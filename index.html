@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Bakulu — discover and access available products and trending videos."
     >
 
     <title>Bakulu</title>
@@ -16,12 +20,13 @@
         rel="stylesheet"
         href="style.css"
     >
-
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
     <header class="navbar">
 
@@ -29,121 +34,166 @@
             BAKULU
         </div>
 
-        <nav>
-            <a href="#videos">videos</a>
-            <a href="#ladies">ladies</a>
+        <nav class="navbar-links">
+            <a href="#videos">Videos</a>
+            <a href="#ladies">Ladies</a>
         </nav>
 
     </header>
 
 
-    <!-- PRODUCTS -->
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
-    <section
-        id="ladies"
-        class="products-section"
-    >
+    <main>
 
-        <div class="section-heading">
+        <!-- AVAILABLE PRODUCTS -->
 
-            <h2>
-                Available Now
-            </h2>
+        <section
+            id="ladies"
+            class="products-section"
+        >
 
-            <p>
-                Scroll horizontally to see more products.
-            </p>
+            <div class="section-heading">
 
-        </div>
+                <p class="small-title">
+                    BAKULU
+                </p>
 
+                <h1>
+                    Available Now
+                </h1>
 
-        <div
-            id="productContainer"
-            class="product-row"
-        ></div>
+                <p class="section-description">
+                    Browse the latest available products.
+                </p>
 
-
-        <div class="section-heading second-row-heading">
-
-            <p class="small-title">
-                TRENDING VIDEOS
-            </p>
-
-            <h2>
-                Videos
-            </h2>
-
-        </div>
+            </div>
 
 
-        <div
-            id="featuredProductContainer"
-            class="product-row featured-row"
-        ></div>
+            <!-- MAIN PRODUCT CARDS -->
 
-    </section>
-
-
-    <!-- PURCHASE SUMMARY -->
-
-    <section
-        id="summarySection"
-        class="summary-section hidden"
-    >
-
-        <div class="summary-card">
-
-            <p class="small-title">
-                PAYMENT CONFIRMED
-            </p>
-
-            <h2>
-                Purchase Summary
-            </h2>
-
-            <div id="purchaseSummary"></div>
-
-        </div>
-
-    </section>
+            <div
+                id="productContainer"
+                class="product-row"
+            ></div>
 
 
-    <!-- IMAGE PREVIEW -->
+            <!-- =========================
+                 TRENDING VIDEOS
+            ========================== -->
+
+            <div
+                id="videos"
+                class="section-heading second-row-heading"
+            >
+
+                <p class="small-title">
+                    TRENDING
+                </p>
+
+                <h2>
+                    Videos
+                </h2>
+
+                <p class="section-description">
+                    Explore our featured content.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURED PRODUCT CARDS -->
+
+            <div
+                id="featuredProductContainer"
+                class="product-row featured-row"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             PURCHASE SUMMARY
+        ========================== -->
+
+        <section
+            id="summarySection"
+            class="summary-section hidden"
+        >
+
+            <div class="summary-card">
+
+                <p class="small-title">
+                    PAYMENT CONFIRMED
+                </p>
+
+                <h2>
+                    Purchase Summary
+                </h2>
+
+                <div id="purchaseSummary"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         IMAGE PREVIEW
+    ========================== -->
 
     <div
         id="imagePreview"
         class="image-preview hidden"
     >
 
-        <span
-            id="closePreview"
-            class="close-preview"
-        >
-            ×
-        </span>
+        <div class="preview-content">
 
-        <img
-            id="previewImage"
-            src=""
-            alt="Product preview"
-        >
+            <button
+                type="button"
+                id="closePreview"
+                class="close-preview"
+                aria-label="Close image preview"
+            >
+                ×
+            </button>
+
+            <img
+                id="previewImage"
+                src=""
+                alt="Product preview"
+            >
+
+        </div>
 
     </div>
 
 
-    <!-- PAYMENT DETAILS MODAL -->
+    <!-- =========================
+         PAYMENT DETAILS MODAL
+    ========================== -->
 
     <div
         id="paymentModal"
         class="payment-modal hidden"
     >
 
-        <div class="payment-card">
+        <div
+            class="payment-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="paymentTitle"
+        >
 
             <button
                 type="button"
                 id="closePaymentModal"
                 class="modal-close"
+                aria-label="Close payment window"
             >
                 ×
             </button>
@@ -154,19 +204,21 @@
             </p>
 
 
-            <h2>
+            <h2 id="paymentTitle">
                 Payment Details
             </h2>
 
 
             <p class="payment-subtitle">
-                Enter your details before continuing to payment.
+                Enter your email before continuing to secure payment.
             </p>
 
 
+            <!-- SELECTED PRODUCT -->
+
             <div class="checkout-product">
 
-                <div>
+                <div class="checkout-product-info">
 
                     <span class="checkout-label">
                         Product
@@ -186,6 +238,8 @@
             </div>
 
 
+            <!-- EMAIL -->
+
             <div class="form-group">
 
                 <label for="customerEmail">
@@ -195,16 +249,18 @@
                 <input
                     type="email"
                     id="customerEmail"
-                    placeholder="Enter your email"
+                    placeholder="you@example.com"
                     autocomplete="email"
                 >
 
                 <small>
-                    Used for your payment transaction.
+                    Your email is used for the payment transaction.
                 </small>
 
             </div>
 
+
+            <!-- CONTINUE -->
 
             <button
                 type="button"
@@ -214,6 +270,8 @@
                 Continue to Payment
             </button>
 
+
+            <!-- CANCEL -->
 
             <button
                 type="button"
@@ -228,14 +286,21 @@
     </div>
 
 
-    <!-- WEBSITE NOTIFICATION -->
+    <!-- =========================
+         WEBSITE NOTIFICATION
+    ========================== -->
 
     <div
         id="notificationModal"
         class="notification-modal hidden"
     >
 
-        <div class="notification-card">
+        <div
+            class="notification-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notificationTitle"
+        >
 
             <div
                 id="notificationIcon"
@@ -268,12 +333,16 @@
     </div>
 
 
-    <!-- LENCO -->
+    <!-- =========================
+         LENCO PAYMENT
+    ========================== -->
 
     <script src="https://pay.lenco.co/js/v1/inline.js"></script>
 
 
-    <!-- WEBSITE JAVASCRIPT -->
+    <!-- =========================
+         BAKULU JAVASCRIPT
+    ========================== -->
 
     <script src="script.js"></script>
 

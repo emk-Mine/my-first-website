@@ -3,7 +3,6 @@
 ========================= */
 
 const products = [
-
     {
         productNumber: "001",
         name: "Product One",
@@ -11,10 +10,7 @@ const products = [
         description: "This is the description of product one.",
         image: "images/product1.jpg",
         location: "Lusaka",
-
-        /* Phone number for this product */
         phone: "+260XXXXXXXXX"
-
     },
 
     {
@@ -24,9 +20,7 @@ const products = [
         description: "This is the description of product two.",
         image: "images/product2.jpg",
         location: "Lusaka",
-
         phone: "+260XXXXXXXXX"
-
     },
 
     {
@@ -36,11 +30,8 @@ const products = [
         description: "This is the description of product three.",
         image: "images/product3.jpg",
         location: "Ndola",
-
         phone: "+260XXXXXXXXX"
-
     }
-
 ];
 
 
@@ -49,17 +40,13 @@ const products = [
 ========================= */
 
 const featuredProducts = [
-
     {
         productNumber: "101",
         name: "Featured One",
         price: 15,
         image: "images/product4.jpg",
         location: "Lusaka",
-
-        /* Link opened after successful payment */
         link: "https://example.com/featured-one"
-
     },
 
     {
@@ -68,9 +55,7 @@ const featuredProducts = [
         price: 20,
         image: "images/product5.jpg",
         location: "Lusaka",
-
         link: "https://example.com/featured-two"
-
     },
 
     {
@@ -79,9 +64,7 @@ const featuredProducts = [
         price: 30,
         image: "images/product6.jpg",
         location: "Ndola",
-
         link: "https://example.com/featured-three"
-
     },
 
     {
@@ -90,11 +73,8 @@ const featuredProducts = [
         price: 40,
         image: "images/product7.jpg",
         location: "Kitwe",
-
         link: "https://example.com/featured-four"
-
     }
-
 ];
 
 
@@ -110,39 +90,25 @@ let selectedProduct = null;
 ========================= */
 
 const productContainer =
-    document.getElementById(
-        "productContainer"
-    );
+    document.getElementById("productContainer");
 
 const featuredProductContainer =
-    document.getElementById(
-        "featuredProductContainer"
-    );
+    document.getElementById("featuredProductContainer");
 
 const paymentModal =
-    document.getElementById(
-        "paymentModal"
-    );
+    document.getElementById("paymentModal");
 
 const customerEmail =
-    document.getElementById(
-        "customerEmail"
-    );
+    document.getElementById("customerEmail");
 
 const checkoutProductName =
-    document.getElementById(
-        "checkoutProductName"
-    );
+    document.getElementById("checkoutProductName");
 
 const checkoutProductPrice =
-    document.getElementById(
-        "checkoutProductPrice"
-    );
+    document.getElementById("checkoutProductPrice");
 
 const continuePaymentButton =
-    document.getElementById(
-        "continuePaymentButton"
-    );
+    document.getElementById("continuePaymentButton");
 
 
 /* =========================
@@ -150,223 +116,147 @@ const continuePaymentButton =
 ========================= */
 
 const notificationModal =
-    document.getElementById(
-        "notificationModal"
-    );
+    document.getElementById("notificationModal");
 
 const notificationIcon =
-    document.getElementById(
-        "notificationIcon"
-    );
+    document.getElementById("notificationIcon");
 
 const notificationTitle =
-    document.getElementById(
-        "notificationTitle"
-    );
+    document.getElementById("notificationTitle");
 
 const notificationMessage =
-    document.getElementById(
-        "notificationMessage"
-    );
+    document.getElementById("notificationMessage");
 
 const notificationButton =
-    document.getElementById(
-        "notificationButton"
-    );
+    document.getElementById("notificationButton");
 
 
 /* =========================
    MAIN PRODUCT CARDS
 ========================= */
 
-products.forEach(
-    (product, index) => {
+products.forEach((product, index) => {
 
-        const card =
-            document.createElement("div");
+    const card = document.createElement("div");
 
-        card.className =
-            "product-card";
+    card.className = "product-card";
 
-
-        card.innerHTML = `
-
-            <div
-                class="product-image-container"
-                onclick="previewImage(
-                    '${product.image}',
-                    '${product.name}'
-                )"
+    card.innerHTML = `
+        <div
+            class="product-image-container"
+            onclick="previewImage('${product.image}', '${product.name}')"
+        >
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${product.name}"
+                loading="lazy"
             >
+        </div>
 
-                <img
-                    class="product-image"
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
+        <div class="product-info">
 
+            <div class="product-number">
+                PRODUCT ${product.productNumber}
             </div>
 
+            <h3 class="product-name">
+                ${product.name}
+            </h3>
 
-            <div class="product-info">
+            <p class="product-description">
+                ${product.description}
+            </p>
 
-                <div class="product-number">
-
-                    PRODUCT ${product.productNumber}
-
-                </div>
-
-
-                <h3 class="product-name">
-
-                    ${product.name}
-
-                </h3>
-
-
-                <p class="product-description">
-
-                    ${product.description}
-
-                </p>
-
-
-                <div class="product-price">
-
-                    K${product.price}
-
-                </div>
-
-
-                <button
-                    class="purchase-button"
-                    onclick="openPaymentModal(
-                        products[${index}]
-                    )"
-                >
-
-                    Purchase
-
-                </button>
-
+            <div class="product-price">
+                K${product.price}
             </div>
 
-        `;
+            <button
+                class="product-button"
+                type="button"
+                onclick="openPaymentModal(products[${index}])"
+            >
+                Purchase
+            </button>
 
+        </div>
+    `;
 
-        productContainer.appendChild(card);
-
-    }
-);
+    productContainer.appendChild(card);
+});
 
 
 /* =========================
    FEATURED PRODUCT CARDS
 ========================= */
 
-featuredProducts.forEach(
-    (product, index) => {
+featuredProducts.forEach((product, index) => {
 
-        const card =
-            document.createElement("div");
+    const card = document.createElement("div");
 
-        card.className =
-            "featured-product-card";
+    card.className = "product-card";
 
-
-        card.innerHTML = `
-
-            <div
-                class="featured-image-container"
-                onclick="previewImage(
-                    '${product.image}',
-                    '${product.name}'
-                )"
+    card.innerHTML = `
+        <div
+            class="product-image-container"
+            onclick="previewImage('${product.image}', '${product.name}')"
+        >
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${product.name}"
+                loading="lazy"
             >
+        </div>
 
-                <img
-                    class="featured-image"
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
+        <div class="product-info">
 
+            <div class="product-number">
+                FEATURED ${product.productNumber}
             </div>
 
+            <h3 class="product-name">
+                ${product.name}
+            </h3>
 
-            <div class="featured-product-info">
-
-                <h3 class="featured-product-name">
-
-                    ${product.name}
-
-                </h3>
-
-
-                <div class="featured-product-price">
-
-                    K${product.price}
-
-                </div>
-
-
-                <button
-                    class="featured-purchase-button"
-                    onclick="openPaymentModal(
-                        featuredProducts[${index}]
-                    )"
-                >
-
-                    Purchase
-
-                </button>
-
+            <div class="product-price">
+                K${product.price}
             </div>
 
-        `;
+            <button
+                class="product-button"
+                type="button"
+                onclick="openPaymentModal(featuredProducts[${index}])"
+            >
+                Purchase
+            </button>
 
+        </div>
+    `;
 
-        featuredProductContainer
-            .appendChild(card);
-
-    }
-);
+    featuredProductContainer.appendChild(card);
+});
 
 
 /* =========================
    IMAGE PREVIEW
 ========================= */
 
-function previewImage(
-    image,
-    name
-) {
+function previewImage(image, name) {
 
     const preview =
-        document.getElementById(
-            "imagePreview"
-        );
+        document.getElementById("imagePreview");
 
     const previewImageElement =
-        document.getElementById(
-            "previewImage"
-        );
+        document.getElementById("previewImage");
 
+    previewImageElement.src = image;
+    previewImageElement.alt = name;
 
-    previewImageElement.src =
-        image;
+    preview.classList.remove("hidden");
 
-    previewImageElement.alt =
-        name;
-
-
-    preview.classList.remove(
-        "hidden"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
 
 
@@ -377,46 +267,28 @@ function previewImage(
 function closeImagePreview() {
 
     const preview =
-        document.getElementById(
-            "imagePreview"
-        );
+        document.getElementById("imagePreview");
 
+    preview.classList.add("hidden");
 
-    preview.classList.add(
-        "hidden"
-    );
-
-
-    document.body.style.overflow =
-        "";
-
+    document.body.style.overflow = "";
 }
 
 
 document
     .getElementById("closePreview")
-    .addEventListener(
-        "click",
-        closeImagePreview
-    );
+    .addEventListener("click", closeImagePreview);
 
 
 document
     .getElementById("imagePreview")
-    .addEventListener(
-        "click",
-        function(event) {
+    .addEventListener("click", function (event) {
 
-            if (
-                event.target === this
-            ) {
-
-                closeImagePreview();
-
-            }
-
+        if (event.target === this) {
+            closeImagePreview();
         }
-    );
+
+    });
 
 
 /* =========================
@@ -425,40 +297,23 @@ document
 
 function openPaymentModal(product) {
 
-    selectedProduct =
-        product;
-
+    selectedProduct = product;
 
     checkoutProductName.textContent =
         product.name;
 
-
     checkoutProductPrice.textContent =
         "K" + product.price;
 
+    customerEmail.value = "";
 
-    customerEmail.value =
-        "";
+    paymentModal.classList.remove("hidden");
 
+    document.body.style.overflow = "hidden";
 
-    paymentModal.classList.remove(
-        "hidden"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
-
-
-    setTimeout(
-        function() {
-
-            customerEmail.focus();
-
-        },
-        100
-    );
-
+    setTimeout(() => {
+        customerEmail.focus();
+    }, 100);
 }
 
 
@@ -468,29 +323,18 @@ function openPaymentModal(product) {
 
 function closePaymentModal() {
 
-    paymentModal.classList.add(
-        "hidden"
-    );
+    paymentModal.classList.add("hidden");
 
+    document.body.style.overflow = "";
 
-    document.body.style.overflow =
-        "";
+    selectedProduct = null;
 
-
-    selectedProduct =
-        null;
-
-
-    customerEmail.value =
-        "";
-
+    customerEmail.value = "";
 }
 
 
 document
-    .getElementById(
-        "closePaymentModal"
-    )
+    .getElementById("closePaymentModal")
     .addEventListener(
         "click",
         closePaymentModal
@@ -498,9 +342,7 @@ document
 
 
 document
-    .getElementById(
-        "cancelPaymentButton"
-    )
+    .getElementById("cancelPaymentButton")
     .addEventListener(
         "click",
         closePaymentModal
@@ -509,15 +351,10 @@ document
 
 paymentModal.addEventListener(
     "click",
-    function(event) {
+    function (event) {
 
-        if (
-            event.target ===
-            paymentModal
-        ) {
-
+        if (event.target === paymentModal) {
             closePaymentModal();
-
         }
 
     }
@@ -534,37 +371,23 @@ function showNotification(
     icon = "!"
 ) {
 
-    notificationTitle.textContent =
-        title;
+    notificationTitle.textContent = title;
 
-    notificationMessage.textContent =
-        message;
+    notificationMessage.textContent = message;
 
-    notificationIcon.textContent =
-        icon;
+    notificationIcon.textContent = icon;
 
+    notificationModal.classList.remove("hidden");
 
-    notificationModal.classList.remove(
-        "hidden"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
 
 
 function closeNotification() {
 
-    notificationModal.classList.add(
-        "hidden"
-    );
+    notificationModal.classList.add("hidden");
 
-
-    document.body.style.overflow =
-        "";
-
+    document.body.style.overflow = "";
 }
 
 
@@ -576,15 +399,10 @@ notificationButton.addEventListener(
 
 notificationModal.addEventListener(
     "click",
-    function(event) {
+    function (event) {
 
-        if (
-            event.target ===
-            notificationModal
-        ) {
-
+        if (event.target === notificationModal) {
             closeNotification();
-
         }
 
     }
@@ -597,22 +415,17 @@ notificationModal.addEventListener(
 
 continuePaymentButton.addEventListener(
     "click",
-    function() {
+    function () {
 
         if (!selectedProduct) {
-
             return;
-
         }
-
 
         const email =
             customerEmail.value.trim();
 
 
-        /* =====================
-           EMPTY EMAIL
-        ===================== */
+        /* EMPTY EMAIL */
 
         if (!email) {
 
@@ -625,17 +438,12 @@ continuePaymentButton.addEventListener(
             customerEmail.focus();
 
             return;
-
         }
 
 
-        /* =====================
-           INVALID EMAIL
-        ===================== */
+        /* INVALID EMAIL */
 
-        if (
-            !isValidEmail(email)
-        ) {
+        if (!isValidEmail(email)) {
 
             showNotification(
                 "Invalid Email",
@@ -646,14 +454,12 @@ continuePaymentButton.addEventListener(
             customerEmail.focus();
 
             return;
-
         }
 
 
-        /* Prevent double clicks */
+        /* PREVENT DOUBLE CLICK */
 
-        continuePaymentButton.disabled =
-            true;
+        continuePaymentButton.disabled = true;
 
         continuePaymentButton.textContent =
             "Opening Payment...";
@@ -674,9 +480,7 @@ continuePaymentButton.addEventListener(
 
 function isValidEmail(email) {
 
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        .test(email);
-
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 
@@ -696,13 +500,9 @@ function startLencoPayment(
         Date.now();
 
 
-    paymentModal.classList.add(
-        "hidden"
-    );
+    paymentModal.classList.add("hidden");
 
-
-    document.body.style.overflow =
-        "";
+    document.body.style.overflow = "";
 
 
     LencoPay.getPaid({
@@ -710,40 +510,28 @@ function startLencoPayment(
         key:
             "pub-0208070bff2479b634c9f91f8ef7e1f306758ee44ee5b278",
 
-
         reference:
             reference,
-
 
         email:
             email,
 
-
         amount:
             product.price,
-
 
         currency:
             "ZMW",
 
-
         channels: [
-
             "card",
-
             "mobile-money"
-
         ],
-
 
         label:
             product.name,
 
-
         customer: {
-
             phone: ""
-
         },
 
 
@@ -752,17 +540,13 @@ function startLencoPayment(
         ===================== */
 
         onSuccess:
-            function(response) {
+            function (response) {
 
                 resetPaymentButton();
 
-
                 showPurchaseSummary(
-
                     product,
-
-                    response.reference
-
+                    response.reference || reference
                 );
 
             },
@@ -773,10 +557,9 @@ function startLencoPayment(
         ===================== */
 
         onClose:
-            function() {
+            function () {
 
                 resetPaymentButton();
-
 
                 showNotification(
                     "Payment Not Completed",
@@ -792,10 +575,9 @@ function startLencoPayment(
         ===================== */
 
         onConfirmationPending:
-            function() {
+            function () {
 
                 resetPaymentButton();
-
 
                 showNotification(
                     "Payment Being Confirmed",
@@ -806,7 +588,6 @@ function startLencoPayment(
             }
 
     });
-
 }
 
 
@@ -816,13 +597,10 @@ function startLencoPayment(
 
 function resetPaymentButton() {
 
-    continuePaymentButton.disabled =
-        false;
-
+    continuePaymentButton.disabled = false;
 
     continuePaymentButton.textContent =
         "Continue to Payment";
-
 }
 
 
@@ -836,31 +614,21 @@ function showPurchaseSummary(
 ) {
 
     const summarySection =
-        document.getElementById(
-            "summarySection"
-        );
-
+        document.getElementById("summarySection");
 
     const purchaseSummary =
-        document.getElementById(
-            "purchaseSummary"
-        );
+        document.getElementById("purchaseSummary");
 
 
     let actionButton = "";
 
 
-    /* =========================
-       MAIN PRODUCT
-       SHOW CALL BUTTON
-    ========================= */
+    /* MAIN PRODUCT
+       SHOW CALL BUTTON */
 
-    if (
-        product.phone
-    ) {
+    if (product.phone) {
 
         actionButton = `
-
             <div class="purchase-action">
 
                 <button
@@ -868,29 +636,20 @@ function showPurchaseSummary(
                     class="call-product-button"
                     onclick="callProduct('${product.phone}')"
                 >
-
                     Call Now
-
                 </button>
 
             </div>
-
         `;
-
     }
 
 
-    /* =========================
-       FEATURED PRODUCT
-       SHOW FEATURE BUTTON
-    ========================= */
+    /* FEATURED PRODUCT
+       SHOW FEATURE BUTTON */
 
-    else if (
-        product.link
-    ) {
+    else if (product.link) {
 
         actionButton = `
-
             <div class="purchase-action">
 
                 <button
@@ -898,15 +657,11 @@ function showPurchaseSummary(
                     class="open-feature-button"
                     onclick="openProductLink('${product.link}')"
                 >
-
                     Open Feature
-
                 </button>
 
             </div>
-
         `;
-
     }
 
 
@@ -1016,17 +771,12 @@ function showPurchaseSummary(
     `;
 
 
-    summarySection.classList.remove(
-        "hidden"
-    );
+    summarySection.classList.remove("hidden");
 
 
     summarySection.scrollIntoView({
-
         behavior: "smooth"
-
     });
-
 }
 
 
@@ -1038,7 +788,6 @@ function callProduct(phone) {
 
     window.location.href =
         "tel:" + phone;
-
 }
 
 
@@ -1050,7 +799,6 @@ function openProductLink(link) {
 
     window.location.href =
         link;
-
 }
 
 
@@ -1060,50 +808,42 @@ function openProductLink(link) {
 
 document.addEventListener(
     "keydown",
-    function(event) {
+    function (event) {
+
+        if (event.key !== "Escape") {
+            return;
+        }
+
+
+        const imagePreview =
+            document.getElementById("imagePreview");
+
 
         if (
-            event.key === "Escape"
+            !imagePreview.classList.contains("hidden")
         ) {
 
-            const imagePreview =
-                document.getElementById(
-                    "imagePreview"
-                );
+            closeImagePreview();
+
+            return;
+        }
 
 
-            if (
-                !imagePreview.classList
-                    .contains("hidden")
-            ) {
+        if (
+            !paymentModal.classList.contains("hidden")
+        ) {
 
-                closeImagePreview();
+            closePaymentModal();
 
-                return;
-
-            }
+            return;
+        }
 
 
-            if (
-                !paymentModal.classList
-                    .contains("hidden")
-            ) {
+        if (
+            !notificationModal.classList.contains("hidden")
+        ) {
 
-                closePaymentModal();
-
-                return;
-
-            }
-
-
-            if (
-                !notificationModal.classList
-                    .contains("hidden")
-            ) {
-
-                closeNotification();
-
-            }
+            closeNotification();
 
         }
 
