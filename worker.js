@@ -1,18 +1,19 @@
+const LENCO_PUBLIC_KEY =
+    "pub-80bfb00b1046485c7774b5018e7c81bd991ef4c3bf3ebe41";
+
 const LENCO_MOBILE_MONEY_URL =
     "https://api.lenco.co/access/v2/collections/mobile-money";
 
 const LENCO_STATUS_URL =
     "https://api.lenco.co/access/v2/collections/status";
 
-
 export default {
     async fetch(request, env) {
-
         const url = new URL(request.url);
 
-        /*
-         * API ROUTES
-         */
+        // ==============================
+        // INITIATE MOBILE MONEY PAYMENT
+        // ==============================
         if (url.pathname === "/api/initiate-payment") {
             if (request.method !== "POST") {
                 return json({
@@ -24,7 +25,9 @@ export default {
             return initiatePayment(request, env);
         }
 
-
+        // ==============================
+        // VERIFY PAYMENT
+        // ==============================
         if (url.pathname === "/api/verify-payment") {
             if (request.method !== "GET") {
                 return json({
@@ -36,47 +39,39 @@ export default {
             return verifyPayment(request, env);
         }
 
-
-        /*
-         * EVERYTHING ELSE:
-         * Serve the normal website files.
-         */
+        // ==============================
+        // SERVE WEBSITE
+        // ==============================
         return env.ASSETS.fetch(request);
     }
 };
 
 
-/* =========================================================
-   INITIATE MOBILE MONEY PAYMENT
-========================================================= */
+// ==========================================
+// INITIATE PAYMENT
+// ==========================================
 
 async function initiatePayment(request, env) {
-
     try {
-
         const body = await request.json();
 
-        const reference =
-            String(body.reference || "").trim();
+        const reference = String(body.reference || "").trim();
 
-        const amount =
-            Number(body.amount);
+        const amount = Number(body.amount);
 
         const currency =
-            String(body.currency || "ZMW")
-                .toUpperCase();
+            String(body.currency || "ZMW").toUpperCase();
 
         const phone =
             normalizeZambianPhone(body.phone);
 
         const operator =
-            String(body.operator || "")
-                .toLowerCase();
+            String(body.operator || "").toLowerCase();
 
 
-        /*
-         * VALIDATION
-         */
+        // ------------------------------
+        // VALIDATION
+        // ------------------------------
 
         if (!reference) {
             return json({
@@ -85,17 +80,12 @@ async function initiatePayment(request, env) {
             }, 400);
         }
 
-
-        if (
-            !Number.isFinite(amount) ||
-            amount <= 0
-        ) {
+        if (!Number.isFinite(amount) || amount <= 0) {
             return json({
                 success: false,
                 message: "Invalid payment amount."
             }, 400);
         }
-
 
         if (currency !== "ZMW") {
             return json({
@@ -104,100 +94,77 @@ async function initiatePayment(request, env) {
             }, 400);
         }
 
-
         if (!isValidZambianPhone(phone)) {
             return json({
                 success: false,
-                message:
-                    "Invalid Zambian mobile-money number."
+                message: "Invalid Zambian mobile-money number."
             }, 400);
         }
 
-
-        if (
-            ![
-                "mtn",
-                "airtel",
-                "zamtel"
-            ].includes(operator)
-        ) {
+        if (!["mtn", "airtel", "zamtel"].includes(operator)) {
             return json({
                 success: false,
-                message:
-                    "Invalid mobile-money operator."
+                message: "Invalid mobile-money operator."
             }, 400);
         }
 
 
-        /*
-         * LENCO SECRET
-         */
+        // ------------------------------
+        // SECRET KEY
+        // ------------------------------
 
-        const secret =
-            env.LENCO_SECRET_KEY;
-
+        const secret = env.LENCO_SECRET_KEY;
 
         if (!secret) {
-
             console.error(
-                "LENCO_SECRET_KEY is missing."
+                "LENCO_SECRET_KEY is missing from Cloudflare Worker."
             );
 
             return json({
                 success: false,
-                message:
-                    "Payment service is temporarily unavailable."
+                message: "Payment service is temporarily unavailable."
             }, 500);
         }
 
 
-        /*
-         * SEND PAYMENT REQUEST TO LENCO
-         */
+        // ------------------------------
+        // SEND PAYMENT TO LENCO
+        // ------------------------------
 
-        const lencoResponse =
-            await fetch(
-                LENCO_MOBILE_MONEY_URL,
-                {
-                    method: "POST",
+        const lencoResponse = await fetch(
+            LENCO_MOBILE_MONEY_URL,
+            {
+                method: "POST",
 
-                    headers: {
-                        "Authorization":
-                            "Bearer " + secret,
+                headers: {
+                    "Authorization": "Bearer " + secret,
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
 
-                        "Content-Type":
-                            "application/json",
+                body: JSON.stringify({
+                    amount: amount,
+                    reference: reference,
+                    phone: phone,
+                    operator: operator,
+                    country: "zm",
+                    bearer: "merchant"
+                })
+            }
+        );
 
-                        "Accept":
-                            "application/json"
-                    },
 
-                    body: JSON.stringify({
-                        amount: amount,
-
-                        reference: reference,
-
-                        phone: phone,
-
-                        operator: operator,
-
-                        country: "zm",
-
-                        bearer: "merchant"
-                    })
-                }
-            );
-
+        // ------------------------------
+        // READ LENCO RESPONSE
+        // ------------------------------
 
         const responseText =
             await lencoResponse.text();
-
 
         console.log(
             "Lenco initiation HTTP status:",
             lencoResponse.status
         );
-
 
         console.log(
             "Lenco initiation response:",
@@ -205,57 +172,52 @@ async function initiatePayment(request, env) {
         );
 
 
-        let data = null;
-
+        let data;
 
         try {
-
-            data =
-                JSON.parse(responseText);
-
-        } catch {
+            data = JSON.parse(responseText);
+        } catch (error) {
+            console.error(
+                "Lenco returned invalid JSON:",
+                responseText
+            );
 
             return json({
                 success: false,
-                message:
-                    "Lenco returned an invalid response."
+                message: "Lenco returned an invalid response."
             }, 502);
         }
 
 
-        /*
-         * LENCO ERROR
-         */
+        // ------------------------------
+        // LENCO ERROR
+        // ------------------------------
 
-        if (
-            !lencoResponse.ok ||
-            data.status !== true
-        ) {
+        if (!lencoResponse.ok || data.status !== true) {
+
+            console.error(
+                "Lenco payment initiation failed:",
+                data
+            );
 
             return json({
                 success: false,
-
                 message:
                     data.message ||
                     "Lenco could not start the payment."
-            },
-            lencoResponse.status || 400);
+            }, lencoResponse.status || 400);
         }
 
 
-        /*
-         * PAYMENT DATA
-         */
+        // ------------------------------
+        // PAYMENT DATA
+        // ------------------------------
 
-        const payment =
-            data.data;
-
+        const payment = data.data;
 
         if (!payment) {
-
             return json({
                 success: false,
-
                 message:
                     "Lenco did not return payment details."
             }, 502);
@@ -269,7 +231,6 @@ async function initiatePayment(request, env) {
 
 
         return json({
-
             success: true,
 
             status:
@@ -281,7 +242,6 @@ async function initiatePayment(request, env) {
                 "Payment request initiated.",
 
             payment: {
-
                 reference:
                     payment.reference ||
                     reference,
@@ -309,7 +269,6 @@ async function initiatePayment(request, env) {
                     payment.mobileMoneyDetails ||
                     null
             }
-
         });
 
     } catch (error) {
@@ -321,7 +280,6 @@ async function initiatePayment(request, env) {
 
         return json({
             success: false,
-
             message:
                 "Unable to start the payment. Please try again."
         }, 500);
@@ -329,58 +287,42 @@ async function initiatePayment(request, env) {
 }
 
 
-/* =========================================================
-   VERIFY PAYMENT
-========================================================= */
+
+// ==========================================
+// VERIFY PAYMENT
+// ==========================================
 
 async function verifyPayment(request, env) {
 
     const url =
         new URL(request.url);
 
-
     const reference =
-        url.searchParams.get(
-            "reference"
-        );
-
+        url.searchParams.get("reference");
 
     const expectedAmount =
-        url.searchParams.get(
-            "amount"
-        );
-
+        url.searchParams.get("amount");
 
     const expectedCurrency =
-        url.searchParams.get(
-            "currency"
-        );
+        url.searchParams.get("currency");
 
-
-    /*
-     * CHECK REFERENCE
-     */
 
     if (!reference) {
-
         return json({
             success: false,
-
             status: "failed",
-
             message:
                 "Payment reference is missing."
         }, 400);
     }
 
 
-    /*
-     * GET LENCO SECRET
-     */
+    // ------------------------------
+    // SECRET KEY
+    // ------------------------------
 
     const secret =
         env.LENCO_SECRET_KEY;
-
 
     if (!secret) {
 
@@ -390,18 +332,12 @@ async function verifyPayment(request, env) {
 
         return json({
             success: false,
-
             status: "pending",
-
             message:
                 "Payment verification is temporarily unavailable."
         }, 500);
     }
 
-
-    /*
-     * LENCO STATUS URL
-     */
 
     const lencoUrl =
         LENCO_STATUS_URL +
@@ -433,41 +369,42 @@ async function verifyPayment(request, env) {
 
 
         console.log(
-            "Lenco HTTP status:",
+            "Lenco verification HTTP status:",
             lencoResponse.status
         );
 
-
         console.log(
-            "Lenco response:",
+            "Lenco verification response:",
             responseText
         );
 
 
-        let data = null;
-
+        let data;
 
         try {
 
             data =
                 JSON.parse(responseText);
 
-        } catch {
+        } catch (error) {
+
+            console.error(
+                "Invalid JSON from Lenco:",
+                responseText
+            );
 
             return json({
                 success: false,
-
                 status: "pending",
-
                 message:
                     "Lenco returned an invalid response."
             }, 502);
         }
 
 
-        /*
-         * FIND PAYMENT OBJECT
-         */
+        // ------------------------------
+        // FIND PAYMENT
+        // ------------------------------
 
         const payment =
             extractPayment(data);
@@ -482,18 +419,12 @@ async function verifyPayment(request, env) {
 
             return json({
                 success: false,
-
                 status: "pending",
-
                 message:
                     "Payment is still being checked."
             });
         }
 
-
-        /*
-         * PAYMENT VALUES
-         */
 
         const paymentStatus =
             String(
@@ -502,9 +433,7 @@ async function verifyPayment(request, env) {
 
 
         const paymentAmount =
-            Number(
-                payment.amount
-            );
+            Number(payment.amount);
 
 
         const paymentCurrency =
@@ -513,19 +442,15 @@ async function verifyPayment(request, env) {
             ).toUpperCase();
 
 
-        /*
-         * VERIFY AMOUNT
-         */
+        // ------------------------------
+        // CHECK AMOUNT
+        // ------------------------------
 
         if (
             expectedAmount &&
             (
-                !Number.isFinite(
-                    paymentAmount
-                ) ||
-
-                paymentAmount !==
-                    Number(expectedAmount)
+                !Number.isFinite(paymentAmount) ||
+                paymentAmount !== Number(expectedAmount)
             )
         ) {
 
@@ -535,25 +460,21 @@ async function verifyPayment(request, env) {
 
             return json({
                 success: false,
-
                 status: "failed",
-
                 message:
                     "Payment amount could not be verified."
             }, 400);
         }
 
 
-        /*
-         * VERIFY CURRENCY
-         */
+        // ------------------------------
+        // CHECK CURRENCY
+        // ------------------------------
 
         if (
             expectedCurrency &&
             paymentCurrency !==
-                String(
-                    expectedCurrency
-                ).toUpperCase()
+            String(expectedCurrency).toUpperCase()
         ) {
 
             console.error(
@@ -562,22 +483,19 @@ async function verifyPayment(request, env) {
 
             return json({
                 success: false,
-
                 status: "failed",
-
                 message:
                     "Payment currency could not be verified."
             }, 400);
         }
 
 
-        /*
-         * SUCCESS
-         */
+        // ------------------------------
+        // SUCCESS
+        // ------------------------------
 
         if (
-            paymentStatus ===
-            "successful"
+            paymentStatus === "successful"
         ) {
 
             console.log(
@@ -586,15 +504,11 @@ async function verifyPayment(request, env) {
             );
 
             return json({
-
                 success: true,
-
                 status: "successful",
 
                 payment: {
-
-                    status:
-                        "successful",
+                    status: "successful",
 
                     amount:
                         paymentAmount,
@@ -611,14 +525,13 @@ async function verifyPayment(request, env) {
                         payment.lenco_reference ||
                         null
                 }
-
             });
         }
 
 
-        /*
-         * FAILED
-         */
+        // ------------------------------
+        // FAILED
+        // ------------------------------
 
         if (
             paymentStatus === "failed" ||
@@ -626,31 +539,23 @@ async function verifyPayment(request, env) {
         ) {
 
             return json({
-
                 success: false,
-
                 status: "failed",
-
                 message:
                     "Lenco reports that this payment was not completed."
-
             });
         }
 
 
-        /*
-         * PENDING
-         */
+        // ------------------------------
+        // STILL PENDING
+        // ------------------------------
 
         return json({
-
             success: false,
-
             status: "pending",
-
             message:
                 "Payment is still being confirmed."
-
         });
 
     } catch (error) {
@@ -661,30 +566,26 @@ async function verifyPayment(request, env) {
         );
 
         return json({
-
             success: false,
-
             status: "pending",
-
             message:
                 "Unable to contact Lenco. Retrying shortly."
-
         }, 502);
     }
 }
 
 
-/* =========================================================
-   FIND PAYMENT
-========================================================= */
+
+// ==========================================
+// EXTRACT PAYMENT
+// ==========================================
 
 function extractPayment(response) {
 
     if (
         response &&
         response.data &&
-        typeof response.data ===
-            "object"
+        typeof response.data === "object"
     ) {
         return response.data;
     }
@@ -693,8 +594,7 @@ function extractPayment(response) {
     if (
         response &&
         response.payment &&
-        typeof response.payment ===
-            "object"
+        typeof response.payment === "object"
     ) {
         return response.payment;
     }
@@ -716,9 +616,10 @@ function extractPayment(response) {
 }
 
 
-/* =========================================================
-   PHONE NORMALIZATION
-========================================================= */
+
+// ==========================================
+// NORMALIZE ZAMBIAN PHONE NUMBER
+// ==========================================
 
 function normalizeZambianPhone(phone) {
 
@@ -728,19 +629,13 @@ function normalizeZambianPhone(phone) {
             .replace(/-/g, "");
 
 
-    if (
-        cleaned.startsWith("+260")
-    ) {
-        return "0" +
-            cleaned.substring(4);
+    if (cleaned.startsWith("+260")) {
+        return "0" + cleaned.substring(4);
     }
 
 
-    if (
-        cleaned.startsWith("260")
-    ) {
-        return "0" +
-            cleaned.substring(3);
+    if (cleaned.startsWith("260")) {
+        return "0" + cleaned.substring(3);
     }
 
 
@@ -748,25 +643,28 @@ function normalizeZambianPhone(phone) {
 }
 
 
+
+// ==========================================
+// VALIDATE ZAMBIAN PHONE
+// ==========================================
+
 function isValidZambianPhone(phone) {
 
-    return /^0\d{9}$/.test(
-        phone
-    );
+    return /^0\d{9}$/.test(phone);
 }
 
 
-/* =========================================================
-   JSON RESPONSE
-========================================================= */
+
+// ==========================================
+// JSON RESPONSE
+// ==========================================
 
 function json(body, status = 200) {
 
     return new Response(
         JSON.stringify(body),
-
         {
-            status: status,
+            status,
 
             headers: {
                 "Content-Type":
