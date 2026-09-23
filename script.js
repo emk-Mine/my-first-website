@@ -1,5 +1,7 @@
 /* =========================================================
-   BAKULU PAYMENT + PRODUCTS
+   BAKULU
+   MOBILE MONEY PAYMENTS
+   LENCO + CLOUDFLARE
 ========================================================= */
 
 
@@ -8,15 +10,17 @@
 ========================================================= */
 
 const products = [
+
     {
         productNumber: "001",
         name: "Product One",
-        price: 2,
+        price: 10,
         description: "This is the description of product one.",
         image: "images/product1.jpg",
         location: "Lusaka",
         phone: "+260XXXXXXXXX"
     },
+
     {
         productNumber: "002",
         name: "Product Two",
@@ -26,6 +30,7 @@ const products = [
         location: "Lusaka",
         phone: "+260XXXXXXXXX"
     },
+
     {
         productNumber: "003",
         name: "Product Three",
@@ -35,18 +40,21 @@ const products = [
         location: "Ndola",
         phone: "+260XXXXXXXXX"
     }
+
 ];
 
 
 const featuredProducts = [
+
     {
         productNumber: "101",
         name: "Featured One",
-        price: 3,
+        price: 15,
         image: "images/product4.jpg",
         location: "Lusaka",
         link: "https://example.com/featured-one"
     },
+
     {
         productNumber: "102",
         name: "Featured Two",
@@ -55,6 +63,7 @@ const featuredProducts = [
         location: "Lusaka",
         link: "https://example.com/featured-two"
     },
+
     {
         productNumber: "103",
         name: "Featured Three",
@@ -63,6 +72,7 @@ const featuredProducts = [
         location: "Ndola",
         link: "https://example.com/featured-three"
     },
+
     {
         productNumber: "104",
         name: "Featured Four",
@@ -71,6 +81,7 @@ const featuredProducts = [
         location: "Kitwe",
         link: "https://example.com/featured-four"
     }
+
 ];
 
 
@@ -78,8 +89,8 @@ const featuredProducts = [
    SETTINGS
 ========================================================= */
 
-const LENCO_PUBLIC_KEY =
-    "pub-0208070bff2479b634c9f91f8ef7e1f306758ee44ee5b278";
+const INITIATE_ENDPOINT =
+    "/api/initiate-payment";
 
 const VERIFY_ENDPOINT =
     "/api/verify-payment";
@@ -87,11 +98,11 @@ const VERIFY_ENDPOINT =
 const PAYMENT_CURRENCY =
     "ZMW";
 
-const MAX_VERIFICATION_ATTEMPTS =
-    40;
-
 const VERIFICATION_INTERVAL =
     3000;
+
+const MAX_VERIFICATION_ATTEMPTS =
+    40;
 
 
 /* =========================================================
@@ -108,13 +119,17 @@ let verificationAttempts = 0;
 
 let paymentFinalized = false;
 
+let paymentVerificationRunning = false;
+
 
 /* =========================================================
-   DOM ELEMENTS
+   DOM
 ========================================================= */
 
 const productContainer =
-    document.getElementById("productContainer");
+    document.getElementById(
+        "productContainer"
+    );
 
 const featuredProductContainer =
     document.getElementById(
@@ -122,10 +137,24 @@ const featuredProductContainer =
     );
 
 const paymentModal =
-    document.getElementById("paymentModal");
+    document.getElementById(
+        "paymentModal"
+    );
 
 const customerEmail =
-    document.getElementById("customerEmail");
+    document.getElementById(
+        "customerEmail"
+    );
+
+const customerPhone =
+    document.getElementById(
+        "customerPhone"
+    );
+
+const mobileMoneyOperator =
+    document.getElementById(
+        "mobileMoneyOperator"
+    );
 
 const checkoutProductName =
     document.getElementById(
@@ -169,122 +198,166 @@ const notificationButton =
 
 
 /* =========================================================
-   RENDER MAIN PRODUCTS
+   RENDER PRODUCTS
 ========================================================= */
 
-products.forEach((product, index) => {
+products.forEach(
+    function (product, index) {
 
-    const card =
-        document.createElement("div");
+        const card =
+            document.createElement(
+                "div"
+            );
 
-    card.className =
-        "product-card";
+        card.className =
+            "product-card";
 
-    card.innerHTML = `
-        <div
-            class="product-image-container"
-            onclick="previewImage('${product.image}', '${escapeHtml(product.name)}')"
-        >
-            <img
-                class="product-image"
-                src="${product.image}"
-                alt="${escapeHtml(product.name)}"
-                loading="lazy"
+        card.innerHTML = `
+
+            <div
+                class="product-image-container"
+                onclick="previewImage(
+                    '${product.image}',
+                    '${escapeHtml(product.name)}'
+                )"
             >
-        </div>
 
-        <div class="product-info">
+                <img
+                    class="product-image"
+                    src="${product.image}"
+                    alt="${escapeHtml(product.name)}"
+                    loading="lazy"
+                >
 
-            <div class="product-number">
-                PRODUCT ${product.productNumber}
             </div>
 
-            <h3 class="product-name">
-                ${escapeHtml(product.name)}
-            </h3>
 
-            <p class="product-description">
-                ${escapeHtml(product.description)}
-            </p>
+            <div class="product-info">
 
-            <div class="product-price">
-                K${formatAmount(product.price)}
+                <div class="product-number">
+                    PRODUCT ${product.productNumber}
+                </div>
+
+
+                <h3 class="product-name">
+                    ${escapeHtml(product.name)}
+                </h3>
+
+
+                <p class="product-description">
+                    ${escapeHtml(product.description)}
+                </p>
+
+
+                <div class="product-price">
+                    K${formatAmount(product.price)}
+                </div>
+
+
+                <button
+                    class="product-button"
+                    type="button"
+                    onclick="openPaymentModal(
+                        products[${index}]
+                    )"
+                >
+                    Purchase
+                </button>
+
             </div>
 
-            <button
-                class="product-button"
-                type="button"
-                onclick="openPaymentModal(products[${index}])"
-            >
-                Purchase
-            </button>
+        `;
 
-        </div>
-    `;
+        productContainer.appendChild(
+            card
+        );
 
-    productContainer.appendChild(card);
-});
+    }
+);
 
 
 /* =========================================================
    RENDER FEATURED PRODUCTS
 ========================================================= */
 
-featuredProducts.forEach((product, index) => {
+featuredProducts.forEach(
+    function (product, index) {
 
-    const card =
-        document.createElement("div");
+        const card =
+            document.createElement(
+                "div"
+            );
 
-    card.className =
-        "product-card";
+        card.className =
+            "product-card";
 
-    card.innerHTML = `
-        <div
-            class="product-image-container"
-            onclick="previewImage('${product.image}', '${escapeHtml(product.name)}')"
-        >
-            <img
-                class="product-image"
-                src="${product.image}"
-                alt="${escapeHtml(product.name)}"
-                loading="lazy"
+        card.innerHTML = `
+
+            <div
+                class="product-image-container"
+                onclick="previewImage(
+                    '${product.image}',
+                    '${escapeHtml(product.name)}'
+                )"
             >
-        </div>
 
-        <div class="product-info">
+                <img
+                    class="product-image"
+                    src="${product.image}"
+                    alt="${escapeHtml(product.name)}"
+                    loading="lazy"
+                >
 
-            <div class="product-number">
-                FEATURED ${product.productNumber}
             </div>
 
-            <h3 class="product-name">
-                ${escapeHtml(product.name)}
-            </h3>
 
-            <div class="product-price">
-                K${formatAmount(product.price)}
+            <div class="product-info">
+
+                <div class="product-number">
+                    FEATURED ${product.productNumber}
+                </div>
+
+
+                <h3 class="product-name">
+                    ${escapeHtml(product.name)}
+                </h3>
+
+
+                <div class="product-price">
+                    K${formatAmount(product.price)}
+                </div>
+
+
+                <button
+                    class="product-button"
+                    type="button"
+                    onclick="openPaymentModal(
+                        featuredProducts[${index}]
+                    )"
+                >
+                    Purchase
+                </button>
+
             </div>
 
-            <button
-                class="product-button"
-                type="button"
-                onclick="openPaymentModal(featuredProducts[${index}])"
-            >
-                Purchase
-            </button>
+        `;
 
-        </div>
-    `;
+        featuredProductContainer.appendChild(
+            card
+        );
 
-    featuredProductContainer.appendChild(card);
-});
+    }
+);
 
 
 /* =========================================================
    IMAGE PREVIEW
 ========================================================= */
 
-function previewImage(image, name) {
+function previewImage(
+    image,
+    name
+) {
 
     const preview =
         document.getElementById(
@@ -328,7 +401,9 @@ function closeImagePreview() {
 
 
 document
-    .getElementById("closePreview")
+    .getElementById(
+        "closePreview"
+    )
     .addEventListener(
         "click",
         closeImagePreview
@@ -336,15 +411,20 @@ document
 
 
 document
-    .getElementById("imagePreview")
+    .getElementById(
+        "imagePreview"
+    )
     .addEventListener(
         "click",
         function (event) {
 
             if (
-                event.target === this
+                event.target ===
+                this
             ) {
+
                 closeImagePreview();
+
             }
 
         }
@@ -352,12 +432,15 @@ document
 
 
 /* =========================================================
-   PAYMENT MODAL
+   OPEN PAYMENT MODAL
 ========================================================= */
 
-function openPaymentModal(product) {
+function openPaymentModal(
+    product
+) {
 
     if (!product) {
+
         showNotification(
             "Payment Error",
             "We could not load this product. Please refresh the page and try again.",
@@ -367,41 +450,68 @@ function openPaymentModal(product) {
         return;
     }
 
+
     selectedProduct =
         product;
+
 
     paymentFinalized =
         false;
 
+
     checkoutProductName.textContent =
         product.name;
 
+
     checkoutProductPrice.textContent =
-        "K" + formatAmount(product.price);
+        "K" +
+        formatAmount(
+            product.price
+        );
+
 
     customerEmail.value =
         "";
 
+    customerPhone.value =
+        "";
+
+    mobileMoneyOperator.value =
+        "";
+
+
     continuePaymentButton.disabled =
         false;
 
+
     continuePaymentButton.textContent =
-        "Continue to Payment";
+        "Pay Now";
+
 
     paymentModal.classList.remove(
         "hidden"
     );
 
+
     document.body.style.overflow =
         "hidden";
 
-    setTimeout(() => {
 
-        customerEmail.focus();
+    setTimeout(
+        function () {
 
-    }, 100);
+            customerEmail.focus();
+
+        },
+        100
+    );
+
 }
 
+
+/* =========================================================
+   CLOSE PAYMENT MODAL
+========================================================= */
 
 function closePaymentModal() {
 
@@ -417,6 +527,13 @@ function closePaymentModal() {
 
     customerEmail.value =
         "";
+
+    customerPhone.value =
+        "";
+
+    mobileMoneyOperator.value =
+        "";
+
 }
 
 
@@ -448,7 +565,9 @@ paymentModal.addEventListener(
             event.target ===
             paymentModal
         ) {
+
             closePaymentModal();
+
         }
 
     }
@@ -456,13 +575,13 @@ paymentModal.addEventListener(
 
 
 /* =========================================================
-   NOTIFICATIONS
+   NOTIFICATION
 ========================================================= */
 
 function showNotification(
     title,
     message,
-    icon = "!"
+    icon
 ) {
 
     notificationTitle.textContent =
@@ -472,14 +591,17 @@ function showNotification(
         message;
 
     notificationIcon.textContent =
-        icon;
+        icon || "!";
+
 
     notificationModal.classList.remove(
         "hidden"
     );
 
+
     document.body.style.overflow =
         "hidden";
+
 }
 
 
@@ -491,6 +613,7 @@ function closeNotification() {
 
     document.body.style.overflow =
         "";
+
 }
 
 
@@ -508,7 +631,9 @@ notificationModal.addEventListener(
             event.target ===
             notificationModal
         ) {
+
             closeNotification();
+
         }
 
     }
@@ -516,14 +641,15 @@ notificationModal.addEventListener(
 
 
 /* =========================================================
-   START PAYMENT
+   PAY BUTTON
 ========================================================= */
 
 continuePaymentButton.addEventListener(
     "click",
-    function () {
+    async function () {
 
         if (!selectedProduct) {
+
             showNotification(
                 "Payment Error",
                 "Please select a product again.",
@@ -533,14 +659,26 @@ continuePaymentButton.addEventListener(
             return;
         }
 
+
         const email =
             customerEmail.value.trim();
+
+
+        const phone =
+            customerPhone.value.trim();
+
+
+        const operator =
+            mobileMoneyOperator.value;
+
+
+        /* EMAIL */
 
         if (!email) {
 
             showNotification(
                 "Email Required",
-                "Please enter your email address before continuing.",
+                "Please enter your email address.",
                 "!"
             );
 
@@ -550,11 +688,15 @@ continuePaymentButton.addEventListener(
         }
 
 
-        if (!isValidEmail(email)) {
+        if (
+            !isValidEmail(
+                email
+            )
+        ) {
 
             showNotification(
                 "Invalid Email",
-                "Please enter a valid email address and try again.",
+                "Please enter a valid email address.",
                 "!"
             );
 
@@ -564,9 +706,61 @@ continuePaymentButton.addEventListener(
         }
 
 
-        startLencoPayment(
+        /* PHONE */
+
+        if (!phone) {
+
+            showNotification(
+                "Phone Number Required",
+                "Please enter the mobile-money phone number.",
+                "!"
+            );
+
+            customerPhone.focus();
+
+            return;
+        }
+
+
+        if (
+            !isValidZambianPhone(
+                phone
+            )
+        ) {
+
+            showNotification(
+                "Invalid Phone Number",
+                "Please enter a valid Zambian mobile-money number.",
+                "!"
+            );
+
+            customerPhone.focus();
+
+            return;
+        }
+
+
+        /* NETWORK */
+
+        if (!operator) {
+
+            showNotification(
+                "Network Required",
+                "Please select MTN, Airtel, or Zamtel.",
+                "!"
+            );
+
+            mobileMoneyOperator.focus();
+
+            return;
+        }
+
+
+        await startMobileMoneyPayment(
             selectedProduct,
-            email
+            email,
+            phone,
+            operator
         );
 
     }
@@ -577,35 +771,101 @@ continuePaymentButton.addEventListener(
    EMAIL VALIDATION
 ========================================================= */
 
-function isValidEmail(email) {
+function isValidEmail(
+    email
+) {
 
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         .test(email);
+
 }
 
 
 /* =========================================================
-   START LENCO PAYMENT
+   ZAMBIAN PHONE VALIDATION
 ========================================================= */
 
-function startLencoPayment(
-    product,
-    email
+function normalizeZambianPhone(
+    phone
 ) {
 
+    let cleaned =
+        String(phone)
+            .replace(
+                /\s+/g,
+                ""
+            )
+            .replace(
+                /-/g,
+                ""
+            );
+
+
     if (
-        typeof LencoPay ===
-        "undefined"
+        cleaned.startsWith(
+            "+260"
+        )
     ) {
 
-        showNotification(
-            "Payment Unavailable",
-            "The payment service could not be loaded. Please check your internet connection and try again.",
-            "!"
+        return "0" +
+            cleaned.substring(
+                4
+            );
+
+    }
+
+
+    if (
+        cleaned.startsWith(
+            "260"
+        )
+    ) {
+
+        return "0" +
+            cleaned.substring(
+                3
+            );
+
+    }
+
+
+    return cleaned;
+
+}
+
+
+function isValidZambianPhone(
+    phone
+) {
+
+    const normalized =
+        normalizeZambianPhone(
+            phone
         );
 
-        return;
-    }
+
+    return /^0\d{9}$/.test(
+        normalized
+    );
+
+}
+
+
+/* =========================================================
+   START MOBILE MONEY PAYMENT
+========================================================= */
+
+async function startMobileMoneyPayment(
+    product,
+    email,
+    phone,
+    operator
+) {
+
+    const normalizedPhone =
+        normalizeZambianPhone(
+            phone
+        );
 
 
     const reference =
@@ -625,8 +885,16 @@ function startLencoPayment(
         email:
             email,
 
+        phone:
+            normalizedPhone,
+
+        operator:
+            operator,
+
         amount:
-            Number(product.price),
+            Number(
+                product.price
+            ),
 
         currency:
             PAYMENT_CURRENCY
@@ -638,163 +906,162 @@ function startLencoPayment(
         false;
 
 
+    paymentVerificationRunning =
+        false;
+
+
     continuePaymentButton.disabled =
         true;
 
+
     continuePaymentButton.textContent =
-        "Opening Payment...";
+        "Sending Payment Prompt...";
 
 
     paymentModal.classList.add(
         "hidden"
     );
 
+
     document.body.style.overflow =
         "";
 
 
+    showNotification(
+        "Sending Payment Prompt",
+        "We are sending a payment request to your mobile phone. Please wait.",
+        "..."
+    );
+
+
     try {
 
-        LencoPay.getPaid({
+        const response =
+            await fetch(
+                INITIATE_ENDPOINT,
+                {
+                    method:
+                        "POST",
 
-            key:
-                LENCO_PUBLIC_KEY,
+                    headers: {
+                        "Content-Type":
+                            "application/json",
 
-            reference:
-                reference,
+                        "Accept":
+                            "application/json"
+                    },
 
-            email:
-                email,
+                    body:
+                        JSON.stringify({
 
-            amount:
-                Number(product.price),
+                            reference:
+                                reference,
 
-            currency:
-                PAYMENT_CURRENCY,
+                            amount:
+                                Number(
+                                    product.price
+                                ),
 
-            channels: [
-                "card",
-                "mobile-money"
-            ],
+                            currency:
+                                PAYMENT_CURRENCY,
 
-            label:
-                product.name,
+                            email:
+                                email,
 
-            customer: {
-                phone: ""
-            },
+                            phone:
+                                normalizedPhone,
 
+                            operator:
+                                operator,
 
-            /* =====================================
-               SUCCESS CALLBACK
-            ===================================== */
+                            country:
+                                "zm"
 
-            onSuccess:
-                function (response) {
+                        }),
 
-                    const returnedReference =
-                        response &&
-                        response.reference
-                            ? response.reference
-                            : reference;
-
-
-                    currentPayment.reference =
-                        returnedReference;
-
-
-                    verifyPaymentWithRetry(
-                        returnedReference
-                    );
-
-                },
-
-
-            /* =====================================
-               PAYMENT WINDOW CLOSED
-            ===================================== */
-
-            onClose:
-                function () {
-
-                    if (
-                        paymentFinalized
-                    ) {
-                        return;
-                    }
-
-
-                    if (
-                        !currentPayment
-                    ) {
-                        resetPaymentButton();
-
-                        return;
-                    }
-
-
-                    /*
-                       Do not immediately say "failed".
-
-                       The customer may have completed
-                       payment immediately before closing
-                       the Lenco window.
-                    */
-
-                    verifyPaymentWithRetry(
-                        currentPayment.reference
-                    );
-
-                },
-
-
-            /* =====================================
-               CONFIRMATION PENDING
-            ===================================== */
-
-            onConfirmationPending:
-                function () {
-
-                    if (
-                        paymentFinalized
-                    ) {
-                        return;
-                    }
-
-
-                    showNotification(
-                        "Confirming Payment",
-                        "Your payment has been submitted. We are checking with Lenco for confirmation. Please do not pay again.",
-                        "..."
-                    );
-
-
-                    if (
-                        currentPayment
-                    ) {
-
-                        verifyPaymentWithRetry(
-                            currentPayment.reference
-                        );
-
-                    }
-
+                    cache:
+                        "no-store"
                 }
+            );
 
-        });
+
+        const result =
+            await response.json();
+
+
+        console.log(
+            "Payment initiation response:",
+            result
+        );
+
+
+        if (
+            !response.ok ||
+            !result.success
+        ) {
+
+            resetPaymentButton();
+
+
+            currentPayment =
+                null;
+
+
+            showNotification(
+                "Payment Could Not Start",
+                result.message ||
+                    "Lenco could not start the mobile-money payment.",
+                "!"
+            );
+
+
+            return;
+
+        }
+
+
+        const payment =
+            result.payment;
+
+
+        currentPayment.reference =
+            payment.reference ||
+            reference;
+
+
+        closeNotification();
+
+
+        showNotification(
+            "Approve Payment",
+            "A payment prompt has been sent to your phone. Approve the payment on your mobile phone to continue.",
+            "!"
+        );
+
+
+        beginPaymentVerification(
+            currentPayment.reference
+        );
+
 
     } catch (error) {
 
         console.error(
-            "Lenco payment error:",
+            "Payment initiation error:",
             error
         );
 
+
         resetPaymentButton();
 
+
+        currentPayment =
+            null;
+
+
         showNotification(
-            "Payment Error",
-            "We could not open the payment window. Please try again.",
+            "Connection Error",
+            "We could not connect to the payment service. Please check your internet connection and try again.",
             "!"
         );
 
@@ -804,7 +1071,7 @@ function startLencoPayment(
 
 
 /* =========================================================
-   CREATE UNIQUE PAYMENT REFERENCE
+   CREATE REFERENCE
 ========================================================= */
 
 function createPaymentReference(
@@ -814,16 +1081,15 @@ function createPaymentReference(
     const timestamp =
         Date.now();
 
+
     const randomPart =
         Math.random()
             .toString(36)
-            .substring(2, 8);
+            .substring(
+                2,
+                9
+            );
 
-
-    /*
-       Only use characters supported
-       by Lenco references.
-    */
 
     return (
         "bakulu-" +
@@ -838,25 +1104,26 @@ function createPaymentReference(
 
 
 /* =========================================================
-   VERIFY PAYMENT THROUGH OUR SERVER
+   VERIFY PAYMENT
 ========================================================= */
 
-async function verifyPaymentWithRetry(
+function beginPaymentVerification(
     reference
 ) {
 
     if (
-        paymentFinalized
+        paymentFinalized ||
+        !currentPayment ||
+        paymentVerificationRunning
     ) {
+
         return;
+
     }
 
 
-    if (
-        !currentPayment
-    ) {
-        return;
-    }
+    paymentVerificationRunning =
+        true;
 
 
     clearVerificationTimer();
@@ -866,85 +1133,124 @@ async function verifyPaymentWithRetry(
         0;
 
 
-    showPaymentCheckingMessage();
-
-
-    await checkPaymentStatus(
+    checkPaymentStatus(
         reference
     );
 
 }
 
 
-/* =========================================================
-   CHECK PAYMENT STATUS
-========================================================= */
-
 async function checkPaymentStatus(
     reference
 ) {
 
     if (
-        paymentFinalized
+        paymentFinalized ||
+        !currentPayment
     ) {
+
         return;
+
     }
 
 
     verificationAttempts++;
 
 
+    console.log(
+        "Checking payment:",
+        reference
+    );
+
+
+    console.log(
+        "Verification attempt:",
+        verificationAttempts
+    );
+
+
     try {
+
+        const url =
+            VERIFY_ENDPOINT +
+            "?reference=" +
+            encodeURIComponent(
+                reference
+            ) +
+            "&amount=" +
+            encodeURIComponent(
+                currentPayment.amount
+            ) +
+            "&currency=" +
+            encodeURIComponent(
+                currentPayment.currency
+            );
+
 
         const response =
             await fetch(
-                VERIFY_ENDPOINT +
-                "?reference=" +
-                encodeURIComponent(
-                    reference
-                ) +
-                "&amount=" +
-                encodeURIComponent(
-                    currentPayment.amount
-                ) +
-                "&currency=" +
-                encodeURIComponent(
-                    currentPayment.currency
-                ),
+                url,
                 {
-                    method: "GET",
+                    method:
+                        "GET",
 
                     headers: {
                         "Accept":
                             "application/json"
                     },
 
-                    cache: "no-store"
+                    cache:
+                        "no-store"
                 }
             );
 
 
-        let result = null;
+        const responseText =
+            await response.text();
+
+
+        console.log(
+            "Verification HTTP status:",
+            response.status
+        );
+
+
+        console.log(
+            "Verification response:",
+            responseText
+        );
+
+
+        let result =
+            null;
 
 
         try {
 
             result =
-                await response.json();
+                JSON.parse(
+                    responseText
+                );
 
         } catch {
 
-            result = null;
+            console.error(
+                "Invalid verification JSON."
+            );
 
         }
 
+
+        /* SUCCESS */
 
         if (
             response.ok &&
             result &&
             result.success === true &&
             result.payment &&
-            result.payment.status ===
+            String(
+                result.payment.status
+            ).toLowerCase() ===
                 "successful"
         ) {
 
@@ -953,35 +1259,21 @@ async function checkPaymentStatus(
             );
 
             return;
+
         }
 
 
-        /*
-           Payment is still pending.
-        */
+        /* FAILED */
 
         if (
             result &&
-            result.status ===
-                "pending"
-        ) {
+            (
+                result.status ===
+                    "failed" ||
 
-            scheduleNextVerification(
-                reference
-            );
-
-            return;
-        }
-
-
-        /*
-           Payment failed.
-        */
-
-        if (
-            result &&
-            result.status ===
-                "failed"
+                result.status ===
+                    "cancelled"
+            )
         ) {
 
             handleFailedPayment(
@@ -989,14 +1281,11 @@ async function checkPaymentStatus(
             );
 
             return;
+
         }
 
 
-        /*
-           Temporary server/API issue.
-           Retry instead of immediately
-           telling the customer they failed.
-        */
+        /* KEEP CHECKING */
 
         if (
             verificationAttempts <
@@ -1008,24 +1297,19 @@ async function checkPaymentStatus(
             );
 
             return;
+
         }
 
 
         showPaymentStillChecking();
 
-
     } catch (error) {
 
         console.error(
-            "Payment verification error:",
+            "Verification error:",
             error
         );
 
-
-        /*
-           Network problem should not
-           automatically mark payment failed.
-        */
 
         if (
             verificationAttempts <
@@ -1037,6 +1321,7 @@ async function checkPaymentStatus(
             );
 
             return;
+
         }
 
 
@@ -1048,7 +1333,7 @@ async function checkPaymentStatus(
 
 
 /* =========================================================
-   SCHEDULE ANOTHER CHECK
+   NEXT VERIFICATION
 ========================================================= */
 
 function scheduleNextVerification(
@@ -1074,7 +1359,7 @@ function scheduleNextVerification(
 
 
 /* =========================================================
-   SUCCESSFUL PAYMENT
+   SUCCESS
 ========================================================= */
 
 function finalizeSuccessfulPayment(
@@ -1082,22 +1367,21 @@ function finalizeSuccessfulPayment(
 ) {
 
     if (
-        paymentFinalized
+        paymentFinalized ||
+        !currentPayment
     ) {
-        return;
-    }
 
-
-    if (
-        !currentPayment ||
-        !currentPayment.product
-    ) {
         return;
+
     }
 
 
     paymentFinalized =
         true;
+
+
+    paymentVerificationRunning =
+        false;
 
 
     clearVerificationTimer();
@@ -1115,11 +1399,14 @@ function finalizeSuccessfulPayment(
         currentPayment.reference;
 
 
-    /*
-       Important:
-       The server has already checked
-       the actual Lenco transaction.
-    */
+    console.log(
+        "PAYMENT SUCCESSFULLY VERIFIED:",
+        payment
+    );
+
+
+    closeNotification();
+
 
     showPurchaseSummary(
         product,
@@ -1134,7 +1421,7 @@ function finalizeSuccessfulPayment(
 
 
 /* =========================================================
-   PAYMENT FAILED
+   FAILED
 ========================================================= */
 
 function handleFailedPayment(
@@ -1144,8 +1431,14 @@ function handleFailedPayment(
     if (
         paymentFinalized
     ) {
+
         return;
+
     }
+
+
+    paymentVerificationRunning =
+        false;
 
 
     clearVerificationTimer();
@@ -1154,60 +1447,36 @@ function handleFailedPayment(
     resetPaymentButton();
 
 
-    showNotification(
-        "Payment Not Completed",
-        message ||
-            "The payment was not completed. You can try again when you are ready.",
-        "!"
-    );
-
-
     currentPayment =
         null;
 
-}
 
-
-/* =========================================================
-   PAYMENT CHECKING MESSAGE
-========================================================= */
-
-function showPaymentCheckingMessage() {
-
-    /*
-       Only show this if the notification
-       isn't already open.
-    */
-
-    if (
-        notificationModal.classList.contains(
-            "hidden"
-        )
-    ) {
-
-        showNotification(
-            "Checking Payment",
-            "Please wait while we confirm your payment.",
-            "..."
-        );
-
-    }
+    showNotification(
+        "Payment Not Completed",
+        message ||
+            "The mobile-money payment was not completed.",
+        "!"
+    );
 
 }
 
 
 /* =========================================================
-   PAYMENT STILL CHECKING
+   STILL CHECKING
 ========================================================= */
 
 function showPaymentStillChecking() {
+
+    paymentVerificationRunning =
+        false;
+
 
     resetPaymentButton();
 
 
     showNotification(
-        "Payment Still Being Confirmed",
-        "We could not confirm the payment yet. Please do not pay again. Your payment may still be processing. You can refresh this page later and check your Lenco transaction.",
+        "Payment Still Processing",
+        "We have not received final confirmation yet. Please check your phone and do not submit another payment.",
         "..."
     );
 
@@ -1215,7 +1484,7 @@ function showPaymentStillChecking() {
 
 
 /* =========================================================
-   RESET PAYMENT BUTTON
+   RESET BUTTON
 ========================================================= */
 
 function resetPaymentButton() {
@@ -1223,8 +1492,9 @@ function resetPaymentButton() {
     continuePaymentButton.disabled =
         false;
 
+
     continuePaymentButton.textContent =
-        "Continue to Payment";
+        "Pay Now";
 
 }
 
@@ -1265,6 +1535,7 @@ function showPurchaseSummary(
             "summarySection"
         );
 
+
     const purchaseSummary =
         document.getElementById(
             "purchaseSummary"
@@ -1275,16 +1546,12 @@ function showPurchaseSummary(
         "";
 
 
-    /*
-       MAIN PRODUCT
-       -> Call Now
-    */
-
     if (
         product.phone
     ) {
 
         actionButton = `
+
             <div class="purchase-action">
 
                 <button
@@ -1296,21 +1563,17 @@ function showPurchaseSummary(
                 </button>
 
             </div>
+
         `;
 
     }
-
-
-    /*
-       FEATURED PRODUCT
-       -> Open Feature
-    */
 
     else if (
         product.link
     ) {
 
         actionButton = `
+
             <div class="purchase-action">
 
                 <button
@@ -1322,6 +1585,7 @@ function showPurchaseSummary(
                 </button>
 
             </div>
+
         `;
 
     }
@@ -1335,6 +1599,7 @@ function showPurchaseSummary(
                 ✓
             </div>
 
+
             <div>
 
                 <strong>
@@ -1342,7 +1607,7 @@ function showPurchaseSummary(
                 </strong>
 
                 <p>
-                    Your payment has been successfully verified.
+                    Your payment has been successfully verified by Lenco.
                 </p>
 
             </div>
@@ -1449,15 +1714,18 @@ function showPurchaseSummary(
 
 
     summarySection.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+        behavior:
+            "smooth",
+
+        block:
+            "start"
     });
 
 }
 
 
 /* =========================================================
-   CALL PRODUCT
+   CALL
 ========================================================= */
 
 function callProduct(
@@ -1471,21 +1739,20 @@ function callProduct(
 
 
 /* =========================================================
-   OPEN FEATURE
+   FEATURE LINK
 ========================================================= */
 
 function openProductLink(
     link
 ) {
 
-    /*
-       Only allow http/https links.
-    */
-
     try {
 
         const url =
-            new URL(link);
+            new URL(
+                link
+            );
+
 
         if (
             url.protocol !==
@@ -1494,7 +1761,9 @@ function openProductLink(
                 "http:"
         ) {
 
-            return;
+            throw new Error(
+                "Invalid URL"
+            );
 
         }
 
@@ -1524,11 +1793,15 @@ function formatAmount(
 ) {
 
     const number =
-        Number(amount);
+        Number(
+            amount
+        );
 
 
     if (
-        Number.isNaN(number)
+        Number.isNaN(
+            number
+        )
     ) {
 
         return "0";
@@ -1547,30 +1820,37 @@ function formatAmount(
 
 
 /* =========================================================
-   BASIC HTML ESCAPE
+   ESCAPE HTML
 ========================================================= */
 
 function escapeHtml(
     value
 ) {
 
-    return String(value)
+    return String(
+        value
+    )
+
         .replace(
             /&/g,
             "&amp;"
         )
+
         .replace(
             /</g,
             "&lt;"
         )
+
         .replace(
             />/g,
             "&gt;"
         )
+
         .replace(
             /"/g,
             "&quot;"
         )
+
         .replace(
             /'/g,
             "&#039;"
@@ -1591,7 +1871,9 @@ document.addEventListener(
             event.key !==
             "Escape"
         ) {
+
             return;
+
         }
 
 

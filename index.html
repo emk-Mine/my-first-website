@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,7 +12,7 @@
 
     <meta
         name="description"
-        content="Bakulu — discover and access available products and trending videos."
+        content="Bakulu - discover available products and featured content."
     >
 
     <title>Bakulu</title>
@@ -20,324 +21,386 @@
         rel="stylesheet"
         href="style.css"
     >
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="logo">
+    <div class="logo">
+        BAKULU
+    </div>
+
+
+    <nav class="navbar-links">
+
+        <a href="#videos">
+            Videos
+        </a>
+
+        <a href="#ladies">
+            Ladies
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<section
+    id="ladies"
+    class="products-section"
+>
+
+
+    <div class="section-heading">
+
+        <p class="small-title">
             BAKULU
-        </div>
+        </p>
 
-        <nav class="navbar-links">
-            <a href="#videos">Videos</a>
-            <a href="#ladies">Ladies</a>
-        </nav>
+        <h1>
+            Available Now
+        </h1>
 
-    </header>
-
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
-
-    <main>
-
-        <!-- AVAILABLE PRODUCTS -->
-
-        <section
-            id="ladies"
-            class="products-section"
-        >
-
-            <div class="section-heading">
-
-
-                <h1>
-                    Available Now
-                </h1>
-
-                <p class="section-description">
-                    Browse the latest available products.
-                </p>
-
-            </div>
-
-
-            <!-- MAIN PRODUCT CARDS -->
-
-            <div
-                id="productContainer"
-                class="product-row"
-            ></div>
-
-
-            <!-- =========================
-                 TRENDING VIDEOS
-            ========================== -->
-
-            <div
-                id="videos"
-                class="section-heading second-row-heading"
-            >
-
-                <h2>
-                    TrendingVideos / Groups
-                </h2>
-
-                <p class="section-description">
-                    Explore our featured content.
-                </p>
-
-            </div>
-
-
-            <!-- FEATURED PRODUCT CARDS -->
-
-            <div
-                id="featuredProductContainer"
-                class="product-row featured-row"
-            ></div>
-
-        </section>
-
-
-        <!-- =========================
-             PURCHASE SUMMARY
-        ========================== -->
-
-        <section
-            id="summarySection"
-            class="summary-section hidden"
-        >
-
-            <div class="summary-card">
-
-                <p class="small-title">
-                    PAYMENT CONFIRMED
-                </p>
-
-                <h2>
-                    Purchase Summary
-                </h2>
-
-                <div id="purchaseSummary"></div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         IMAGE PREVIEW
-    ========================== -->
-
-    <div
-        id="imagePreview"
-        class="image-preview hidden"
-    >
-
-        <div class="preview-content">
-
-            <button
-                type="button"
-                id="closePreview"
-                class="close-preview"
-                aria-label="Close image preview"
-            >
-                ×
-            </button>
-
-            <img
-                id="previewImage"
-                src=""
-                alt="Product preview"
-            >
-
-        </div>
+        <p class="section-description">
+            Browse the latest available products.
+        </p>
 
     </div>
 
 
-    <!-- =========================
-         PAYMENT DETAILS MODAL
-    ========================== -->
+    <div
+        id="productContainer"
+        class="product-row"
+    ></div>
+
+
 
     <div
-        id="paymentModal"
-        class="payment-modal hidden"
+        id="videos"
+        class="section-heading second-row-heading"
     >
 
+        <p class="small-title">
+            TRENDING
+        </p>
+
+        <h2>
+            Videos
+        </h2>
+
+        <p class="section-description">
+            Explore our featured content.
+        </p>
+
+    </div>
+
+
+    <div
+        id="featuredProductContainer"
+        class="product-row featured-row"
+    ></div>
+
+
+</section>
+
+
+
+<section
+    id="summarySection"
+    class="summary-section hidden"
+>
+
+    <div class="summary-card">
+
+        <p class="small-title">
+            PAYMENT CONFIRMED
+        </p>
+
+        <h2>
+            Purchase Summary
+        </h2>
+
         <div
-            class="payment-card"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="paymentTitle"
+            id="purchaseSummary"
+        ></div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- IMAGE PREVIEW -->
+
+<div
+    id="imagePreview"
+    class="image-preview hidden"
+>
+
+    <div class="preview-content">
+
+        <button
+            type="button"
+            id="closePreview"
+            class="close-preview"
+            aria-label="Close image preview"
+        >
+            ×
+        </button>
+
+
+        <img
+            id="previewImage"
+            src=""
+            alt="Product preview"
         >
 
-            <button
-                type="button"
-                id="closePaymentModal"
-                class="modal-close"
-                aria-label="Close payment window"
-            >
-                ×
-            </button>
+    </div>
+
+</div>
 
 
-            <p class="small-title">
-                CHECKOUT
-            </p>
+
+<!-- PAYMENT MODAL -->
+
+<div
+    id="paymentModal"
+    class="payment-modal hidden"
+>
+
+    <div
+        class="payment-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="paymentTitle"
+    >
 
 
-            <h2 id="paymentTitle">
-                Payment Details
-            </h2>
+        <button
+            type="button"
+            id="closePaymentModal"
+            class="modal-close"
+            aria-label="Close payment window"
+        >
+            ×
+        </button>
 
 
-            <p class="payment-subtitle">
-                Enter your email before continuing to secure payment.
-            </p>
+
+        <p class="small-title">
+            CHECKOUT
+        </p>
 
 
-            <!-- SELECTED PRODUCT -->
-
-            <div class="checkout-product">
-
-                <div class="checkout-product-info">
-
-                    <span class="checkout-label">
-                        Product
-                    </span>
-
-                    <strong id="checkoutProductName">
-                        Product
-                    </strong>
-
-                </div>
+        <h2 id="paymentTitle">
+            Payment Details
+        </h2>
 
 
-                <strong id="checkoutProductPrice">
-                    K0
+        <p class="payment-subtitle">
+            Enter your details to receive the payment prompt.
+        </p>
+
+
+
+        <!-- PRODUCT -->
+
+        <div class="checkout-product">
+
+            <div class="checkout-product-info">
+
+                <span class="checkout-label">
+                    Product
+                </span>
+
+                <strong id="checkoutProductName">
+                    Product
                 </strong>
 
             </div>
 
 
-            <!-- EMAIL -->
-
-            <div class="form-group">
-
-                <label for="customerEmail">
-                    Email address
-                </label>
-
-                <input
-                    type="email"
-                    id="customerEmail"
-                    placeholder="you@example.com"
-                    autocomplete="email"
-                >
-
-                <small>
-                    Your email is used for the payment transaction.
-                </small>
-
-            </div>
-
-
-            <!-- CONTINUE -->
-
-            <button
-                type="button"
-                id="continuePaymentButton"
-                class="continue-payment-button"
-            >
-                Continue to Payment
-            </button>
-
-
-            <!-- CANCEL -->
-
-            <button
-                type="button"
-                id="cancelPaymentButton"
-                class="cancel-payment-button"
-            >
-                Cancel
-            </button>
+            <strong id="checkoutProductPrice">
+                K0
+            </strong>
 
         </div>
 
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="customerEmail">
+                Email address
+            </label>
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+            >
+
+            <small>
+                Enter your email address.
+            </small>
+
+        </div>
+
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+            <label for="customerPhone">
+                Mobile Money Number
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="0971234567"
+                autocomplete="tel"
+                inputmode="tel"
+            >
+
+            <small>
+                Enter the phone number registered for mobile money.
+            </small>
+
+        </div>
+
+
+
+        <!-- NETWORK -->
+
+        <div class="form-group">
+
+            <label for="mobileMoneyOperator">
+                Mobile Money Network
+            </label>
+
+            <select
+                id="mobileMoneyOperator"
+            >
+
+                <option value="">
+                    Select network
+                </option>
+
+                <option value="mtn">
+                    MTN
+                </option>
+
+                <option value="airtel">
+                    Airtel
+                </option>
+
+                <option value="zamtel">
+                    Zamtel
+                </option>
+
+            </select>
+
+            <small>
+                Select the network connected to the number.
+            </small>
+
+        </div>
+
+
+
+        <!-- PAY BUTTON -->
+
+        <button
+            type="button"
+            id="continuePaymentButton"
+            class="continue-payment-button"
+        >
+            Pay Now
+        </button>
+
+
+
+        <button
+            type="button"
+            id="cancelPaymentButton"
+            class="cancel-payment-button"
+        >
+            Cancel
+        </button>
+
+
     </div>
 
+</div>
 
-    <!-- =========================
-         WEBSITE NOTIFICATION
-    ========================== -->
+
+
+<!-- NOTIFICATION -->
+
+<div
+    id="notificationModal"
+    class="notification-modal hidden"
+>
 
     <div
-        id="notificationModal"
-        class="notification-modal hidden"
+        class="notification-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="notificationTitle"
     >
 
+
         <div
-            class="notification-card"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="notificationTitle"
+            id="notificationIcon"
+            class="notification-icon"
         >
-
-            <div
-                id="notificationIcon"
-                class="notification-icon"
-            >
-                !
-            </div>
-
-
-            <h2 id="notificationTitle">
-                Notice
-            </h2>
-
-
-            <p id="notificationMessage">
-                Please try again.
-            </p>
-
-
-            <button
-                type="button"
-                id="notificationButton"
-                class="notification-button"
-            >
-                Continue
-            </button>
-
+            !
         </div>
+
+
+        <h2 id="notificationTitle">
+            Notice
+        </h2>
+
+
+        <p id="notificationMessage">
+            Please try again.
+        </p>
+
+
+        <button
+            type="button"
+            id="notificationButton"
+            class="notification-button"
+        >
+            Continue
+        </button>
+
 
     </div>
 
-
-    <!-- =========================
-         LENCO PAYMENT
-    ========================== -->
-
-    <script src="https://pay.lenco.co/js/v1/inline.js"></script>
+</div>
 
 
-    <!-- =========================
-         BAKULU JAVASCRIPT
-    ========================== -->
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 
