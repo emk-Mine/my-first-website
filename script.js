@@ -585,7 +585,7 @@ function startLencoPayment(
     LencoPay.getPaid({
 
         key:
-            "pub-4387d952b76bff4bba2d7561e2a161229c5c73e6ad72ffd3",
+            "pub-0208070bff2479b634c9f91f8ef7e1f306758ee44ee5b278",
 
 
         reference:
