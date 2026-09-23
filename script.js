@@ -6,11 +6,11 @@ const products = [
     {
         productNumber: "001",
         name: "Product One",
-        price: 10,
+        price: 5,
         description: "This is the description of product one.",
         image: "images/product1.jpg",
         location: "Lusaka",
-        phone: "+260XXXXXXXXX"
+        phone: "+260774907636"
     },
 
     {
@@ -43,10 +43,10 @@ const featuredProducts = [
     {
         productNumber: "101",
         name: "Featured One",
-        price: 15,
+        price: 5,
         image: "images/product4.jpg",
         location: "Lusaka",
-        link: "https://example.com/featured-one"
+        link: "https://gigzm.org"
     },
 
     {
