@@ -10,7 +10,6 @@
 ========================================================= */
 
 const products = [
-
     {
         productNumber: "001",
         name: "Product One",
@@ -40,12 +39,10 @@ const products = [
         location: "Ndola",
         phone: "+260XXXXXXXXX"
     }
-
 ];
 
 
 const featuredProducts = [
-
     {
         productNumber: "101",
         name: "Featured One",
@@ -81,7 +78,6 @@ const featuredProducts = [
         location: "Kitwe",
         link: "https://example.com/featured-four"
     }
-
 ];
 
 
@@ -89,20 +85,15 @@ const featuredProducts = [
    SETTINGS
 ========================================================= */
 
-const INITIATE_ENDPOINT =
-    "/api/initiate-payment";
+const INITIATE_ENDPOINT = "/api/initiate-payment";
 
-const VERIFY_ENDPOINT =
-    "/api/verify-payment";
+const VERIFY_ENDPOINT = "/api/verify-payment";
 
-const PAYMENT_CURRENCY =
-    "ZMW";
+const PAYMENT_CURRENCY = "ZMW";
 
-const VERIFICATION_INTERVAL =
-    3000;
+const VERIFICATION_INTERVAL = 3000;
 
-const MAX_VERIFICATION_ATTEMPTS =
-    40;
+const MAX_VERIFICATION_ATTEMPTS = 40;
 
 
 /* =========================================================
@@ -127,283 +118,208 @@ let paymentVerificationRunning = false;
 ========================================================= */
 
 const productContainer =
-    document.getElementById(
-        "productContainer"
-    );
+    document.getElementById("productContainer");
 
 const featuredProductContainer =
-    document.getElementById(
-        "featuredProductContainer"
-    );
+    document.getElementById("featuredProductContainer");
 
 const paymentModal =
-    document.getElementById(
-        "paymentModal"
-    );
+    document.getElementById("paymentModal");
 
 const customerEmail =
-    document.getElementById(
-        "customerEmail"
-    );
+    document.getElementById("customerEmail");
 
 const customerPhone =
-    document.getElementById(
-        "customerPhone"
-    );
+    document.getElementById("customerPhone");
 
 const mobileMoneyOperator =
-    document.getElementById(
-        "mobileMoneyOperator"
-    );
+    document.getElementById("mobileMoneyOperator");
 
 const checkoutProductName =
-    document.getElementById(
-        "checkoutProductName"
-    );
+    document.getElementById("checkoutProductName");
 
 const checkoutProductPrice =
-    document.getElementById(
-        "checkoutProductPrice"
-    );
+    document.getElementById("checkoutProductPrice");
 
 const continuePaymentButton =
-    document.getElementById(
-        "continuePaymentButton"
-    );
+    document.getElementById("continuePaymentButton");
 
 const notificationModal =
-    document.getElementById(
-        "notificationModal"
-    );
+    document.getElementById("notificationModal");
 
 const notificationIcon =
-    document.getElementById(
-        "notificationIcon"
-    );
+    document.getElementById("notificationIcon");
 
 const notificationTitle =
-    document.getElementById(
-        "notificationTitle"
-    );
+    document.getElementById("notificationTitle");
 
 const notificationMessage =
-    document.getElementById(
-        "notificationMessage"
-    );
+    document.getElementById("notificationMessage");
 
 const notificationButton =
-    document.getElementById(
-        "notificationButton"
-    );
+    document.getElementById("notificationButton");
+
+const summarySection =
+    document.getElementById("summarySection");
 
 
 /* =========================================================
    RENDER PRODUCTS
 ========================================================= */
 
-products.forEach(
-    function (product, index) {
+products.forEach(function (product, index) {
 
-        const card =
-            document.createElement(
-                "div"
-            );
+    const card = document.createElement("div");
 
-        card.className =
-            "product-card";
+    card.className = "product-card";
 
-        card.innerHTML = `
+    card.innerHTML = `
+        <div
+            class="product-image-container"
+            onclick="previewImage(
+                '${product.image}',
+                '${escapeHtml(product.name)}'
+            )"
+        >
 
-            <div
-                class="product-image-container"
-                onclick="previewImage(
-                    '${product.image}',
-                    '${escapeHtml(product.name)}'
-                )"
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${escapeHtml(product.name)}"
+                loading="lazy"
             >
 
-                <img
-                    class="product-image"
-                    src="${product.image}"
-                    alt="${escapeHtml(product.name)}"
-                    loading="lazy"
-                >
+        </div>
 
+        <div class="product-info">
+
+            <div class="product-number">
+                PRODUCT ${product.productNumber}
             </div>
 
+            <h3 class="product-name">
+                ${escapeHtml(product.name)}
+            </h3>
 
-            <div class="product-info">
+            <p class="product-description">
+                ${escapeHtml(product.description)}
+            </p>
 
-                <div class="product-number">
-                    PRODUCT ${product.productNumber}
-                </div>
-
-
-                <h3 class="product-name">
-                    ${escapeHtml(product.name)}
-                </h3>
-
-
-                <p class="product-description">
-                    ${escapeHtml(product.description)}
-                </p>
-
-
-                <div class="product-price">
-                    K${formatAmount(product.price)}
-                </div>
-
-
-                <button
-                    class="product-button"
-                    type="button"
-                    onclick="openPaymentModal(
-                        products[${index}]
-                    )"
-                >
-                    Purchase
-                </button>
-
+            <div class="product-price">
+                K${formatAmount(product.price)}
             </div>
 
-        `;
+            <button
+                class="product-button"
+                type="button"
+                onclick="openPaymentModal(
+                    products[${index}]
+                )"
+            >
+                Purchase
+            </button>
 
-        productContainer.appendChild(
-            card
-        );
+        </div>
+    `;
 
-    }
-);
+    productContainer.appendChild(card);
+});
 
 
 /* =========================================================
    RENDER FEATURED PRODUCTS
 ========================================================= */
 
-featuredProducts.forEach(
-    function (product, index) {
+featuredProducts.forEach(function (product, index) {
 
-        const card =
-            document.createElement(
-                "div"
-            );
+    const card = document.createElement("div");
 
-        card.className =
-            "product-card";
+    card.className = "product-card";
 
-        card.innerHTML = `
+    card.innerHTML = `
+        <div
+            class="product-image-container"
+            onclick="previewImage(
+                '${product.image}',
+                '${escapeHtml(product.name)}'
+            )"
+        >
 
-            <div
-                class="product-image-container"
-                onclick="previewImage(
-                    '${product.image}',
-                    '${escapeHtml(product.name)}'
-                )"
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${escapeHtml(product.name)}"
+                loading="lazy"
             >
 
-                <img
-                    class="product-image"
-                    src="${product.image}"
-                    alt="${escapeHtml(product.name)}"
-                    loading="lazy"
-                >
+        </div>
 
+        <div class="product-info">
+
+            <div class="product-number">
+                FEATURED ${product.productNumber}
             </div>
 
+            <h3 class="product-name">
+                ${escapeHtml(product.name)}
+            </h3>
 
-            <div class="product-info">
-
-                <div class="product-number">
-                    FEATURED ${product.productNumber}
-                </div>
-
-
-                <h3 class="product-name">
-                    ${escapeHtml(product.name)}
-                </h3>
-
-
-                <div class="product-price">
-                    K${formatAmount(product.price)}
-                </div>
-
-
-                <button
-                    class="product-button"
-                    type="button"
-                    onclick="openPaymentModal(
-                        featuredProducts[${index}]
-                    )"
-                >
-                    Purchase
-                </button>
-
+            <div class="product-price">
+                K${formatAmount(product.price)}
             </div>
 
-        `;
+            <button
+                class="product-button"
+                type="button"
+                onclick="openPaymentModal(
+                    featuredProducts[${index}]
+                )"
+            >
+                Purchase
+            </button>
 
-        featuredProductContainer.appendChild(
-            card
-        );
+        </div>
+    `;
 
-    }
-);
+    featuredProductContainer.appendChild(card);
+});
 
 
 /* =========================================================
    IMAGE PREVIEW
 ========================================================= */
 
-function previewImage(
-    image,
-    name
-) {
+function previewImage(image, name) {
 
     const preview =
-        document.getElementById(
-            "imagePreview"
-        );
+        document.getElementById("imagePreview");
 
     const previewImageElement =
-        document.getElementById(
-            "previewImage"
-        );
+        document.getElementById("previewImage");
 
-    previewImageElement.src =
-        image;
+    previewImageElement.src = image;
 
-    previewImageElement.alt =
-        name;
+    previewImageElement.alt = name;
 
-    preview.classList.remove(
-        "hidden"
-    );
+    preview.classList.remove("hidden");
 
-    document.body.style.overflow =
-        "hidden";
+    document.body.style.overflow = "hidden";
 }
 
 
 function closeImagePreview() {
 
     const preview =
-        document.getElementById(
-            "imagePreview"
-        );
+        document.getElementById("imagePreview");
 
-    preview.classList.add(
-        "hidden"
-    );
+    preview.classList.add("hidden");
 
-    document.body.style.overflow =
-        "";
+    restoreBodyScroll();
 }
 
 
 document
-    .getElementById(
-        "closePreview"
-    )
+    .getElementById("closePreview")
     .addEventListener(
         "click",
         closeImagePreview
@@ -411,20 +327,13 @@ document
 
 
 document
-    .getElementById(
-        "imagePreview"
-    )
+    .getElementById("imagePreview")
     .addEventListener(
         "click",
         function (event) {
 
-            if (
-                event.target ===
-                this
-            ) {
-
+            if (event.target === this) {
                 closeImagePreview();
-
             }
 
         }
@@ -435,9 +344,7 @@ document
    OPEN PAYMENT MODAL
 ========================================================= */
 
-function openPaymentModal(
-    product
-) {
+function openPaymentModal(product) {
 
     if (!product) {
 
@@ -451,61 +358,41 @@ function openPaymentModal(
     }
 
 
-    selectedProduct =
-        product;
+    selectedProduct = product;
 
-
-    paymentFinalized =
-        false;
+    paymentFinalized = false;
 
 
     checkoutProductName.textContent =
         product.name;
 
-
     checkoutProductPrice.textContent =
-        "K" +
-        formatAmount(
-            product.price
-        );
+        "K" + formatAmount(product.price);
 
 
-    customerEmail.value =
-        "";
+    customerEmail.value = "";
 
-    customerPhone.value =
-        "";
+    customerPhone.value = "";
 
-    mobileMoneyOperator.value =
-        "";
+    mobileMoneyOperator.value = "";
 
 
-    continuePaymentButton.disabled =
-        false;
-
+    continuePaymentButton.disabled = false;
 
     continuePaymentButton.textContent =
         "Pay Now";
 
 
-    paymentModal.classList.remove(
-        "hidden"
-    );
+    paymentModal.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
 
 
-    document.body.style.overflow =
-        "hidden";
+    setTimeout(function () {
 
+        customerEmail.focus();
 
-    setTimeout(
-        function () {
-
-            customerEmail.focus();
-
-        },
-        100
-    );
-
+    }, 100);
 }
 
 
@@ -515,32 +402,22 @@ function openPaymentModal(
 
 function closePaymentModal() {
 
-    paymentModal.classList.add(
-        "hidden"
-    );
+    paymentModal.classList.add("hidden");
 
-    document.body.style.overflow =
-        "";
+    selectedProduct = null;
 
-    selectedProduct =
-        null;
+    customerEmail.value = "";
 
-    customerEmail.value =
-        "";
+    customerPhone.value = "";
 
-    customerPhone.value =
-        "";
+    mobileMoneyOperator.value = "";
 
-    mobileMoneyOperator.value =
-        "";
-
+    restoreBodyScroll();
 }
 
 
 document
-    .getElementById(
-        "closePaymentModal"
-    )
+    .getElementById("closePaymentModal")
     .addEventListener(
         "click",
         closePaymentModal
@@ -548,9 +425,7 @@ document
 
 
 document
-    .getElementById(
-        "cancelPaymentButton"
-    )
+    .getElementById("cancelPaymentButton")
     .addEventListener(
         "click",
         closePaymentModal
@@ -561,13 +436,8 @@ paymentModal.addEventListener(
     "click",
     function (event) {
 
-        if (
-            event.target ===
-            paymentModal
-        ) {
-
+        if (event.target === paymentModal) {
             closePaymentModal();
-
         }
 
     }
@@ -598,10 +468,8 @@ function showNotification(
         "hidden"
     );
 
-
     document.body.style.overflow =
         "hidden";
-
 }
 
 
@@ -611,9 +479,7 @@ function closeNotification() {
         "hidden"
     );
 
-    document.body.style.overflow =
-        "";
-
+    restoreBodyScroll();
 }
 
 
@@ -663,10 +529,8 @@ continuePaymentButton.addEventListener(
         const email =
             customerEmail.value.trim();
 
-
         const phone =
             customerPhone.value.trim();
-
 
         const operator =
             mobileMoneyOperator.value;
@@ -688,11 +552,7 @@ continuePaymentButton.addEventListener(
         }
 
 
-        if (
-            !isValidEmail(
-                email
-            )
-        ) {
+        if (!isValidEmail(email)) {
 
             showNotification(
                 "Invalid Email",
@@ -722,11 +582,7 @@ continuePaymentButton.addEventListener(
         }
 
 
-        if (
-            !isValidZambianPhone(
-                phone
-            )
-        ) {
+        if (!isValidZambianPhone(phone)) {
 
             showNotification(
                 "Invalid Phone Number",
@@ -771,13 +627,9 @@ continuePaymentButton.addEventListener(
    EMAIL VALIDATION
 ========================================================= */
 
-function isValidEmail(
-    email
-) {
+function isValidEmail(email) {
 
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        .test(email);
-
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 
@@ -785,69 +637,38 @@ function isValidEmail(
    ZAMBIAN PHONE VALIDATION
 ========================================================= */
 
-function normalizeZambianPhone(
-    phone
-) {
+function normalizeZambianPhone(phone) {
 
     let cleaned =
         String(phone)
-            .replace(
-                /\s+/g,
-                ""
-            )
-            .replace(
-                /-/g,
-                ""
-            );
+            .replace(/\s+/g, "")
+            .replace(/-/g, "");
 
 
-    if (
-        cleaned.startsWith(
-            "+260"
-        )
-    ) {
+    if (cleaned.startsWith("+260")) {
 
-        return "0" +
-            cleaned.substring(
-                4
-            );
+        return "0" + cleaned.substring(4);
 
     }
 
 
-    if (
-        cleaned.startsWith(
-            "260"
-        )
-    ) {
+    if (cleaned.startsWith("260")) {
 
-        return "0" +
-            cleaned.substring(
-                3
-            );
+        return "0" + cleaned.substring(3);
 
     }
 
 
     return cleaned;
-
 }
 
 
-function isValidZambianPhone(
-    phone
-) {
+function isValidZambianPhone(phone) {
 
     const normalized =
-        normalizeZambianPhone(
-            phone
-        );
+        normalizeZambianPhone(phone);
 
-
-    return /^0\d{9}$/.test(
-        normalized
-    );
-
+    return /^0\d{9}$/.test(normalized);
 }
 
 
@@ -863,68 +684,46 @@ async function startMobileMoneyPayment(
 ) {
 
     const normalizedPhone =
-        normalizeZambianPhone(
-            phone
-        );
+        normalizeZambianPhone(phone);
 
 
     const reference =
-        createPaymentReference(
-            product
-        );
+        createPaymentReference(product);
 
 
     currentPayment = {
 
-        reference:
-            reference,
+        reference: reference,
 
-        product:
-            product,
+        product: product,
 
-        email:
-            email,
+        email: email,
 
-        phone:
-            normalizedPhone,
+        phone: normalizedPhone,
 
-        operator:
-            operator,
+        operator: operator,
 
-        amount:
-            Number(
-                product.price
-            ),
+        amount: Number(product.price),
 
-        currency:
-            PAYMENT_CURRENCY
+        currency: PAYMENT_CURRENCY
 
     };
 
 
-    paymentFinalized =
-        false;
+    paymentFinalized = false;
+
+    paymentVerificationRunning = false;
 
 
-    paymentVerificationRunning =
-        false;
-
-
-    continuePaymentButton.disabled =
-        true;
-
+    continuePaymentButton.disabled = true;
 
     continuePaymentButton.textContent =
         "Sending Payment Prompt...";
 
 
-    paymentModal.classList.add(
-        "hidden"
-    );
+    paymentModal.classList.add("hidden");
 
-
-    document.body.style.overflow =
-        "";
+    restoreBodyScroll();
 
 
     showNotification(
@@ -940,8 +739,8 @@ async function startMobileMoneyPayment(
             await fetch(
                 INITIATE_ENDPOINT,
                 {
-                    method:
-                        "POST",
+
+                    method: "POST",
 
                     headers: {
                         "Content-Type":
@@ -951,36 +750,29 @@ async function startMobileMoneyPayment(
                             "application/json"
                     },
 
-                    body:
-                        JSON.stringify({
+                    body: JSON.stringify({
 
-                            reference:
-                                reference,
+                        reference: reference,
 
-                            amount:
-                                Number(
-                                    product.price
-                                ),
+                        amount:
+                            Number(product.price),
 
-                            currency:
-                                PAYMENT_CURRENCY,
+                        currency:
+                            PAYMENT_CURRENCY,
 
-                            email:
-                                email,
+                        email: email,
 
-                            phone:
-                                normalizedPhone,
+                        phone:
+                            normalizedPhone,
 
-                            operator:
-                                operator,
+                        operator: operator,
 
-                            country:
-                                "zm"
+                        country: "zm"
 
-                        }),
+                    }),
 
-                    cache:
-                        "no-store"
+                    cache: "no-store"
+
                 }
             );
 
@@ -1002,9 +794,7 @@ async function startMobileMoneyPayment(
 
             resetPaymentButton();
 
-
-            currentPayment =
-                null;
+            currentPayment = null;
 
 
             showNotification(
@@ -1014,9 +804,7 @@ async function startMobileMoneyPayment(
                 "!"
             );
 
-
             return;
-
         }
 
 
@@ -1043,7 +831,6 @@ async function startMobileMoneyPayment(
             currentPayment.reference
         );
 
-
     } catch (error) {
 
         console.error(
@@ -1054,9 +841,7 @@ async function startMobileMoneyPayment(
 
         resetPaymentButton();
 
-
-        currentPayment =
-            null;
+        currentPayment = null;
 
 
         showNotification(
@@ -1064,9 +849,7 @@ async function startMobileMoneyPayment(
             "We could not connect to the payment service. Please check your internet connection and try again.",
             "!"
         );
-
     }
-
 }
 
 
@@ -1074,9 +857,7 @@ async function startMobileMoneyPayment(
    CREATE REFERENCE
 ========================================================= */
 
-function createPaymentReference(
-    product
-) {
+function createPaymentReference(product) {
 
     const timestamp =
         Date.now();
@@ -1085,10 +866,7 @@ function createPaymentReference(
     const randomPart =
         Math.random()
             .toString(36)
-            .substring(
-                2,
-                9
-            );
+            .substring(2, 9);
 
 
     return (
@@ -1099,7 +877,6 @@ function createPaymentReference(
         "-" +
         randomPart
     );
-
 }
 
 
@@ -1107,9 +884,7 @@ function createPaymentReference(
    VERIFY PAYMENT
 ========================================================= */
 
-function beginPaymentVerification(
-    reference
-) {
+function beginPaymentVerification(reference) {
 
     if (
         paymentFinalized ||
@@ -1118,31 +893,21 @@ function beginPaymentVerification(
     ) {
 
         return;
-
     }
 
 
-    paymentVerificationRunning =
-        true;
-
+    paymentVerificationRunning = true;
 
     clearVerificationTimer();
 
-
-    verificationAttempts =
-        0;
+    verificationAttempts = 0;
 
 
-    checkPaymentStatus(
-        reference
-    );
-
+    checkPaymentStatus(reference);
 }
 
 
-async function checkPaymentStatus(
-    reference
-) {
+async function checkPaymentStatus(reference) {
 
     if (
         paymentFinalized ||
@@ -1150,7 +915,6 @@ async function checkPaymentStatus(
     ) {
 
         return;
-
     }
 
 
@@ -1174,9 +938,7 @@ async function checkPaymentStatus(
         const url =
             VERIFY_ENDPOINT +
             "?reference=" +
-            encodeURIComponent(
-                reference
-            ) +
+            encodeURIComponent(reference) +
             "&amount=" +
             encodeURIComponent(
                 currentPayment.amount
@@ -1191,16 +953,16 @@ async function checkPaymentStatus(
             await fetch(
                 url,
                 {
-                    method:
-                        "GET",
+
+                    method: "GET",
 
                     headers: {
                         "Accept":
                             "application/json"
                     },
 
-                    cache:
-                        "no-store"
+                    cache: "no-store"
+
                 }
             );
 
@@ -1221,16 +983,13 @@ async function checkPaymentStatus(
         );
 
 
-        let result =
-            null;
+        let result = null;
 
 
         try {
 
             result =
-                JSON.parse(
-                    responseText
-                );
+                JSON.parse(responseText);
 
         } catch {
 
@@ -1259,7 +1018,6 @@ async function checkPaymentStatus(
             );
 
             return;
-
         }
 
 
@@ -1268,11 +1026,8 @@ async function checkPaymentStatus(
         if (
             result &&
             (
-                result.status ===
-                    "failed" ||
-
-                result.status ===
-                    "cancelled"
+                result.status === "failed" ||
+                result.status === "cancelled"
             )
         ) {
 
@@ -1281,7 +1036,6 @@ async function checkPaymentStatus(
             );
 
             return;
-
         }
 
 
@@ -1297,7 +1051,6 @@ async function checkPaymentStatus(
             );
 
             return;
-
         }
 
 
@@ -1321,14 +1074,11 @@ async function checkPaymentStatus(
             );
 
             return;
-
         }
 
 
         showPaymentStillChecking();
-
     }
-
 }
 
 
@@ -1336,9 +1086,7 @@ async function checkPaymentStatus(
    NEXT VERIFICATION
 ========================================================= */
 
-function scheduleNextVerification(
-    reference
-) {
+function scheduleNextVerification(reference) {
 
     clearVerificationTimer();
 
@@ -1354,7 +1102,6 @@ function scheduleNextVerification(
             },
             VERIFICATION_INTERVAL
         );
-
 }
 
 
@@ -1362,9 +1109,7 @@ function scheduleNextVerification(
    SUCCESS
 ========================================================= */
 
-function finalizeSuccessfulPayment(
-    payment
-) {
+function finalizeSuccessfulPayment(payment) {
 
     if (
         paymentFinalized ||
@@ -1372,20 +1117,14 @@ function finalizeSuccessfulPayment(
     ) {
 
         return;
-
     }
 
 
-    paymentFinalized =
-        true;
+    paymentFinalized = true;
 
-
-    paymentVerificationRunning =
-        false;
-
+    paymentVerificationRunning = false;
 
     clearVerificationTimer();
-
 
     resetPaymentButton();
 
@@ -1414,9 +1153,7 @@ function finalizeSuccessfulPayment(
     );
 
 
-    currentPayment =
-        null;
-
+    currentPayment = null;
 }
 
 
@@ -1424,31 +1161,20 @@ function finalizeSuccessfulPayment(
    FAILED
 ========================================================= */
 
-function handleFailedPayment(
-    message
-) {
+function handleFailedPayment(message) {
 
-    if (
-        paymentFinalized
-    ) {
-
+    if (paymentFinalized) {
         return;
-
     }
 
 
-    paymentVerificationRunning =
-        false;
-
+    paymentVerificationRunning = false;
 
     clearVerificationTimer();
 
-
     resetPaymentButton();
 
-
-    currentPayment =
-        null;
+    currentPayment = null;
 
 
     showNotification(
@@ -1457,7 +1183,6 @@ function handleFailedPayment(
             "The mobile-money payment was not completed.",
         "!"
     );
-
 }
 
 
@@ -1467,9 +1192,7 @@ function handleFailedPayment(
 
 function showPaymentStillChecking() {
 
-    paymentVerificationRunning =
-        false;
-
+    paymentVerificationRunning = false;
 
     resetPaymentButton();
 
@@ -1479,7 +1202,6 @@ function showPaymentStillChecking() {
         "We have not received final confirmation yet. Please check your phone and do not submit another payment.",
         "..."
     );
-
 }
 
 
@@ -1489,13 +1211,10 @@ function showPaymentStillChecking() {
 
 function resetPaymentButton() {
 
-    continuePaymentButton.disabled =
-        false;
-
+    continuePaymentButton.disabled = false;
 
     continuePaymentButton.textContent =
         "Pay Now";
-
 }
 
 
@@ -1505,24 +1224,20 @@ function resetPaymentButton() {
 
 function clearVerificationTimer() {
 
-    if (
-        verificationTimer
-    ) {
+    if (verificationTimer) {
 
         clearTimeout(
             verificationTimer
         );
 
-        verificationTimer =
-            null;
-
+        verificationTimer = null;
     }
-
 }
 
 
 /* =========================================================
    PURCHASE SUMMARY
+   FINAL POPUP
 ========================================================= */
 
 function showPurchaseSummary(
@@ -1542,16 +1257,66 @@ function showPurchaseSummary(
         );
 
 
-    let actionButton =
-        "";
+    /* -----------------------------------------------------
+       CREATE CLOSE BUTTON IF IT DOES NOT EXIST
+    ----------------------------------------------------- */
+
+    let closeButton =
+        summarySection.querySelector(
+            ".summary-close"
+        );
 
 
-    if (
-        product.phone
-    ) {
+    if (!closeButton) {
+
+        closeButton =
+            document.createElement("button");
+
+        closeButton.type = "button";
+
+        closeButton.className =
+            "summary-close";
+
+        closeButton.setAttribute(
+            "aria-label",
+            "Close payment confirmation"
+        );
+
+        closeButton.innerHTML = "×";
+
+
+        closeButton.addEventListener(
+            "click",
+            closePurchaseSummary
+        );
+
+
+        const summaryCard =
+            summarySection.querySelector(
+                ".summary-card"
+            );
+
+
+        if (summaryCard) {
+
+            summaryCard.appendChild(
+                closeButton
+            );
+
+        }
+    }
+
+
+    let actionButton = "";
+
+
+    /* -----------------------------------------------------
+       MAIN PRODUCT
+    ----------------------------------------------------- */
+
+    if (product.phone) {
 
         actionButton = `
-
             <div class="purchase-action">
 
                 <button
@@ -1563,17 +1328,17 @@ function showPurchaseSummary(
                 </button>
 
             </div>
-
         `;
-
     }
 
-    else if (
-        product.link
-    ) {
+
+    /* -----------------------------------------------------
+       FEATURED PRODUCT
+    ----------------------------------------------------- */
+
+    else if (product.link) {
 
         actionButton = `
-
             <div class="purchase-action">
 
                 <button
@@ -1585,9 +1350,7 @@ function showPurchaseSummary(
                 </button>
 
             </div>
-
         `;
-
     }
 
 
@@ -1598,7 +1361,6 @@ function showPurchaseSummary(
             <div class="success-icon">
                 ✓
             </div>
-
 
             <div>
 
@@ -1708,33 +1470,59 @@ function showPurchaseSummary(
     `;
 
 
+    /* -----------------------------------------------------
+       SHOW FINAL POPUP
+    ----------------------------------------------------- */
+
     summarySection.classList.remove(
         "hidden"
     );
 
 
-    summarySection.scrollIntoView({
-        behavior:
-            "smooth",
+    document.body.style.overflow =
+        "hidden";
 
-        block:
-            "start"
-    });
 
+    /* Move keyboard focus to close button */
+
+    setTimeout(function () {
+
+        if (closeButton) {
+            closeButton.focus();
+        }
+
+    }, 100);
 }
 
 
 /* =========================================================
-   CALL
+   CLOSE PURCHASE SUMMARY
 ========================================================= */
 
-function callProduct(
-    phone
-) {
+function closePurchaseSummary() {
+
+    if (!summarySection) {
+        return;
+    }
+
+
+    summarySection.classList.add(
+        "hidden"
+    );
+
+
+    restoreBodyScroll();
+}
+
+
+/* =========================================================
+   CALL PRODUCT
+========================================================= */
+
+function callProduct(phone) {
 
     window.location.href =
         "tel:" + phone;
-
 }
 
 
@@ -1742,29 +1530,22 @@ function callProduct(
    FEATURE LINK
 ========================================================= */
 
-function openProductLink(
-    link
-) {
+function openProductLink(link) {
 
     try {
 
         const url =
-            new URL(
-                link
-            );
+            new URL(link);
 
 
         if (
-            url.protocol !==
-                "https:" &&
-            url.protocol !==
-                "http:"
+            url.protocol !== "https:" &&
+            url.protocol !== "http:"
         ) {
 
             throw new Error(
                 "Invalid URL"
             );
-
         }
 
 
@@ -1778,9 +1559,7 @@ function openProductLink(
             "This feature link is not available.",
             "!"
         );
-
     }
-
 }
 
 
@@ -1788,34 +1567,20 @@ function openProductLink(
    FORMAT AMOUNT
 ========================================================= */
 
-function formatAmount(
-    amount
-) {
+function formatAmount(amount) {
 
     const number =
-        Number(
-            amount
-        );
+        Number(amount);
 
 
-    if (
-        Number.isNaN(
-            number
-        )
-    ) {
-
+    if (Number.isNaN(number)) {
         return "0";
-
     }
 
 
     return number
         .toFixed(2)
-        .replace(
-            /\.00$/,
-            ""
-        );
-
+        .replace(/\.00$/, "");
 }
 
 
@@ -1823,39 +1588,77 @@ function formatAmount(
    ESCAPE HTML
 ========================================================= */
 
-function escapeHtml(
-    value
-) {
+function escapeHtml(value) {
 
-    return String(
-        value
-    )
+    return String(value)
 
-        .replace(
-            /&/g,
-            "&amp;"
-        )
+        .replace(/&/g, "&amp;")
 
-        .replace(
-            /</g,
-            "&lt;"
-        )
+        .replace(/</g, "&lt;")
 
-        .replace(
-            />/g,
-            "&gt;"
-        )
+        .replace(/>/g, "&gt;")
 
-        .replace(
-            /"/g,
-            "&quot;"
-        )
+        .replace(/"/g, "&quot;")
 
-        .replace(
-            /'/g,
-            "&#039;"
+        .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   RESTORE BODY SCROLL
+========================================================= */
+
+function restoreBodyScroll() {
+
+    const paymentOpen =
+        paymentModal &&
+        !paymentModal.classList.contains(
+            "hidden"
         );
 
+
+    const notificationOpen =
+        notificationModal &&
+        !notificationModal.classList.contains(
+            "hidden"
+        );
+
+
+    const summaryOpen =
+        summarySection &&
+        !summarySection.classList.contains(
+            "hidden"
+        );
+
+
+    const imagePreview =
+        document.getElementById(
+            "imagePreview"
+        );
+
+
+    const previewOpen =
+        imagePreview &&
+        !imagePreview.classList.contains(
+            "hidden"
+        );
+
+
+    if (
+        paymentOpen ||
+        notificationOpen ||
+        summaryOpen ||
+        previewOpen
+    ) {
+
+        document.body.style.overflow =
+            "hidden";
+
+    } else {
+
+        document.body.style.overflow =
+            "";
+    }
 }
 
 
@@ -1867,13 +1670,8 @@ document.addEventListener(
     "keydown",
     function (event) {
 
-        if (
-            event.key !==
-            "Escape"
-        ) {
-
+        if (event.key !== "Escape") {
             return;
-
         }
 
 
@@ -1884,6 +1682,7 @@ document.addEventListener(
 
 
         if (
+            imagePreview &&
             !imagePreview.classList.contains(
                 "hidden"
             )
@@ -1892,11 +1691,24 @@ document.addEventListener(
             closeImagePreview();
 
             return;
-
         }
 
 
         if (
+            summarySection &&
+            !summarySection.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            closePurchaseSummary();
+
+            return;
+        }
+
+
+        if (
+            paymentModal &&
             !paymentModal.classList.contains(
                 "hidden"
             )
@@ -1905,18 +1717,17 @@ document.addEventListener(
             closePaymentModal();
 
             return;
-
         }
 
 
         if (
+            notificationModal &&
             !notificationModal.classList.contains(
                 "hidden"
             )
         ) {
 
             closeNotification();
-
         }
 
     }

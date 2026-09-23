@@ -1,6 +1,6 @@
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -21,7 +21,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
     font: inherit;
 }
 
@@ -35,25 +36,21 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     height: 70px;
     padding: 0 5%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: rgba(8, 8, 8, 0.94);
     border-bottom: 1px solid #202020;
-
     backdrop-filter: blur(12px);
 }
 
@@ -73,10 +70,7 @@ a {
     color: #bdbdbd;
     font-size: 14px;
     font-weight: 600;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .navbar-links a:hover {
@@ -85,9 +79,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCTS SECTION
-========================= */
+========================================================= */
 
 .products-section {
     width: 100%;
@@ -126,23 +120,18 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCT ROW
-========================= */
+========================================================= */
 
 .product-row {
     display: flex;
     gap: 16px;
-
     width: 100%;
-
     padding: 0 5% 12px;
-
     overflow-x: auto;
     overflow-y: hidden;
-
     scroll-behavior: smooth;
-
     scrollbar-width: thin;
     scrollbar-color: #444 transparent;
 }
@@ -165,23 +154,17 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    MAIN PRODUCT CARDS
-   SLIGHTLY WIDER + SHORTER
-========================= */
+========================================================= */
 
 .product-card {
     position: relative;
-
     flex: 0 0 245px;
-
     background: #111;
-
     border: 1px solid #242424;
     border-radius: 14px;
-
     overflow: hidden;
-
     transition:
         transform 0.25s ease,
         border-color 0.25s ease,
@@ -190,43 +173,32 @@ a {
 
 .product-card:hover {
     transform: translateY(-4px);
-
     border-color: #3a3a3a;
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
 }
 
 
-/* =========================
+/* =========================================================
    MAIN PRODUCT IMAGE
-========================= */
+========================================================= */
 
 .product-image-container {
     position: relative;
-
     width: 100%;
     height: 195px;
-
     background: #181818;
-
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
 }
 
 .product-image {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: contain;
-
     transition: transform 0.35s ease;
 }
 
@@ -235,9 +207,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    PRODUCT CONTENT
-========================= */
+========================================================= */
 
 .product-info {
     padding: 16px;
@@ -245,58 +217,45 @@ a {
 
 .product-number {
     color: #666;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 1px;
-
     margin-bottom: 6px;
 }
 
 .product-name {
     font-size: 16px;
-
     margin-bottom: 6px;
 }
 
 .product-description {
     color: #777;
-
     font-size: 12px;
     line-height: 1.5;
-
     margin-bottom: 10px;
 }
 
 .product-price {
     color: #ffffff;
-
     font-size: 17px;
     font-weight: 800;
 }
 
 
-/* =========================
+/* =========================================================
    PURCHASE BUTTON
-========================= */
+========================================================= */
 
 .product-button {
     width: 100%;
-
     margin-top: 14px;
-
     padding: 11px 13px;
-
     border: none;
     border-radius: 8px;
-
     background: #e50914;
     color: #ffffff;
-
     font-size: 13px;
     font-weight: 700;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -304,7 +263,6 @@ a {
 
 .product-button:hover {
     background: #b20710;
-
     transform: translateY(-1px);
 }
 
@@ -313,10 +271,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================================
    FEATURED PRODUCTS
-   LANDSCAPE + COMPRESSED
-========================= */
+========================================================= */
 
 .featured-row .product-card {
     flex: 0 0 245px;
@@ -325,9 +282,7 @@ a {
 .featured-row .product-image-container {
     width: 100%;
     height: 150px;
-
     aspect-ratio: 16 / 9;
-
     background: #181818;
 }
 
@@ -341,7 +296,6 @@ a {
 
 .featured-row .product-name {
     font-size: 15px;
-
     margin-bottom: 4px;
 }
 
@@ -351,40 +305,31 @@ a {
 
 .featured-row .product-button {
     margin-top: 10px;
-
     padding: 10px 12px;
-
     font-size: 13px;
 }
 
 
-/* =========================
+/* =========================================================
    IMAGE PREVIEW
-========================= */
+========================================================= */
 
 .image-preview {
     position: fixed;
     inset: 0;
-
     z-index: 4000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
-
     background: rgba(0, 0, 0, 0.94);
-
     backdrop-filter: blur(5px);
 }
 
 .preview-content {
     position: relative;
-
     width: min(92vw, 900px);
     height: min(88vh, 850px);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,42 +337,30 @@ a {
 
 .preview-content img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     max-width: 100%;
     max-height: 100%;
-
     object-fit: contain;
-
     border-radius: 12px;
 }
 
 .close-preview {
     position: absolute;
-
     top: 10px;
     right: 10px;
-
     width: 38px;
     height: 38px;
-
     border: 1px solid #444;
     border-radius: 50%;
-
     background: rgba(10, 10, 10, 0.88);
     color: #ffffff;
-
     font-size: 24px;
     line-height: 1;
-
     z-index: 2;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -435,110 +368,111 @@ a {
 
 .close-preview:hover {
     background: #e50914;
-
     transform: scale(1.05);
 }
 
 
-/* =========================
+/* =========================================================
    PAYMENT MODAL
-========================= */
+========================================================= */
 
 .payment-modal {
     position: fixed;
     inset: 0;
-
     z-index: 3000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 20px;
-
-    background: rgba(0, 0, 0, 0.86);
-
-    backdrop-filter: blur(6px);
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(7px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .payment-card {
-    width: 100%;
-    max-width: 440px;
-
-    padding: 30px;
-
-    background: #121212;
-
-    border: 1px solid #292929;
-    border-radius: 18px;
-
-    box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.7);
-
     position: relative;
+    width: min(100%, 420px);
+    max-height: calc(100vh - 32px);
+    padding: 24px;
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 17px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    animation: paymentAppear 0.22s ease;
+}
+
+@keyframes paymentAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .payment-card h2 {
-    font-size: 27px;
-
-    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+    padding-right: 35px;
 }
 
 .payment-subtitle {
     color: #888;
-
-    font-size: 13px;
-
-    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 18px;
 }
 
 
-/* =========================
+/* =========================================================
    PAYMENT CLOSE BUTTON
-========================= */
+========================================================= */
 
 .modal-close {
     position: absolute;
-
-    top: 16px;
-    right: 16px;
-
-    width: 35px;
-    height: 35px;
-
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
     border: 1px solid #333;
     border-radius: 50%;
-
     background: #181818;
     color: #ffffff;
-
-    font-size: 21px;
-
-    transition: background 0.2s ease;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .modal-close:hover {
     background: #292929;
+    border-color: #555;
 }
 
 
-/* =========================
+/* =========================================================
    CHECKOUT PRODUCT
-========================= */
+========================================================= */
 
 .checkout-product {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 16px;
-
-    margin-bottom: 22px;
-
+    gap: 14px;
+    padding: 13px;
+    margin-bottom: 17px;
     background: #191919;
-
     border: 1px solid #292929;
     border-radius: 10px;
 }
@@ -549,97 +483,94 @@ a {
 
 .checkout-label {
     display: block;
-
     color: #777;
-
-    font-size: 11px;
-
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .checkout-product strong {
-    font-size: 15px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.checkout-product-price {
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 800;
 }
 
 
-/* =========================
+/* =========================================================
    FORM
-========================= */
+========================================================= */
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .form-group label {
     display: block;
-
-    margin-bottom: 8px;
-
-    font-size: 13px;
+    margin-bottom: 6px;
+    font-size: 12px;
     font-weight: 700;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     width: 100%;
-
-    padding: 13px 14px;
-
+    height: 43px;
+    padding: 10px 12px;
     border: 1px solid #333;
     border-radius: 8px;
-
     outline: none;
-
     background: #0d0d0d;
     color: #ffffff;
-
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.form-group input:focus {
-    border-color: #e50914;
+.form-group select {
+    appearance: auto;
+}
 
-    box-shadow:
-        0 0 0 3px rgba(229, 9, 20, 0.12);
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.12);
 }
 
 .form-group small {
     display: block;
-
     color: #666;
-
-    font-size: 11px;
-
-    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.4;
+    margin-top: 5px;
 }
 
 
-/* =========================
+/* =========================================================
    PAYMENT BUTTONS
-========================= */
+========================================================= */
 
 .continue-payment-button,
 .cancel-payment-button {
     width: 100%;
-
-    padding: 13px;
-
+    min-height: 43px;
+    padding: 10px 13px;
     border-radius: 8px;
-
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .continue-payment-button {
     border: none;
-
     background: #e50914;
     color: #ffffff;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -647,26 +578,20 @@ a {
 
 .continue-payment-button:hover {
     background: #b20710;
-
     transform: translateY(-1px);
 }
 
 .continue-payment-button:disabled {
     opacity: 0.6;
-
     cursor: not-allowed;
-
     transform: none;
 }
 
 .cancel-payment-button {
-    margin-top: 10px;
-
+    margin-top: 8px;
     border: 1px solid #333;
-
     background: transparent;
     color: #aaa;
-
     transition:
         color 0.2s ease,
         background 0.2s ease;
@@ -674,160 +599,189 @@ a {
 
 .cancel-payment-button:hover {
     background: #1d1d1d;
-
     color: #ffffff;
 }
 
 
-/* =========================
+/* =========================================================
    PURCHASE SUMMARY
-========================= */
+   FINAL PAYMENT CONFIRMATION POPUP
+========================================================= */
 
 .summary-section {
-    padding: 0 5% 80px;
+    position: fixed;
+    inset: 0;
+    z-index: 4500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .summary-card {
-    width: 100%;
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    padding: 30px;
-
+    position: relative;
+    width: min(100%, 520px);
+    max-height: calc(100vh - 32px);
+    margin: 0;
+    padding: 25px;
     background: #111;
-
     border: 1px solid #292929;
     border-radius: 18px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    animation: summaryAppear 0.25s ease;
+}
 
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
+@keyframes summaryAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.summary-card > .small-title {
+    padding-right: 40px;
 }
 
 .summary-card h2 {
-    margin-bottom: 22px;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    padding-right: 40px;
 }
 
 
-/* =========================
+/* =========================================================
+   SUMMARY CLOSE BUTTON
+========================================================= */
+
+.summary-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background: #181818;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.summary-close:hover {
+    background: #292929;
+    border-color: #555;
+}
+
+
+/* =========================================================
    SUMMARY ROWS
-========================= */
+========================================================= */
 
 .summary-row {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
-    padding: 13px 0;
-
+    padding: 11px 0;
     border-bottom: 1px solid #222;
 }
 
 .summary-label {
     color: #777;
-
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .summary-value {
     color: #ffffff;
-
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
-
     text-align: right;
-
     word-break: break-word;
+    max-width: 65%;
 }
 
 
-/* =========================
+/* =========================================================
    PAYMENT SUCCESS
-========================= */
+========================================================= */
 
 .payment-success-message {
     display: flex;
-
     align-items: center;
-
-    gap: 14px;
-
-    padding: 15px;
-
-    margin-bottom: 20px;
-
+    gap: 12px;
+    padding: 13px;
+    margin-bottom: 16px;
     background: rgba(229, 9, 20, 0.08);
-
     border: 1px solid rgba(229, 9, 20, 0.35);
-
     border-radius: 10px;
 }
 
 .success-icon {
     flex-shrink: 0;
-
-    width: 42px;
-    height: 42px;
-
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #e50914;
-
     color: #ffffff;
-
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .payment-success-message strong {
     display: block;
-
-    margin-bottom: 3px;
+    font-size: 13px;
+    margin-bottom: 2px;
 }
 
 .payment-success-message p {
     color: #888;
-
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.4;
 }
 
 
-/* =========================
+/* =========================================================
    PURCHASE ACTION
-========================= */
+========================================================= */
 
 .purchase-action {
-    margin-top: 25px;
-
-    padding-top: 20px;
-
+    margin-top: 20px;
+    padding-top: 16px;
     border-top: 1px solid #292929;
 }
 
 .call-product-button,
 .open-feature-button {
     width: 100%;
-
-    padding: 14px;
-
+    min-height: 44px;
+    padding: 11px 14px;
     border: none;
-
     border-radius: 8px;
-
     background: #e50914;
-
     color: #ffffff;
-
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -836,125 +790,88 @@ a {
 .call-product-button:hover,
 .open-feature-button:hover {
     background: #b20710;
-
     transform: translateY(-1px);
 }
 
 
-/* =========================
+/* =========================================================
    CUSTOM NOTIFICATION
-========================= */
+========================================================= */
 
 .notification-modal {
     position: fixed;
     inset: 0;
-
     z-index: 5000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 20px;
-
-    background: rgba(0, 0, 0, 0.88);
-
-    backdrop-filter: blur(5px);
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(6px);
 }
 
 .notification-card {
-    width: 100%;
-    max-width: 410px;
-
-    padding: 32px;
-
+    width: min(100%, 400px);
+    max-height: calc(100vh - 32px);
+    padding: 27px;
     background: #151515;
-
     border: 1px solid #303030;
-
-    border-radius: 18px;
-
+    border-radius: 17px;
     text-align: center;
-
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.7);
-
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
     animation: notificationAppear 0.2s ease;
 }
 
 @keyframes notificationAppear {
-
     from {
         opacity: 0;
-
-        transform:
-            translateY(10px)
-            scale(0.97);
+        transform: translateY(10px) scale(0.97);
     }
 
     to {
         opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
+        transform: translateY(0) scale(1);
     }
 }
 
 .notification-icon {
-    width: 58px;
-    height: 58px;
-
-    margin: 0 auto 18px;
-
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: rgba(229, 9, 20, 0.12);
-
     border: 1px solid #e50914;
-
     color: #e50914;
-
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
 }
 
 .notification-card h2 {
-    font-size: 25px;
-
-    margin-bottom: 10px;
+    font-size: 23px;
+    margin-bottom: 9px;
 }
 
 .notification-card p {
     color: #999;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-
-    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 20px;
 }
 
 .notification-button {
     width: 100%;
-
-    padding: 13px;
-
+    min-height: 43px;
+    padding: 11px;
     border: none;
-
     border-radius: 8px;
-
     background: #e50914;
-
     color: #ffffff;
-
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
@@ -962,29 +879,27 @@ a {
 
 .notification-button:hover {
     background: #b20710;
-
     transform: translateY(-1px);
 }
 
 
-/* =========================
+/* =========================================================
    HIDDEN
-========================= */
+========================================================= */
 
 .hidden {
     display: none !important;
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 700px) {
 
     .navbar {
         height: 62px;
-
         padding: 0 20px;
     }
 
@@ -1000,32 +915,24 @@ a {
         font-size: 13px;
     }
 
-
     .products-section {
         padding-top: 50px;
     }
 
-
     .section-heading {
         padding: 0 20px;
     }
-
 
     .section-heading h1,
     .section-heading h2 {
         font-size: 32px;
     }
 
-
     .product-row {
         padding-left: 20px;
         padding-right: 20px;
-
         gap: 14px;
     }
-
-
-    /* Main cards */
 
     .product-card {
         flex: 0 0 220px;
@@ -1034,9 +941,6 @@ a {
     .product-image-container {
         height: 180px;
     }
-
-
-    /* Featured cards */
 
     .featured-row .product-card {
         flex: 0 0 220px;
@@ -1050,37 +954,121 @@ a {
         padding: 12px 14px;
     }
 
-
     .second-row-heading {
         margin-top: 60px;
     }
 
 
-    /* Payment */
+    /* PAYMENT POPUP */
+
+    .payment-modal {
+        padding: 12px;
+        align-items: center;
+    }
 
     .payment-card {
-        padding: 25px 20px;
-
-        border-radius: 16px;
+        width: 100%;
+        max-width: 390px;
+        max-height: calc(100vh - 24px);
+        padding: 20px 17px;
+        border-radius: 15px;
     }
 
     .payment-card h2 {
-        font-size: 24px;
+        font-size: 23px;
+    }
+
+    .payment-subtitle {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .checkout-product {
+        padding: 11px;
+        margin-bottom: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 41px;
+        padding: 9px 11px;
+        font-size: 13px;
+    }
+
+    .form-group small {
+        font-size: 9px;
+    }
+
+    .continue-payment-button,
+    .cancel-payment-button {
+        min-height: 41px;
+        font-size: 12px;
     }
 
 
-    /* Summary */
+    /* FINAL CONFIRMATION */
 
     .summary-section {
-        padding: 0 20px 60px;
+        padding: 12px;
+        align-items: center;
     }
 
     .summary-card {
-        padding: 24px 20px;
+        width: 100%;
+        max-width: 390px;
+        max-height: calc(100vh - 24px);
+        padding: 21px 17px;
+        border-radius: 15px;
+    }
+
+    .summary-card h2 {
+        font-size: 23px;
+    }
+
+    .summary-row {
+        padding: 10px 0;
+        gap: 12px;
+    }
+
+    .summary-label {
+        font-size: 10px;
+    }
+
+    .summary-value {
+        font-size: 11px;
+        max-width: 60%;
+    }
+
+    .payment-success-message {
+        padding: 11px;
+        gap: 10px;
+    }
+
+    .success-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 18px;
+    }
+
+    .payment-success-message strong {
+        font-size: 12px;
+    }
+
+    .payment-success-message p {
+        font-size: 10px;
     }
 
 
-    /* Preview */
+    /* PREVIEW */
 
     .image-preview {
         padding: 12px;
@@ -1097,23 +1085,22 @@ a {
     }
 
 
-    /* Notification */
+    /* NOTIFICATION */
 
     .notification-card {
-        padding: 27px 20px;
-
-        border-radius: 16px;
+        padding: 24px 19px;
+        border-radius: 15px;
     }
 
     .notification-card h2 {
-        font-size: 23px;
+        font-size: 22px;
     }
 }
 
 
-/* =========================
+/* =========================================================
    SMALL PHONES
-========================= */
+========================================================= */
 
 @media (max-width: 400px) {
 
@@ -1125,7 +1112,6 @@ a {
         font-size: 12px;
     }
 
-
     .product-card {
         flex: 0 0 210px;
     }
@@ -1133,7 +1119,6 @@ a {
     .product-image-container {
         height: 170px;
     }
-
 
     .featured-row .product-card {
         flex: 0 0 210px;
@@ -1143,16 +1128,58 @@ a {
         height: 128px;
     }
 
+    .payment-card {
+        padding: 18px 15px;
+    }
+
+    .summary-card {
+        padding: 19px 15px;
+    }
 
     .summary-row {
         align-items: flex-start;
-
         flex-direction: column;
-
-        gap: 4px;
+        gap: 3px;
     }
 
     .summary-value {
         text-align: left;
+        max-width: 100%;
+    }
+
+    .notification-card {
+        padding: 22px 17px;
+    }
+}
+
+
+/* =========================================================
+   VERY SHORT SCREENS
+========================================================= */
+
+@media (max-height: 650px) {
+
+    .payment-card {
+        max-height: calc(100vh - 16px);
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .summary-card {
+        max-height: calc(100vh - 16px);
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .payment-subtitle {
+        margin-bottom: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .checkout-product {
+        margin-bottom: 12px;
     }
 }
