@@ -1,18 +1,3 @@
-/*
-    ==========================================
-    STORE PRODUCTS
-    ==========================================
-
-    Add or edit products here.
-
-    productNumber = product number
-    name          = product name
-    price         = price in ZMW
-    description   = product description
-    image         = product image URL
-    location      = purchase/delivery location
-*/
-
 const products = [
 
     {
@@ -29,7 +14,7 @@ const products = [
         name: "Product Two",
         price: 25,
         description: "This is the description of product two.",
-        image: "https://images.unsplash.com/photo-1503602642458-232111445657",
+        image: "images/product2.jpg",
         location: "Lusaka"
     },
 
@@ -38,22 +23,14 @@ const products = [
         name: "Product Three",
         price: 50,
         description: "This is the description of product three.",
-        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+        image: "images/product3.jpg",
         location: "Ndola"
     }
 
 ];
 
-
-/*
-    ==========================================
-    DISPLAY PRODUCTS
-    ==========================================
-*/
-
 const productContainer =
     document.getElementById("productContainer");
-
 
 products.forEach((product, index) => {
 
@@ -63,11 +40,18 @@ products.forEach((product, index) => {
 
     card.innerHTML = `
 
-        <img
-            class="product-image"
-            src="${product.image}"
-            alt="${product.name}"
+        <div
+            class="product-image-container"
+            onclick="previewImage('${product.image}', '${product.name}')"
         >
+
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${product.name}"
+            >
+
+        </div>
 
         <div class="product-info">
 
@@ -102,20 +86,49 @@ products.forEach((product, index) => {
 });
 
 
-/*
-    ==========================================
-    PURCHASE
-    ==========================================
-*/
+/* IMAGE PREVIEW */
+function previewImage(image, name) {
 
+    const preview = document.createElement("div");
+
+    preview.className = "image-preview";
+
+    preview.innerHTML = `
+
+        <span class="close-preview">
+            ×
+        </span>
+
+        <img
+            src="${image}"
+            alt="${name}"
+        >
+
+    `;
+
+    document.body.appendChild(preview);
+
+    /* Close when X is clicked */
+    preview.querySelector(".close-preview").onclick = function() {
+        preview.remove();
+    };
+
+    /* Close when outside image is clicked */
+    preview.onclick = function(event) {
+
+        if (event.target === preview) {
+            preview.remove();
+        }
+
+    };
+
+}
+
+
+/* PURCHASE */
 function purchaseProduct(index) {
 
     const product = products[index];
-
-    /*
-        Only ONE product can be purchased
-        per transaction.
-    */
 
     const confirmed = confirm(
         `Purchase ${product.name} for K${product.price}?`
@@ -125,12 +138,6 @@ function purchaseProduct(index) {
         return;
     }
 
-
-    /*
-        Lenco currently requires an email
-        parameter in its web popup.
-    */
-
     const email = prompt(
         "Lenco requires an email address for payment.\n\nEnter your email:"
     );
@@ -139,21 +146,11 @@ function purchaseProduct(index) {
         return;
     }
 
-
-    /*
-        Generate unique payment reference.
-    */
-
     const reference =
         "product-" +
         product.productNumber +
         "-" +
         Date.now();
-
-
-    /*
-        Open Lenco payment.
-    */
 
     LencoPay.getPaid({
 
@@ -174,22 +171,11 @@ function purchaseProduct(index) {
 
         label: product.name,
 
-
         customer: {
-
             phone: ""
-
         },
 
-
         onSuccess: function(response) {
-
-            /*
-                IMPORTANT:
-                This callback should eventually
-                call our Cloudflare backend to
-                verify the payment with Lenco.
-            */
 
             showPurchaseSummary(
                 product,
@@ -198,7 +184,6 @@ function purchaseProduct(index) {
 
         },
 
-
         onClose: function() {
 
             alert(
@@ -206,7 +191,6 @@ function purchaseProduct(index) {
             );
 
         },
-
 
         onConfirmationPending: function() {
 
@@ -222,12 +206,7 @@ function purchaseProduct(index) {
 }
 
 
-/*
-    ==========================================
-    PURCHASE SUMMARY
-    ==========================================
-*/
-
+/* PURCHASE SUMMARY */
 function showPurchaseSummary(
     product,
     reference
@@ -243,7 +222,6 @@ function showPurchaseSummary(
             "purchaseSummary"
         );
 
-
     purchaseSummary.innerHTML = `
 
         <div class="summary-row">
@@ -258,7 +236,6 @@ function showPurchaseSummary(
 
         </div>
 
-
         <div class="summary-row">
 
             <span class="summary-label">
@@ -270,7 +247,6 @@ function showPurchaseSummary(
             </span>
 
         </div>
-
 
         <div class="summary-row">
 
@@ -284,7 +260,6 @@ function showPurchaseSummary(
 
         </div>
 
-
         <div class="summary-row">
 
             <span class="summary-label">
@@ -297,7 +272,6 @@ function showPurchaseSummary(
 
         </div>
 
-
         <div class="summary-row">
 
             <span class="summary-label">
@@ -309,7 +283,6 @@ function showPurchaseSummary(
             </span>
 
         </div>
-
 
         <div class="summary-row">
 
@@ -325,9 +298,7 @@ function showPurchaseSummary(
 
     `;
 
-
     summarySection.classList.remove("hidden");
-
 
     summarySection.scrollIntoView({
         behavior: "smooth"
