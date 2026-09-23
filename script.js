@@ -20,7 +20,7 @@ const products = [
         name: "Product One",
         price: 10,
         description: "This is the description of product one.",
-        image: "product1.jpg",
+        image: "images/product1.jpg",
         location: "Lusaka"
     },
 
