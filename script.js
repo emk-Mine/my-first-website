@@ -42,7 +42,7 @@ const featuredProducts = [
     {
         productNumber: "101",
         name: "Featured One",
-        price: 15,
+        price: 3,
         image: "images/product4.jpg",
         location: "Lusaka",
         link: "https://example.com/featured-one"
