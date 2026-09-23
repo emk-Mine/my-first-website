@@ -10,7 +10,11 @@ const products = [
         price: 10,
         description: "This is the description of product one.",
         image: "images/product1.jpg",
-        location: "Lusaka"
+        location: "Lusaka",
+
+        /* Phone number for this product */
+        phone: "+260XXXXXXXXX"
+
     },
 
     {
@@ -19,7 +23,10 @@ const products = [
         price: 25,
         description: "This is the description of product two.",
         image: "images/product2.jpg",
-        location: "Lusaka"
+        location: "Lusaka",
+
+        phone: "+260XXXXXXXXX"
+
     },
 
     {
@@ -28,7 +35,10 @@ const products = [
         price: 50,
         description: "This is the description of product three.",
         image: "images/product3.jpg",
-        location: "Ndola"
+        location: "Ndola",
+
+        phone: "+260XXXXXXXXX"
+
     }
 
 ];
@@ -45,7 +55,11 @@ const featuredProducts = [
         name: "Featured One",
         price: 15,
         image: "images/product4.jpg",
-        location: "Lusaka"
+        location: "Lusaka",
+
+        /* Link opened after successful payment */
+        link: "https://example.com/featured-one"
+
     },
 
     {
@@ -53,7 +67,10 @@ const featuredProducts = [
         name: "Featured Two",
         price: 20,
         image: "images/product5.jpg",
-        location: "Lusaka"
+        location: "Lusaka",
+
+        link: "https://example.com/featured-two"
+
     },
 
     {
@@ -61,7 +78,10 @@ const featuredProducts = [
         name: "Featured Three",
         price: 30,
         image: "images/product6.jpg",
-        location: "Ndola"
+        location: "Ndola",
+
+        link: "https://example.com/featured-three"
+
     },
 
     {
@@ -69,7 +89,10 @@ const featuredProducts = [
         name: "Featured Four",
         price: 40,
         image: "images/product7.jpg",
-        location: "Kitwe"
+        location: "Kitwe",
+
+        link: "https://example.com/featured-four"
+
     }
 
 ];
@@ -119,6 +142,36 @@ const checkoutProductPrice =
 const continuePaymentButton =
     document.getElementById(
         "continuePaymentButton"
+    );
+
+
+/* =========================
+   NOTIFICATION ELEMENTS
+========================= */
+
+const notificationModal =
+    document.getElementById(
+        "notificationModal"
+    );
+
+const notificationIcon =
+    document.getElementById(
+        "notificationIcon"
+    );
+
+const notificationTitle =
+    document.getElementById(
+        "notificationTitle"
+    );
+
+const notificationMessage =
+    document.getElementById(
+        "notificationMessage"
+    );
+
+const notificationButton =
+    document.getElementById(
+        "notificationButton"
     );
 
 
@@ -454,8 +507,6 @@ document
     );
 
 
-/* Close when clicking outside */
-
 paymentModal.addEventListener(
     "click",
     function(event) {
@@ -466,6 +517,73 @@ paymentModal.addEventListener(
         ) {
 
             closePaymentModal();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CUSTOM NOTIFICATION
+========================= */
+
+function showNotification(
+    title,
+    message,
+    icon = "!"
+) {
+
+    notificationTitle.textContent =
+        title;
+
+    notificationMessage.textContent =
+        message;
+
+    notificationIcon.textContent =
+        icon;
+
+
+    notificationModal.classList.remove(
+        "hidden"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeNotification() {
+
+    notificationModal.classList.add(
+        "hidden"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+notificationButton.addEventListener(
+    "click",
+    closeNotification
+);
+
+
+notificationModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            notificationModal
+        ) {
+
+            closeNotification();
 
         }
 
@@ -492,30 +610,40 @@ continuePaymentButton.addEventListener(
             customerEmail.value.trim();
 
 
-        /* Validate email */
+        /* =====================
+           EMPTY EMAIL
+        ===================== */
 
         if (!email) {
 
-            customerEmail.focus();
-
-            alert(
-                "Please enter your email address."
+            showNotification(
+                "Email Required",
+                "Please enter your email address before continuing.",
+                "!"
             );
+
+            customerEmail.focus();
 
             return;
 
         }
 
 
+        /* =====================
+           INVALID EMAIL
+        ===================== */
+
         if (
             !isValidEmail(email)
         ) {
 
-            customerEmail.focus();
-
-            alert(
-                "Please enter a valid email address."
+            showNotification(
+                "Invalid Email",
+                "Please enter a valid email address and try again.",
+                "!"
             );
+
+            customerEmail.focus();
 
             return;
 
@@ -568,11 +696,6 @@ function startLencoPayment(
         Date.now();
 
 
-    /*
-        Close our custom modal before
-        opening the Lenco payment window.
-    */
-
     paymentModal.classList.add(
         "hidden"
     );
@@ -624,18 +747,15 @@ function startLencoPayment(
         },
 
 
+        /* =====================
+           PAYMENT SUCCESS
+        ===================== */
+
         onSuccess:
             function(response) {
 
                 resetPaymentButton();
 
-
-                /*
-                    IMPORTANT:
-                    For production, this success
-                    callback should be followed by
-                    server-side payment verification.
-                */
 
                 showPurchaseSummary(
 
@@ -648,25 +768,39 @@ function startLencoPayment(
             },
 
 
+        /* =====================
+           PAYMENT CLOSED
+        ===================== */
+
         onClose:
             function() {
 
                 resetPaymentButton();
 
-                alert(
-                    "Payment was not completed."
+
+                showNotification(
+                    "Payment Not Completed",
+                    "Your payment was not completed. You can try again when you're ready.",
+                    "!"
                 );
 
             },
 
+
+        /* =====================
+           CONFIRMATION PENDING
+        ===================== */
 
         onConfirmationPending:
             function() {
 
                 resetPaymentButton();
 
-                alert(
-                    "Your payment is being confirmed. Please wait."
+
+                showNotification(
+                    "Payment Being Confirmed",
+                    "Your payment is being confirmed. Please wait for the confirmation.",
+                    "..."
                 );
 
             }
@@ -713,7 +847,91 @@ function showPurchaseSummary(
         );
 
 
+    let actionButton = "";
+
+
+    /* =========================
+       MAIN PRODUCT
+       SHOW CALL BUTTON
+    ========================= */
+
+    if (
+        product.phone
+    ) {
+
+        actionButton = `
+
+            <div class="purchase-action">
+
+                <button
+                    type="button"
+                    class="call-product-button"
+                    onclick="callProduct('${product.phone}')"
+                >
+
+                    Call Now
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =========================
+       FEATURED PRODUCT
+       SHOW FEATURE BUTTON
+    ========================= */
+
+    else if (
+        product.link
+    ) {
+
+        actionButton = `
+
+            <div class="purchase-action">
+
+                <button
+                    type="button"
+                    class="open-feature-button"
+                    onclick="openProductLink('${product.link}')"
+                >
+
+                    Open Feature
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
     purchaseSummary.innerHTML = `
+
+        <div class="payment-success-message">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>
+                    Payment Confirmed
+                </strong>
+
+                <p>
+                    Your purchase has been successfully processed.
+                </p>
+
+            </div>
+
+        </div>
+
 
         <div class="summary-row">
 
@@ -792,6 +1010,9 @@ function showPurchaseSummary(
 
         </div>
 
+
+        ${actionButton}
+
     `;
 
 
@@ -805,6 +1026,30 @@ function showPurchaseSummary(
         behavior: "smooth"
 
     });
+
+}
+
+
+/* =========================
+   CALL MAIN PRODUCT
+========================= */
+
+function callProduct(phone) {
+
+    window.location.href =
+        "tel:" + phone;
+
+}
+
+
+/* =========================
+   OPEN FEATURE
+========================= */
+
+function openProductLink(link) {
+
+    window.location.href =
+        link;
 
 }
 
@@ -845,6 +1090,18 @@ document.addEventListener(
             ) {
 
                 closePaymentModal();
+
+                return;
+
+            }
+
+
+            if (
+                !notificationModal.classList
+                    .contains("hidden")
+            ) {
+
+                closeNotification();
 
             }
 
