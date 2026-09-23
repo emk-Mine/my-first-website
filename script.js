@@ -14,7 +14,7 @@ const products = [
     {
         productNumber: "001",
         name: "Product One",
-        price: 10,
+        price: 2,
         description: "This is the description of product one.",
         image: "images/product1.jpg",
         location: "Lusaka",
