@@ -1,3 +1,7 @@
+/* =========================
+   MAIN PRODUCTS
+========================= */
+
 const products = [
 
     {
@@ -29,20 +33,69 @@ const products = [
 
 ];
 
+
+/* =========================
+   FEATURED PRODUCTS
+========================= */
+
+const featuredProducts = [
+
+    {
+        productNumber: "101",
+        name: "Featured One",
+        price: 15,
+        image: "images/product4.jpg"
+    },
+
+    {
+        productNumber: "102",
+        name: "Featured Two",
+        price: 20,
+        image: "images/product5.jpg"
+    },
+
+    {
+        productNumber: "103",
+        name: "Featured Three",
+        price: 30,
+        image: "images/product6.jpg"
+    },
+
+    {
+        productNumber: "104",
+        name: "Featured Four",
+        price: 40,
+        image: "images/product7.jpg"
+    }
+
+];
+
+
+/* =========================
+   MAIN PRODUCT ROW
+========================= */
+
 const productContainer =
     document.getElementById("productContainer");
 
+
 products.forEach((product, index) => {
 
-    const card = document.createElement("div");
+    const card =
+        document.createElement("div");
 
-    card.className = "product-card";
+    card.className =
+        "product-card";
+
 
     card.innerHTML = `
 
         <div
             class="product-image-container"
-            onclick="previewImage('${product.image}', '${product.name}')"
+            onclick="previewImage(
+                '${product.image}',
+                '${product.name}'
+            )"
         >
 
             <img
@@ -53,98 +106,277 @@ products.forEach((product, index) => {
 
         </div>
 
+
         <div class="product-info">
 
             <div class="product-number">
+
                 PRODUCT ${product.productNumber}
+
             </div>
+
 
             <h3 class="product-name">
+
                 ${product.name}
+
             </h3>
 
+
             <p class="product-description">
+
                 ${product.description}
+
             </p>
 
+
             <div class="product-price">
+
                 K${product.price}
+
             </div>
+
 
             <button
                 class="purchase-button"
                 onclick="purchaseProduct(${index})"
             >
+
                 Purchase
+
             </button>
 
         </div>
+
     `;
+
 
     productContainer.appendChild(card);
 
 });
 
 
-/* IMAGE PREVIEW */
+/* =========================
+   FEATURED PRODUCT ROW
+========================= */
+
+const featuredProductContainer =
+    document.getElementById(
+        "featuredProductContainer"
+    );
+
+
+featuredProducts.forEach(
+    (product, index) => {
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "featured-product-card";
+
+
+        card.innerHTML = `
+
+            <div
+                class="featured-image-container"
+                onclick="previewImage(
+                    '${product.image}',
+                    '${product.name}'
+                )"
+            >
+
+                <img
+                    class="featured-image"
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="featured-product-info">
+
+                <h3 class="featured-product-name">
+
+                    ${product.name}
+
+                </h3>
+
+
+                <div class="featured-product-price">
+
+                    K${product.price}
+
+                </div>
+
+
+                <button
+                    class="featured-purchase-button"
+                    onclick="purchaseFeaturedProduct(${index})"
+                >
+
+                    Purchase
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        featuredProductContainer
+            .appendChild(card);
+
+    }
+);
+
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+
 function previewImage(image, name) {
 
-    const preview = document.createElement("div");
+    const preview =
+        document.getElementById(
+            "imagePreview"
+        );
 
-    preview.className = "image-preview";
 
-    preview.innerHTML = `
+    const previewImageElement =
+        document.getElementById(
+            "previewImage"
+        );
 
-        <span class="close-preview">
-            ×
-        </span>
 
-        <img
-            src="${image}"
-            alt="${name}"
-        >
+    previewImageElement.src =
+        image;
 
-    `;
 
-    document.body.appendChild(preview);
+    previewImageElement.alt =
+        name;
 
-    /* Close when X is clicked */
-    preview.querySelector(".close-preview").onclick = function() {
-        preview.remove();
-    };
 
-    /* Close when outside image is clicked */
-    preview.onclick = function(event) {
+    preview.classList.remove(
+        "hidden"
+    );
 
-        if (event.target === preview) {
-            preview.remove();
-        }
 
-    };
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
-/* PURCHASE */
+/* =========================
+   CLOSE IMAGE PREVIEW
+========================= */
+
+function closeImagePreview() {
+
+    const preview =
+        document.getElementById(
+            "imagePreview"
+        );
+
+
+    preview.classList.add(
+        "hidden"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* Close with X */
+
+document
+    .getElementById("closePreview")
+    .addEventListener(
+        "click",
+        closeImagePreview
+    );
+
+
+/* Close when clicking outside image */
+
+document
+    .getElementById("imagePreview")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target ===
+                this
+            ) {
+
+                closeImagePreview();
+
+            }
+
+        }
+    );
+
+
+/* Close with ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeImagePreview();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   MAIN PRODUCT PURCHASE
+========================= */
+
 function purchaseProduct(index) {
 
-    const product = products[index];
+    const product =
+        products[index];
 
-    const confirmed = confirm(
-        `Purchase ${product.name} for K${product.price}?`
-    );
+
+    const confirmed =
+        confirm(
+            `Purchase ${product.name} for K${product.price}?`
+        );
+
 
     if (!confirmed) {
+
         return;
+
     }
 
-    const email = prompt(
-        "Lenco requires an email address for payment.\n\nEnter your email:"
-    );
+
+    const email =
+        prompt(
+            "Lenco requires an email address for payment.\n\nEnter your email:"
+        );
+
 
     if (!email) {
+
         return;
+
     }
+
 
     const reference =
         "product-" +
@@ -152,61 +384,211 @@ function purchaseProduct(index) {
         "-" +
         Date.now();
 
+
     LencoPay.getPaid({
 
-        key: "pub-4387d952b76bff4bba2d7561e2a161229c5c73e6ad72ffd3",
+        key:
+            "pub-4387d952b76bff4bba2d7561e2a161229c5c73e6ad72ffd3",
 
-        reference: reference,
 
-        email: email,
+        reference:
+            reference,
 
-        amount: product.price,
 
-        currency: "ZMW",
+        email:
+            email,
+
+
+        amount:
+            product.price,
+
+
+        currency:
+            "ZMW",
+
 
         channels: [
+
             "card",
+
             "mobile-money"
+
         ],
 
-        label: product.name,
+
+        label:
+            product.name,
+
 
         customer: {
+
             phone: ""
-        },
-
-        onSuccess: function(response) {
-
-            showPurchaseSummary(
-                product,
-                response.reference
-            );
 
         },
 
-        onClose: function() {
 
-            alert(
-                "Payment was not completed."
-            );
+        onSuccess:
+            function(response) {
 
-        },
+                showPurchaseSummary(
 
-        onConfirmationPending: function() {
+                    product,
 
-            alert(
-                "Your payment is being confirmed. " +
-                "Please wait."
-            );
+                    response.reference
 
-        }
+                );
+
+            },
+
+
+        onClose:
+            function() {
+
+                alert(
+                    "Payment was not completed."
+                );
+
+            },
+
+
+        onConfirmationPending:
+            function() {
+
+                alert(
+                    "Your payment is being confirmed. Please wait."
+                );
+
+            }
 
     });
 
 }
 
 
-/* PURCHASE SUMMARY */
+/* =========================
+   FEATURED PRODUCT PURCHASE
+========================= */
+
+function purchaseFeaturedProduct(index) {
+
+    const product =
+        featuredProducts[index];
+
+
+    const confirmed =
+        confirm(
+            `Purchase ${product.name} for K${product.price}?`
+        );
+
+
+    if (!confirmed) {
+
+        return;
+
+    }
+
+
+    const email =
+        prompt(
+            "Lenco requires an email address for payment.\n\nEnter your email:"
+        );
+
+
+    if (!email) {
+
+        return;
+
+    }
+
+
+    const reference =
+        "featured-" +
+        product.productNumber +
+        "-" +
+        Date.now();
+
+
+    LencoPay.getPaid({
+
+        key:
+            "pub-4387d952b76bff4bba2d7561e2a161229c5c73e6ad72ffd3",
+
+
+        reference:
+            reference,
+
+
+        email:
+            email,
+
+
+        amount:
+            product.price,
+
+
+        currency:
+            "ZMW",
+
+
+        channels: [
+
+            "card",
+
+            "mobile-money"
+
+        ],
+
+
+        label:
+            product.name,
+
+
+        customer: {
+
+            phone: ""
+
+        },
+
+
+        onSuccess:
+            function(response) {
+
+                alert(
+                    "Payment successful for " +
+                    product.name
+                );
+
+            },
+
+
+        onClose:
+            function() {
+
+                alert(
+                    "Payment was not completed."
+                );
+
+            },
+
+
+        onConfirmationPending:
+            function() {
+
+                alert(
+                    "Your payment is being confirmed. Please wait."
+                );
+
+            }
+
+    });
+
+}
+
+
+/* =========================
+   PURCHASE SUMMARY
+========================= */
+
 function showPurchaseSummary(
     product,
     reference
@@ -217,10 +599,12 @@ function showPurchaseSummary(
             "summarySection"
         );
 
+
     const purchaseSummary =
         document.getElementById(
             "purchaseSummary"
         );
+
 
     purchaseSummary.innerHTML = `
 
@@ -236,6 +620,7 @@ function showPurchaseSummary(
 
         </div>
 
+
         <div class="summary-row">
 
             <span class="summary-label">
@@ -247,6 +632,7 @@ function showPurchaseSummary(
             </span>
 
         </div>
+
 
         <div class="summary-row">
 
@@ -260,6 +646,7 @@ function showPurchaseSummary(
 
         </div>
 
+
         <div class="summary-row">
 
             <span class="summary-label">
@@ -272,6 +659,7 @@ function showPurchaseSummary(
 
         </div>
 
+
         <div class="summary-row">
 
             <span class="summary-label">
@@ -283,6 +671,7 @@ function showPurchaseSummary(
             </span>
 
         </div>
+
 
         <div class="summary-row">
 
@@ -298,10 +687,16 @@ function showPurchaseSummary(
 
     `;
 
-    summarySection.classList.remove("hidden");
+
+    summarySection.classList.remove(
+        "hidden"
+    );
+
 
     summarySection.scrollIntoView({
+
         behavior: "smooth"
+
     });
 
 }

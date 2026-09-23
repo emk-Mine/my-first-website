@@ -1,34 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>My Store</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
+
     <header class="navbar">
 
-        <div class="logo">MY STORE</div>
+        <div class="logo">
+            MY STORE
+        </div>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#products">
+                Products
+            </a>
+
         </nav>
 
     </header>
 
 
+    <!-- HERO -->
 
-    <!-- Products -->
-    <section id="products" class="products-section">
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME
+            </p>
+
+            <h1>
+                Shop What You Love
+            </h1>
+
+            <p>
+                Choose a product and purchase it instantly.
+            </p>
+
+            <a
+                href="#products"
+                class="hero-button"
+            >
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section
+        id="products"
+        class="products-section"
+    >
+
+        <!-- FIRST ROW -->
 
         <div class="section-heading">
+
+            <p class="small-title">
+                OUR PRODUCTS
+            </p>
 
             <h2>
                 Available Now
@@ -41,14 +103,41 @@
         </div>
 
 
-        <!-- Products are inserted here by JavaScript -->
-        <div id="productContainer" class="product-row"></div>
+        <div
+            id="productContainer"
+            class="product-row"
+        ></div>
+
+
+        <!-- SECOND ROW -->
+
+        <div class="section-heading second-row-heading">
+
+            <p class="small-title">
+                MORE PRODUCTS
+            </p>
+
+            <h2>
+                Featured Products
+            </h2>
+
+        </div>
+
+
+        <div
+            id="featuredProductContainer"
+            class="product-row featured-row"
+        ></div>
 
     </section>
 
 
-    <!-- Purchase Summary -->
-    <section id="summarySection" class="summary-section hidden">
+    <!-- PURCHASE SUMMARY -->
+
+    <section
+        id="summarySection"
+        class="summary-section hidden"
+    >
 
         <div class="summary-card">
 
@@ -67,11 +156,37 @@
     </section>
 
 
-    <!-- Lenco -->
+    <!-- IMAGE PREVIEW CONTAINER -->
+
+    <div
+        id="imagePreview"
+        class="image-preview hidden"
+    >
+
+        <span
+            id="closePreview"
+            class="close-preview"
+        >
+            ×
+        </span>
+
+        <img
+            id="previewImage"
+            src=""
+            alt="Product preview"
+        >
+
+    </div>
+
+
+    <!-- LENCO -->
+
     <script src="https://pay.lenco.co/js/v1/inline.js"></script>
 
-    <!-- Website JavaScript -->
+    <!-- WEBSITE JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
