@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Website</title>
+    <title>My Store</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,78 +14,90 @@
     <!-- Navigation -->
     <header class="navbar">
 
-        <div class="logo">NETFLIX</div>
+        <div class="logo">MY STORE</div>
 
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#products">Products</a>
         </nav>
 
     </header>
 
 
-    <!-- Hero Section -->
-    <main id="home" class="hero">
+    <!-- Hero -->
+    <section id="home" class="hero">
 
         <div class="hero-content">
 
-            <p class="small-title">
-                WELCOME
-            </p>
+            <p class="small-title">WELCOME</p>
 
             <h1>
-                Unlimited Entertainment
+                Shop What You Love
             </h1>
 
             <p>
-                Welcome to my Netflix-inspired website.
-                Explore movies, shows and entertainment.
+                Choose a product and purchase it instantly.
             </p>
 
-            <!-- Payment Button -->
-            <button id="contactButton">
-                Get Started — K10
-            </button>
+            <a href="#products" class="hero-button">
+                Shop Now
+            </a>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- Products -->
+    <section id="products" class="products-section">
 
-        <h2>
-            About
-        </h2>
+        <div class="section-heading">
 
-        <p>
-            This is my Netflix-inspired website built
-            with HTML, CSS and JavaScript.
-        </p>
+            <p class="small-title">
+                OUR PRODUCTS
+            </p>
+
+            <h2>
+                Available Now
+            </h2>
+
+            <p>
+                Scroll horizontally to see more products.
+            </p>
+
+        </div>
+
+
+        <!-- Products are inserted here by JavaScript -->
+        <div id="productContainer" class="product-row"></div>
 
     </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- Purchase Summary -->
+    <section id="summarySection" class="summary-section hidden">
 
-        <h2>
-            Contact
-        </h2>
+        <div class="summary-card">
 
-        <p>
-            Thanks for visiting my website.
-        </p>
+            <p class="small-title">
+                PAYMENT CONFIRMED
+            </p>
+
+            <h2>
+                Purchase Summary
+            </h2>
+
+            <div id="purchaseSummary"></div>
+
+        </div>
 
     </section>
 
 
-    <!-- Lenco Payment Library -->
+    <!-- Lenco -->
     <script src="https://pay.lenco.co/js/v1/inline.js"></script>
 
-    <!-- Your JavaScript -->
+    <!-- Website JavaScript -->
     <script src="script.js"></script>
 
 </body>
