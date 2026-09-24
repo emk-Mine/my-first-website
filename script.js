@@ -14,7 +14,7 @@ const products = [
         name: "location mansa",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product2.jpg",
+        image: "images/Product2.jpg",
         location: "Mansa",
         phone: "+260776025194"
     },
@@ -23,7 +23,7 @@ const products = [
         name: "location kabwe",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product3.jpg",
+        image: "images/Product3.jpg",
         location: "Kabwe",
         phone: "+260775788853"
     },
@@ -32,7 +32,7 @@ const products = [
         name: "location lusaka",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product4.jpg",
+        image: "images/Product4.jpg",
         location: "water works",
         phone: "+260975736569"
     },
@@ -41,7 +41,7 @@ const products = [
         name: "lsk Chamba Vally",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product5.jpg",
+        image: "images/Product5.jpg",
         location: "Lusaka Chamba Vally",
         phone: "+260976831899"
     },
@@ -50,7 +50,7 @@ const products = [
         name: "kitwe",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product6.jpg",
+        image: "images/Product6.jpg",
         location: "Kitwe",
         phone: "+260762429176"
     },
@@ -59,7 +59,7 @@ const products = [
         name: "lusaka ngomba",
         price: 30,
         description: "feel free to inbox and tell me anything.",
-        image: "images/product8.jpg",
+        image: "images/Product8.jpg",
         location: "Lusaka",
         phone: "+260776007309"
     },
@@ -68,7 +68,7 @@ const products = [
         name: "Lusaka matero",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product9.jpg",
+        image: "images/Product9.jpg",
         location: "Lusaka matero",
         phone: "+260573102739"
     },
@@ -77,7 +77,7 @@ const products = [
         name: "Solwezi",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product10.jpg",
+        image: "images/Product10.jpg",
         location: "solwezi",
         phone: "+260972968720"
     },
@@ -86,7 +86,7 @@ const products = [
         name: "Kitwe",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product11.jpg",
+        image: "images/Product11.jpg",
         location: "Kitwe",
         phone: "+260767267075"
     },
@@ -95,7 +95,7 @@ const products = [
         name: "Lsk Kamwala south",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product12.jpg",
+        image: "images/Product12.jpg",
         location: "Lusaka kamwala south",
         phone: "+260771610165"
     },
@@ -104,7 +104,7 @@ const products = [
         name: "lsk Garden house ",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product13.jpg",
+        image: "images/Product13.jpg",
         location: "Lusaka garden house",
         phone: "+260570887604"
     },
@@ -113,7 +113,7 @@ const products = [
         name: "Ndola kansanshi",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product14.jpg",
+        image: "images/Product14.jpg",
         location: "Ndola kansanshi",
         phone: "+260766756675"
     },
@@ -122,7 +122,7 @@ const products = [
         name: "lsk garden house",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product15.jpg",
+        image: "images/Product15.jpg",
         location: "Lusaka garden house",
         phone: "+260977178021"
     },
@@ -131,7 +131,7 @@ const products = [
         name: "lsk garden house",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product16.jpg",
+        image: "images/Product16.jpg",
         location: "Lusaka garden house",
         phone: "+260978001911"
     },
@@ -140,7 +140,7 @@ const products = [
         name: "lsk Avondale",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product17.jpg",
+        image: "images/Product17.jpg",
         location: "Lusaka avondale",
         phone: "+260772828660"
     },
@@ -149,7 +149,7 @@ const products = [
         name: "Ndola twapia",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product18.jpg",
+        image: "images/Product18.jpg",
         location: "Ndola twapia",
         phone: "+260761278566"
     },
@@ -158,7 +158,7 @@ const products = [
         name: "lusaka zambia",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product20.jpg",
+        image: "images/Product20.jpg",
         location: "Lusaka",
         phone: "+260974986089"
     },
@@ -167,7 +167,7 @@ const products = [
         name: "lsk kawala south",
         price: 30,
         description: "feel free to inbox and ask me anything.",
-        image: "images/product21.jpg",
+        image: "images/Product21.jpg",
         location: "Lusaka",
         phone: "+260771677760"
     },
