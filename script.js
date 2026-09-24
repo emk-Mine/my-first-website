@@ -10,6 +10,26 @@
 ========================================================= */
 
 const products = [
+     {
+        productNumber: "001",
+        name: "Product One",
+        price: 2,
+        description: "This is the description of product one.",
+        image: "images/product1.jpg",
+        location: "Lusaka",
+        phone: "+260XXXXXXXXX"
+    },
+
+     {
+        productNumber: "001",
+        name: "Product One",
+        price: 2,
+        description: "This is the description of product one.",
+        image: "images/product1.jpg",
+        location: "Lusaka",
+        phone: "+260XXXXXXXXX"
+    },
+
     {
         productNumber: "001",
         name: "Product One",
@@ -44,6 +64,24 @@ const products = [
 
 const featuredProducts = [
     {
+        productNumber: "101",
+        name: "Featured One",
+        price: 15,
+        image: "images/product4.jpg",
+        location: "Lusaka",
+        link: "https://example.com/featured-one"
+    },
+
+      {
+        productNumber: "101",
+        name: "Featured One",
+        price: 15,
+        image: "images/product4.jpg",
+        location: "Lusaka",
+        link: "https://example.com/featured-one"
+    },
+
+      {
         productNumber: "101",
         name: "Featured One",
         price: 15,
