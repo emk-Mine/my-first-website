@@ -11,54 +11,166 @@
 
 const products = [
      {
-        productNumber: "001",
-        name: "Product One",
-        price: 2,
-        description: "This is the description of product one.",
-        image: "images/product1.jpg",
-        location: "Lusaka",
-        phone: "+260XXXXXXXXX"
+        name: "location mansa",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
+        image: "images/product2.jpg",
+        location: "Mansa",
+        phone: "+260776025194"
     },
 
      {
-        productNumber: "001",
-        name: "Product One",
-        price: 2,
-        description: "This is the description of product one.",
-        image: "images/product1.jpg",
-        location: "Lusaka",
-        phone: "+260XXXXXXXXX"
-    },
-
-    {
-        productNumber: "001",
-        name: "Product One",
-        price: 2,
-        description: "This is the description of product one.",
-        image: "images/product1.jpg",
-        location: "Lusaka",
-        phone: "+260XXXXXXXXX"
-    },
-
-    {
-        productNumber: "002",
-        name: "Product Two",
-        price: 25,
-        description: "This is the description of product two.",
-        image: "images/product2.jpg",
-        location: "Lusaka",
-        phone: "+260XXXXXXXXX"
-    },
-
-    {
-        productNumber: "003",
-        name: "Product Three",
-        price: 50,
-        description: "This is the description of product three.",
+        name: "location kabwe",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
         image: "images/product3.jpg",
-        location: "Ndola",
-        phone: "+260XXXXXXXXX"
-    }
+        location: "Kabwe",
+        phone: "+260775788853"
+    },
+
+     {
+        name: "location lusaka",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
+        image: "images/product4.jpg",
+        location: "water works",
+        phone: "+260975736569"
+    },
+
+     {
+        name: "lsk Chamba Vally",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
+        image: "images/product5.jpg",
+        location: "Lusaka Chamba Vally",
+        phone: "+260976831899"
+    },
+
+     {
+        name: "kitwe",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
+        image: "images/product6.jpg",
+        location: "Kitwe",
+        phone: "+260762429176"
+    },
+
+     {
+        name: "lusaka ngomba",
+        price: 30,
+        description: "feel free to inbox and tell me anything.",
+        image: "images/product8.jpg",
+        location: "Lusaka",
+        phone: "+260776007309"
+    },
+
+     {
+        name: "Lusaka matero",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product9.jpg",
+        location: "Lusaka matero",
+        phone: "+260573102739"
+    },
+
+     {
+        name: "Solwezi",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product10.jpg",
+        location: "solwezi",
+        phone: "+260972968720"
+    },
+
+     {
+        name: "Kitwe",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product11.jpg",
+        location: "Kitwe",
+        phone: "+260767267075"
+    },
+
+     {
+        name: "Lsk Kamwala south",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product12.jpg",
+        location: "Lusaka kamwala south",
+        phone: "+260771610165"
+    },
+
+     {
+        name: "lsk Garden house ",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product13.jpg",
+        location: "Lusaka garden house",
+        phone: "+260570887604"
+    },
+
+     {
+        name: "Ndola kansanshi",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product14.jpg",
+        location: "Ndola kansanshi",
+        phone: "+260766756675"
+    },
+
+     {
+        name: "lsk garden house",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product15.jpg",
+        location: "Lusaka garden house",
+        phone: "+260977178021"
+    },
+
+     {
+        name: "lsk garden house",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product16.jpg",
+        location: "Lusaka garden house",
+        phone: "+260978001911"
+    },
+
+     {
+        name: "lsk Avondale",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product17.jpg",
+        location: "Lusaka avondale",
+        phone: "+260772828660"
+    },
+
+     {
+        name: "Ndola twapia",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product18.jpg",
+        location: "Ndola twapia",
+        phone: "+260761278566"
+    },
+
+    {
+        name: "lusaka zambia",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product20.jpg",
+        location: "Lusaka",
+        phone: "+260974986089"
+    },
+
+    {
+        name: "lsk kawala south",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/product21.jpg",
+        location: "Lusaka",
+        phone: "+260771677760"
+    },
 ];
 
 
