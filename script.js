@@ -10,6 +10,96 @@
 ========================================================= */
 
 const products = [
+      {
+        name: "location lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product31.jpg",
+        location: "Lusaka",
+        phone: "+260966330227"
+    },
+    
+      {
+        name: "lusaka zambia",
+        price: 100,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product30.jpg",
+        location: "Lusaka Zambia",
+        phone: "+63 915 351 1483"
+    },
+    
+      {
+        name: "lusaka town",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product29.jpg",
+        location: "lusaka town",
+        phone: "+260773620924"
+    },
+    
+      {
+        name: "lusaka garden house",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product28.jpg",
+        location: "lusaka garden house",
+        phone: "+260977178021"
+    },
+    
+      {
+        name: "lusaka Chalala",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product27.jpg",
+        location: "Lusaka Chalala",
+        phone: "+260975616380"
+    },
+    
+      {
+        name: "lusaka Olympia",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product26.jpg",
+        location: "Olympia lusaka",
+        phone: "+260974740075"
+    },
+    
+      {
+        name: "lusaka Chawama",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product25.jpg",
+        location: " lusaka chawama",
+        phone: "+260778707866"
+    },
+    
+      {
+        name: "Lusak rhodes park",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product24.jpg",
+        location: "Rhodes park lusaka",
+        phone: "+260776984542"
+    },
+    
+      {
+        name: "location Lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product23.jpg",
+        location: "Lusaka",
+        phone: "+260574141749"
+    },
+    
+    {
+        name: "location Kitwe",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product22.jpg",
+        location: "Kitwe",
+        phone: "+260974826582"
+    },
+
      {
         name: "location mansa",
         price: 30,
@@ -177,56 +267,83 @@ const products = [
 const featuredProducts = [
     {
         productNumber: "101",
-        name: "Featured One",
-        price: 15,
-        image: "images/product4.jpg",
-        location: "Lusaka",
-        link: "https://example.com/featured-one"
-    },
-
-      {
-        productNumber: "101",
-        name: "Featured One",
-        price: 15,
-        image: "images/product4.jpg",
-        location: "Lusaka",
-        link: "https://example.com/featured-one"
-    },
-
-      {
-        productNumber: "101",
-        name: "Featured One",
-        price: 15,
-        image: "images/product4.jpg",
-        location: "Lusaka",
-        link: "https://example.com/featured-one"
+        name: "zed_fuck hub",
+        price: 20,
+        image: "images/Photo1.jpg",
+        location: "Zambia",
+        link: "https://chat.whatsapp.com/ELCDcKLQTcU83TiTKOGXKr?s=cl&p=a&mlu=4&ilr=4"
     },
 
     {
         productNumber: "102",
-        name: "Featured Two",
+        name: "Banned videos only ",
         price: 20,
-        image: "images/product5.jpg",
-        location: "Lusaka",
-        link: "https://example.com/featured-two"
+        image: "images/Photo2.jpg",
+        location: "Zambia",
+        link: "https://chat.whatsapp.com/CKGatvIA14n4MWVDIA8d4S?s=cl&p=a&ilr=0"
     },
 
     {
         productNumber: "103",
-        name: "Featured Three",
-        price: 30,
-        image: "images/product6.jpg",
-        location: "Ndola",
-        link: "https://example.com/featured-three"
+        name: "Real sex chat",
+        price: 20,
+        image: "images/Photo3.jpg",
+        location: "Zambia",
+        link: "https://chat.whatsapp.com/FZTT11EsYPl42fAHtmhZfq?s=cl&p=a&ilr=0"
     },
 
     {
-        productNumber: "104",
-        name: "Featured Four",
+        productNumber: "105",
+        name: "Bakulu",
         price: 40,
-        image: "images/product7.jpg",
+        image: "images/Photo5.jpg",
+        location: "Zambia",
+        link: "https://t.me/+4pR6wVZkgHIwZTQ0"
+    },
+
+      {
+        productNumber: "106",
+        name: "ZedTrending stories",
+        price: 40,
+        image: "images/Photo6.jpg",
+        location: "Lusaka",
+        link: "https://chat.whatsapp.com/LdpwzSQlBKJDQmgLRUlDF6"
+    },
+
+      {
+        productNumber: "107",
+        name: "Ukulalana pa zed",
+        price: 40,
+        image: "images/Photo7.jpg",
+        location: "Lusaka",
+        link: "https://t.me/+kkTkh4N7b6A1ODJk"
+    },
+
+    {
+        productNumber: "108",
+        name: "Zed hule kuchalo",
+        price: 40,
+        image: "images/Photo8.jpg",
+        location: "Lusaka",
+        link: "https://t.me/+VPwVAL2K6ec0YzZk"
+    },
+
+    {
+        productNumber: "109",
+        name: "Cant belive this ",
+        price: 40,
+        image: "images/Photo9.jpg",
+        location: "Ndola",
+        link: "https://t.me/+TPzk-MEpchY3ZWQ0"
+    },
+
+    {
+        productNumber: "110",
+        name: "Edith trending vides ",
+        price: 40,
+        image: "images/Photo10.jpg",
         location: "Kitwe",
-        link: "https://example.com/featured-four"
+        link: "https://t.me/+8_gCN2YNwjI1MzU0"
     }
 ];
 
