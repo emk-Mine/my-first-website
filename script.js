@@ -1,7 +1,5 @@
 /* =========================================================
    BAKULU
-   MOBILE MONEY PAYMENTS
-   LENCO + CLOUDFLARE
 ========================================================= */
 
 
@@ -18,7 +16,34 @@ const products = [
         location: "Lusaka",
         phone: "+260966330227"
     },
+
+     {
+        name: "Titan gel ",
+        price: 350,
+        description: "high quality gel available lsk.",
+        image: "images/Product34.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
     
+     {
+        name: " Lusaka Zambia ",
+        price: 100,
+        description: "UNZA tyla.",
+        image: "images/Product32.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
+    
+     {
+        name: "location lusaka",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product33.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
+
       {
         name: "lusaka zambia",
         price: 100,
@@ -266,6 +291,15 @@ const products = [
 
 const featuredProducts = [
     {
+        productNumber: "100",
+        name: "LIZZY BADDIE",
+        price: 60,
+        image: "images/Photo11.jpg",
+        location: "Lusaka Zambia",
+        link: "https://chat.whatsapp.com/Hct5SVgIqePIlJV6iDHvG0"
+    },
+
+    {
         productNumber: "101",
         name: "zed_fuck hub",
         price: 20,
@@ -483,7 +517,7 @@ products.forEach(function (product, index) {
                     products[${index}]
                 )"
             >
-                Purchase
+                Call Now
             </button>
 
         </div>
@@ -542,7 +576,7 @@ featuredProducts.forEach(function (product, index) {
                     featuredProducts[${index}]
                 )"
             >
-                Purchase
+                Access Videos
             </button>
 
         </div>
