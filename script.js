@@ -7,34 +7,7 @@
    PRODUCTS
 ========================================================= */
 
-const products = [
-      {
-        name: "location lusaka",
-        price: 30,
-        description: "feel free to inbox and ask me anything.",
-        image: "images/Product31.jpg",
-        location: "Lusaka",
-        phone: "+260966330227"
-    },
-
-     {
-        name: "Titan gel ",
-        price: 350,
-        description: "high quality gel available lsk.",
-        image: "images/Product34.jpg",
-        location: "Lusaka",
-        phone: "+260766894140"
-    },
-    
-     {
-        name: " Lusaka Zambia ",
-        price: 100,
-        description: "UNZA tyla.",
-        image: "images/Product32.jpg",
-        location: "Lusaka",
-        phone: "+260766894140"
-    },
-    
+const products = [ 
      {
         name: "location lusaka",
         price: 50,
@@ -43,6 +16,25 @@ const products = [
         location: "Lusaka",
         phone: "+260766894140"
     },
+
+     {
+        name: " Lusaka Zambia ",
+        price: 100,
+        description: "UNZA tyla.feel free to inbox and ask Anything ",
+        image: "images/Product32.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
+    
+     {
+        name: "location lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product31.jpg",
+        location: "Lusaka",
+        phone: "+260966330227"
+    },
+
 
       {
         name: "lusaka zambia",
