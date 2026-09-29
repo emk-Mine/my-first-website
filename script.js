@@ -301,12 +301,30 @@ const featuredProducts = [
     },
 
     {
+        productNumber: "10.1",
+        name: "Mwaka Halwindi",
+        price: 30,
+        image: "images/Photo12.jpg",
+        location: "Lusaka",
+        link: "https://t.me/c/3983996172/135"
+    },
+
+    {
         productNumber: "102",
         name: "Banned videos only ",
         price: 20,
         image: "images/Photo2.jpg",
         location: "Zambia",
         link: "https://chat.whatsapp.com/CKGatvIA14n4MWVDIA8d4S?s=cl&p=a&ilr=0"
+    },
+
+     {
+        productNumber: "10.2",
+        name: "Gizile Trending",
+        price: 25,
+        image: "images/Photo13.jpg",
+        location: "Lusaka",
+        link: "https://t.me/+ccUvnvkA1iFkNGU0"
     },
 
     {
