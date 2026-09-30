@@ -35,6 +35,15 @@ const products = [
         phone: "+260966330227"
     },
 
+      {
+        name: "Chipate Eastern",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product35.jpg",
+        location: "Chipata eastern",
+        phone: "+260975432580"
+    },
+
 
       {
         name: "lusaka zambia",
