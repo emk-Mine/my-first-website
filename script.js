@@ -400,6 +400,35 @@ const featuredProducts = [
     }
 ];
 
+const newProducts = [
+    {
+        productNumber: "201",
+        name: "New Product One",
+        price: 3,
+        image: "images/Product36.jpg",
+        location: "Lusaka",
+        phone: "+260774907636"
+    },
+
+    {
+        productNumber: "202",
+        name: "New Product Two",
+        price: 40,
+        image: "images/Product37.jpg",
+        location: "Ndola",
+        phone: "+260XXXXXXXXX"
+    },
+
+    {
+        productNumber: "203",
+        name: "New Product Three",
+        price: 50,
+        image: "images/Product38.jpg",
+        location: "Kitwe",
+        phone: "+260XXXXXXXXX"
+    }
+];
+
 
 /* =========================================================
    SETTINGS
@@ -442,6 +471,9 @@ const productContainer =
 
 const featuredProductContainer =
     document.getElementById("featuredProductContainer");
+
+const newProductContainer =
+    document.getElementById("newProductContainer");    
 
 const paymentModal =
     document.getElementById("paymentModal");
@@ -602,6 +634,65 @@ featuredProducts.forEach(function (product, index) {
     `;
 
     featuredProductContainer.appendChild(card);
+});
+
+/* =========================================================
+   RENDER NEW PRODUCTS
+========================================================= */
+
+newProducts.forEach(function (product, index) {
+
+    const card = document.createElement("div");
+
+    card.className = "product-card";
+
+    card.innerHTML = `
+
+        <div
+            class="product-image-container"
+            onclick="previewImage(
+                '${product.image}',
+                '${escapeHtml(product.name)}'
+            )"
+        >
+
+            <img
+                class="product-image"
+                src="${product.image}"
+                alt="${escapeHtml(product.name)}"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-number">
+                PRODUCT ${product.productNumber}
+            </div>
+
+            <h3 class="product-name">
+                ${escapeHtml(product.name)}
+            </h3>
+
+            <div class="product-price">
+                K${formatAmount(product.price)}
+            </div>
+
+            <button
+                class="product-button"
+                type="button"
+                onclick="openPaymentModal(
+                    newProducts[${index}]
+                )"
+            >
+                Call Now
+            </button>
+
+        </div>
+    `;
+
+    newProductContainer.appendChild(card);
 });
 
 
