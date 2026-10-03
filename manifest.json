@@ -1,0 +1,22 @@
+{
+    "name": "Bakulu",
+    "short_name": "Bakulu",
+    "description": "Discover available products and featured content.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/images/logo1.jpg",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/logo2.jpg",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -17,6 +17,12 @@
 
     <title>Bakulu</title>
 
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#000000">
+
+<link rel="apple-touch-icon" href="images/logo1.jpg">
+
     <link
         rel="stylesheet"
         href="style.css"
@@ -385,6 +391,20 @@
 
 
 <script src="script.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/service-worker.js")
+                .then(() => {
+                    console.log("Service worker registered.");
+                })
+                .catch((error) => {
+                    console.error("Service worker registration failed:", error);
+                });
+        });
+    }
+</script>
 
 </body>
 
