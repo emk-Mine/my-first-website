@@ -686,7 +686,7 @@ newProducts.forEach(function (product, index) {
                     newProducts[${index}]
                 )"
             >
-                Call Now
+                Buy Now
             </button>
 
         </div>
@@ -1211,7 +1211,7 @@ async function startMobileMoneyPayment(
             showNotification(
                 "Payment Could Not Start",
                 result.message ||
-                    "Lenco could not start the mobile-money payment.",
+                    "Could not start the mobile-money payment.",
                 "!"
             );
 
@@ -1780,7 +1780,7 @@ function showPurchaseSummary(
                 </strong>
 
                 <p>
-                    Your payment has been successfully verified by Lenco.
+                    Your payment has been successfully verified.
                 </p>
 
             </div>
