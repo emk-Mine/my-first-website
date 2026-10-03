@@ -2052,3 +2052,90 @@ document.addEventListener(
 
     }
 );
+// ==========================================
+// PWA INSTALL APP
+// ==========================================
+
+let deferredInstallPrompt = null;
+
+const installBanner =
+    document.getElementById("installBanner");
+
+const installAppButton =
+    document.getElementById("installAppButton");
+
+const closeInstallBanner =
+    document.getElementById("closeInstallBanner");
+
+
+// Detect when the browser makes the app installable
+
+window.addEventListener("beforeinstallprompt", (event) => {
+
+    event.preventDefault();
+
+    deferredInstallPrompt = event;
+
+    if (installBanner) {
+        installBanner.classList.remove("hidden");
+    }
+
+});
+
+
+// Install button
+
+if (installAppButton) {
+
+    installAppButton.addEventListener("click", async () => {
+
+        if (!deferredInstallPrompt) {
+            return;
+        }
+
+        deferredInstallPrompt.prompt();
+
+        const result =
+            await deferredInstallPrompt.userChoice;
+
+        if (result.outcome === "accepted") {
+
+            if (installBanner) {
+                installBanner.classList.add("hidden");
+            }
+
+        }
+
+        deferredInstallPrompt = null;
+
+    });
+
+}
+
+
+// Close banner
+
+if (closeInstallBanner) {
+
+    closeInstallBanner.addEventListener("click", () => {
+
+        if (installBanner) {
+            installBanner.classList.add("hidden");
+        }
+
+    });
+
+}
+
+
+// Hide banner after installation
+
+window.addEventListener("appinstalled", () => {
+
+    deferredInstallPrompt = null;
+
+    if (installBanner) {
+        installBanner.classList.add("hidden");
+    }
+
+});

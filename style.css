@@ -1183,3 +1183,170 @@ a {
         margin-bottom: 12px;
     }
 }
+/* ==========================================
+   PWA INSTALL APP BANNER
+   ========================================== */
+
+.install-banner {
+    position: fixed;
+
+    left: 16px;
+    right: 16px;
+    bottom: 18px;
+
+    z-index: 9999;
+}
+
+.install-banner-content {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background: #111;
+
+    border: 1px solid #333;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+.install-app-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+}
+
+
+.install-app-icon img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+.install-banner-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.install-banner-text strong {
+
+    color: #fff;
+
+    font-size: 15px;
+}
+
+
+.install-banner-text span {
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+.install-app-button {
+
+    border: none;
+
+    background: #e50914;
+
+    color: #fff;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.install-app-button:hover {
+
+    background: #ff1722;
+}
+
+
+.close-install-banner {
+
+    border: none;
+
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    padding: 4px;
+}
+
+
+.close-install-banner:hover {
+
+    color: #fff;
+}
+
+
+@media (max-width: 600px) {
+
+    .install-banner {
+
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+
+    }
+
+
+    .install-banner-content {
+
+        padding: 10px;
+
+    }
+
+
+    .install-banner-text span {
+
+        font-size: 11px;
+
+    }
+
+
+    .install-app-button {
+
+        padding: 9px 12px;
+
+    }
+
+}
