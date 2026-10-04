@@ -405,7 +405,7 @@ const newProducts = [
         productNumber: "201",
         name: "New Product One",
         price: 3,
-        image: "images/Product36.jpg",
+        image: "images/Product7.jpg",
         location: "Lusaka",
         phone: "+260774907636"
     },
@@ -2251,13 +2251,29 @@ const searchResults =
 
 
 // ==========================================
-// PRODUCTS THAT CAN BE SEARCHED
+// ALL SEARCHABLE PRODUCTS
 // ==========================================
 
-// Normal products + New Arrivals
 const searchableProducts = [
-    ...products,
-    ...newProducts
+
+    // Available Now
+    ...products.map((product) => ({
+        ...product,
+        searchCategory: "Available Now"
+    })),
+
+    // Trending Videos & Groups
+    ...featuredProducts.map((product) => ({
+        ...product,
+        searchCategory: "Trending Videos & Groups"
+    })),
+
+    // New Arrivals
+    ...newProducts.map((product) => ({
+        ...product,
+        searchCategory: "New Arrival"
+    }))
+
 ];
 
 
@@ -2265,25 +2281,33 @@ const searchableProducts = [
 // OPEN SEARCH
 // ==========================================
 
-if (openSearchButton && searchModal && searchInput) {
+if (
+    openSearchButton &&
+    searchModal &&
+    searchInput &&
+    searchResults
+) {
 
-    openSearchButton.addEventListener("click", () => {
+    openSearchButton.addEventListener(
+        "click",
+        () => {
 
-        searchModal.classList.remove("hidden");
+            searchModal.classList.remove("hidden");
 
-        document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
 
-        searchResults.innerHTML = `
-            <div class="search-no-results">
-                Start typing to search.
-            </div>
-        `;
+            searchResults.innerHTML = `
+                <div class="search-no-results">
+                    Start typing to search.
+                </div>
+            `;
 
-        setTimeout(() => {
-            searchInput.focus();
-        }, 100);
+            setTimeout(() => {
+                searchInput.focus();
+            }, 100);
 
-    });
+        }
+    );
 
 }
 
@@ -2294,11 +2318,9 @@ if (openSearchButton && searchModal && searchInput) {
 
 function closeSearch() {
 
-    if (!searchModal) {
-        return;
+    if (searchModal) {
+        searchModal.classList.add("hidden");
     }
-
-    searchModal.classList.add("hidden");
 
     if (searchInput) {
         searchInput.value = "";
@@ -2323,7 +2345,9 @@ if (closeSearchButton) {
 }
 
 
-// Close when clicking outside search card
+// ==========================================
+// CLOSE WHEN CLICKING BACKGROUND
+// ==========================================
 
 if (searchModal) {
 
@@ -2342,7 +2366,7 @@ if (searchModal) {
 
 
 // ==========================================
-// SEARCH PRODUCTS
+// PERFORM SEARCH
 // ==========================================
 
 function performSearch() {
@@ -2351,13 +2375,16 @@ function performSearch() {
         return;
     }
 
+
     const searchTerm =
         searchInput.value
             .trim()
             .toLowerCase();
 
 
-    // Nothing typed
+    // ======================================
+    // EMPTY SEARCH
+    // ======================================
 
     if (!searchTerm) {
 
@@ -2372,44 +2399,51 @@ function performSearch() {
     }
 
 
-    // Search Available Now + New Arrivals
+    // ======================================
+    // FIND MATCHES
+    // ======================================
 
     const results =
-        searchableProducts.filter((product) => {
+        searchableProducts.filter(
+            (product) => {
 
-            const searchableText = [
+                const searchableText = [
 
-                product.productNumber || "",
+                    product.productNumber || "",
 
-                product.name || "",
+                    product.name || "",
 
-                product.description || "",
+                    product.description || "",
 
-                product.location || "",
+                    product.location || "",
 
-                product.price || ""
+                    product.price || "",
 
-            ]
-                .join(" ")
-                .toLowerCase();
+                    product.searchCategory || ""
 
-
-            return searchableText.includes(
-                searchTerm
-            );
-
-        });
+                ]
+                    .join(" ")
+                    .toLowerCase();
 
 
-    // ==========================================
+                return searchableText.includes(
+                    searchTerm
+                );
+
+            }
+        );
+
+
+    // ======================================
     // NO RESULTS
-    // ==========================================
+    // ======================================
 
     if (results.length === 0) {
 
         searchResults.innerHTML = `
             <div class="search-no-results">
-                No products found for "${escapeHtml(searchInput.value)}".
+                No results found for
+                "${escapeHtml(searchInput.value)}".
             </div>
         `;
 
@@ -2418,54 +2452,77 @@ function performSearch() {
     }
 
 
-    // ==========================================
+    // ======================================
     // DISPLAY RESULTS
-    // ==========================================
+    // ======================================
 
     searchResults.innerHTML =
-        results.map((product, index) => {
+        results
+            .map(
+                (product, index) => {
 
-            return `
+                    return `
 
-                <div
-                    class="search-result"
-                    data-search-index="${index}"
-                >
+                        <div
+                            class="search-result"
+                            data-search-index="${index}"
+                        >
 
-                    <img
-                        class="search-result-image"
-                        src="${product.image}"
-                        alt="${escapeHtml(product.name)}"
-                        loading="lazy"
-                    >
+                            <img
+                                class="search-result-image"
+                                src="${product.image}"
+                                alt="${escapeHtml(product.name || "")}"
+                                loading="lazy"
+                            >
 
-                    <div class="search-result-info">
+                            <div class="search-result-info">
 
-                        <div class="search-result-name">
-                            ${escapeHtml(product.name)}
+                                <div class="search-result-name">
+
+                                    ${escapeHtml(
+                                        product.name || ""
+                                    )}
+
+                                </div>
+
+
+                                <div class="search-result-details">
+
+                                    ${escapeHtml(
+                                        product.searchCategory || ""
+                                    )}
+
+                                    •
+
+                                    ${escapeHtml(
+                                        product.location || ""
+                                    )}
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="search-result-price">
+
+                                K${formatAmount(
+                                    product.price
+                                )}
+
+                            </div>
+
                         </div>
 
-                        <div class="search-result-details">
-                            ${escapeHtml(product.location || "")}
-                        </div>
+                    `;
 
-                    </div>
-
-                    <div class="search-result-price">
-                        K${formatAmount(product.price)}
-                    </div>
-
-                </div>
-
-            `;
-
-        })
-        .join("");
+                }
+            )
+            .join("");
 
 
-    // ==========================================
+    // ======================================
     // CLICK SEARCH RESULT
-    // ==========================================
+    // ======================================
 
     const resultCards =
         searchResults.querySelectorAll(
@@ -2473,44 +2530,46 @@ function performSearch() {
         );
 
 
-    resultCards.forEach((card) => {
+    resultCards.forEach(
+        (card) => {
 
-        card.addEventListener(
-            "click",
-            () => {
+            card.addEventListener(
+                "click",
+                () => {
 
-                const index =
-                    Number(
-                        card.dataset.searchIndex
+                    const index =
+                        Number(
+                            card.dataset.searchIndex
+                        );
+
+
+                    const product =
+                        results[index];
+
+
+                    if (!product) {
+                        return;
+                    }
+
+
+                    closeSearch();
+
+
+                    openPaymentModal(
+                        product
                     );
 
-
-                const product =
-                    results[index];
-
-
-                if (!product) {
-                    return;
                 }
+            );
 
-
-                closeSearch();
-
-
-                openPaymentModal(
-                    product
-                );
-
-            }
-        );
-
-    });
+        }
+    );
 
 }
 
 
 // ==========================================
-// SEARCH WHILE TYPING
+// LIVE SEARCH WHILE TYPING
 // ==========================================
 
 if (searchInput) {
@@ -2524,7 +2583,7 @@ if (searchInput) {
 
 
 // ==========================================
-// ESCAPE KEY FOR SEARCH
+// CLOSE SEARCH WITH ESC
 // ==========================================
 
 document.addEventListener(
@@ -2534,7 +2593,9 @@ document.addEventListener(
         if (
             event.key === "Escape" &&
             searchModal &&
-            !searchModal.classList.contains("hidden")
+            !searchModal.classList.contains(
+                "hidden"
+            )
         ) {
 
             closeSearch();
