@@ -473,7 +473,55 @@ const featuredProductContainer =
     document.getElementById("featuredProductContainer");
 
 const newProductContainer =
-    document.getElementById("newProductContainer");    
+    document.getElementById("newProductContainer");
+
+if (newProductContainer) {
+    newProducts.forEach((product, index) => {
+        const card = document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+            <img
+                src="${product.image}"
+                alt="${escapeHtml(product.name)}"
+                class="product-image"
+            >
+
+            <div class="product-info">
+                <h3>${escapeHtml(product.name)}</h3>
+
+                <p>
+                    ${escapeHtml(product.description)}
+                </p>
+
+                <div class="product-bottom">
+                    <span class="product-price">
+                        K${formatAmount(product.price)}
+                    </span>
+
+                    <button
+                        type="button"
+                        class="buy-button"
+                    >
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        `;
+
+        const buyButton =
+            card.querySelector(".buy-button");
+
+        if (buyButton) {
+            buyButton.addEventListener("click", () => {
+                openPaymentModal(product);
+            });
+        }
+
+        newProductContainer.appendChild(card);
+    });
+}   
 
 const paymentModal =
     document.getElementById("paymentModal");
@@ -2230,3 +2278,273 @@ window.addEventListener("appinstalled", () => {
     }
 
 });
+// ==========================================
+// SEARCH
+// ==========================================
+
+const openSearchButton =
+    document.getElementById("openSearchButton");
+
+const closeSearchButton =
+    document.getElementById("closeSearchButton");
+
+const searchModal =
+    document.getElementById("searchModal");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const searchResults =
+    document.getElementById("searchResults");
+
+
+// Open search
+
+if (openSearchButton) {
+
+    openSearchButton.addEventListener("click", () => {
+
+        searchModal.classList.remove("hidden");
+
+        document.body.style.overflow = "hidden";
+
+        setTimeout(() => {
+            searchInput.focus();
+        }, 100);
+
+    });
+
+}
+
+
+// Close search
+
+function closeSearch() {
+
+    searchModal.classList.add("hidden");
+
+    searchInput.value = "";
+
+    searchResults.innerHTML = "";
+
+    restoreBodyScroll();
+
+}
+
+
+if (closeSearchButton) {
+
+    closeSearchButton.addEventListener(
+        "click",
+        closeSearch
+    );
+
+}
+
+
+// Close when clicking outside the card
+
+if (searchModal) {
+
+    searchModal.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === searchModal) {
+                closeSearch();
+            }
+
+        }
+    );
+
+}
+
+// ==========================================
+// SEARCH PRODUCTS
+// ==========================================
+
+function performSearch() {
+
+    const searchTerm =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    // Nothing typed
+
+    if (!searchTerm) {
+
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                Start typing to search.
+            </div>
+        `;
+
+        return;
+    }
+
+
+    /*
+       Search normal products.
+
+       We search:
+       - product name
+       - description
+       - location
+       - price
+    */
+
+    const results =
+        products.filter((product) => {
+
+            const searchableText = [
+
+                product.name,
+
+                product.description,
+
+                product.location,
+
+                product.price
+
+            ]
+                .join(" ")
+                .toLowerCase();
+
+
+            return searchableText.includes(
+                searchTerm
+            );
+
+        });
+
+
+    // No results
+
+    if (results.length === 0) {
+
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                No products found for "${escapeHtml(searchInput.value)}".
+            </div>
+        `;
+
+        return;
+    }
+
+
+    // Display results
+
+    searchResults.innerHTML =
+        results.map((product) => {
+
+            return `
+
+                <div
+                    class="search-result"
+                    data-product-name="${escapeHtml(product.name)}"
+                >
+
+                    <img
+                        class="search-result-image"
+                        src="${product.image}"
+                        alt="${escapeHtml(product.name)}"
+                    >
+
+                    <div class="search-result-info">
+
+                        <div class="search-result-name">
+                            ${escapeHtml(product.name)}
+                        </div>
+
+                        <div class="search-result-details">
+                            ${escapeHtml(product.location)}
+                        </div>
+
+                    </div>
+
+                    <div class="search-result-price">
+                        K${formatAmount(product.price)}
+                    </div>
+
+                </div>
+
+            `;
+
+        })
+        .join("");
+
+
+    // Make results clickable
+
+    const resultCards =
+        searchResults.querySelectorAll(
+            ".search-result"
+        );
+
+
+    resultCards.forEach((card) => {
+
+        card.addEventListener(
+            "click",
+            () => {
+
+                const product =
+                    products.find(
+                        (item) =>
+                            item.name ===
+                            card.dataset.productName
+                    );
+
+
+                if (product) {
+
+                    closeSearch();
+
+                    openPaymentModal(
+                        product
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+}
+
+
+// Search while typing
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        performSearch
+    );
+
+}
+
+
+// ESC closes search
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "Escape" &&
+            searchModal &&
+            !searchModal.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            closeSearch();
+
+        }
+
+    }
+);
