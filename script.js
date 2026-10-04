@@ -473,55 +473,7 @@ const featuredProductContainer =
     document.getElementById("featuredProductContainer");
 
 const newProductContainer =
-    document.getElementById("newProductContainer");
-
-if (newProductContainer) {
-    newProducts.forEach((product, index) => {
-        const card = document.createElement("div");
-
-        card.className = "product-card";
-
-        card.innerHTML = `
-            <img
-                src="${product.image}"
-                alt="${escapeHtml(product.name)}"
-                class="product-image"
-            >
-
-            <div class="product-info">
-                <h3>${escapeHtml(product.name)}</h3>
-
-                <p>
-                    ${escapeHtml(product.description)}
-                </p>
-
-                <div class="product-bottom">
-                    <span class="product-price">
-                        K${formatAmount(product.price)}
-                    </span>
-
-                    <button
-                        type="button"
-                        class="buy-button"
-                    >
-                        Buy Now
-                    </button>
-                </div>
-            </div>
-        `;
-
-        const buyButton =
-            card.querySelector(".buy-button");
-
-        if (buyButton) {
-            buyButton.addEventListener("click", () => {
-                openPaymentModal(product);
-            });
-        }
-
-        newProductContainer.appendChild(card);
-    });
-}   
+    document.getElementById("newProductContainer"); 
 
 const paymentModal =
     document.getElementById("paymentModal");
@@ -2298,15 +2250,34 @@ const searchResults =
     document.getElementById("searchResults");
 
 
-// Open search
+// ==========================================
+// PRODUCTS THAT CAN BE SEARCHED
+// ==========================================
 
-if (openSearchButton) {
+// Normal products + New Arrivals
+const searchableProducts = [
+    ...products,
+    ...newProducts
+];
+
+
+// ==========================================
+// OPEN SEARCH
+// ==========================================
+
+if (openSearchButton && searchModal && searchInput) {
 
     openSearchButton.addEventListener("click", () => {
 
         searchModal.classList.remove("hidden");
 
         document.body.style.overflow = "hidden";
+
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                Start typing to search.
+            </div>
+        `;
 
         setTimeout(() => {
             searchInput.focus();
@@ -2317,15 +2288,25 @@ if (openSearchButton) {
 }
 
 
-// Close search
+// ==========================================
+// CLOSE SEARCH
+// ==========================================
 
 function closeSearch() {
 
+    if (!searchModal) {
+        return;
+    }
+
     searchModal.classList.add("hidden");
 
-    searchInput.value = "";
+    if (searchInput) {
+        searchInput.value = "";
+    }
 
-    searchResults.innerHTML = "";
+    if (searchResults) {
+        searchResults.innerHTML = "";
+    }
 
     restoreBodyScroll();
 
@@ -2342,7 +2323,7 @@ if (closeSearchButton) {
 }
 
 
-// Close when clicking outside the card
+// Close when clicking outside search card
 
 if (searchModal) {
 
@@ -2359,11 +2340,16 @@ if (searchModal) {
 
 }
 
+
 // ==========================================
 // SEARCH PRODUCTS
 // ==========================================
 
 function performSearch() {
+
+    if (!searchInput || !searchResults) {
+        return;
+    }
 
     const searchTerm =
         searchInput.value
@@ -2382,31 +2368,26 @@ function performSearch() {
         `;
 
         return;
+
     }
 
 
-    /*
-       Search normal products.
-
-       We search:
-       - product name
-       - description
-       - location
-       - price
-    */
+    // Search Available Now + New Arrivals
 
     const results =
-        products.filter((product) => {
+        searchableProducts.filter((product) => {
 
             const searchableText = [
 
-                product.name,
+                product.productNumber || "",
 
-                product.description,
+                product.name || "",
 
-                product.location,
+                product.description || "",
 
-                product.price
+                product.location || "",
+
+                product.price || ""
 
             ]
                 .join(" ")
@@ -2420,7 +2401,9 @@ function performSearch() {
         });
 
 
-    // No results
+    // ==========================================
+    // NO RESULTS
+    // ==========================================
 
     if (results.length === 0) {
 
@@ -2431,25 +2414,29 @@ function performSearch() {
         `;
 
         return;
+
     }
 
 
-    // Display results
+    // ==========================================
+    // DISPLAY RESULTS
+    // ==========================================
 
     searchResults.innerHTML =
-        results.map((product) => {
+        results.map((product, index) => {
 
             return `
 
                 <div
                     class="search-result"
-                    data-product-name="${escapeHtml(product.name)}"
+                    data-search-index="${index}"
                 >
 
                     <img
                         class="search-result-image"
                         src="${product.image}"
                         alt="${escapeHtml(product.name)}"
+                        loading="lazy"
                     >
 
                     <div class="search-result-info">
@@ -2459,7 +2446,7 @@ function performSearch() {
                         </div>
 
                         <div class="search-result-details">
-                            ${escapeHtml(product.location)}
+                            ${escapeHtml(product.location || "")}
                         </div>
 
                     </div>
@@ -2476,7 +2463,9 @@ function performSearch() {
         .join("");
 
 
-    // Make results clickable
+    // ==========================================
+    // CLICK SEARCH RESULT
+    // ==========================================
 
     const resultCards =
         searchResults.querySelectorAll(
@@ -2490,23 +2479,27 @@ function performSearch() {
             "click",
             () => {
 
+                const index =
+                    Number(
+                        card.dataset.searchIndex
+                    );
+
+
                 const product =
-                    products.find(
-                        (item) =>
-                            item.name ===
-                            card.dataset.productName
-                    );
+                    results[index];
 
 
-                if (product) {
-
-                    closeSearch();
-
-                    openPaymentModal(
-                        product
-                    );
-
+                if (!product) {
+                    return;
                 }
+
+
+                closeSearch();
+
+
+                openPaymentModal(
+                    product
+                );
 
             }
         );
@@ -2516,7 +2509,9 @@ function performSearch() {
 }
 
 
-// Search while typing
+// ==========================================
+// SEARCH WHILE TYPING
+// ==========================================
 
 if (searchInput) {
 
@@ -2528,7 +2523,9 @@ if (searchInput) {
 }
 
 
-// ESC closes search
+// ==========================================
+// ESCAPE KEY FOR SEARCH
+// ==========================================
 
 document.addEventListener(
     "keydown",
@@ -2537,9 +2534,7 @@ document.addEventListener(
         if (
             event.key === "Escape" &&
             searchModal &&
-            !searchModal.classList.contains(
-                "hidden"
-            )
+            !searchModal.classList.contains("hidden")
         ) {
 
             closeSearch();
