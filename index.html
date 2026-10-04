@@ -90,7 +90,6 @@
     🔍
 </button>
 
-
     <nav class="navbar-links">
 
         <a href="#videos">
@@ -196,6 +195,56 @@
 
 </main>
 
+<!-- SEARCH MODAL -->
+
+<div
+    id="searchModal"
+    class="search-modal hidden"
+>
+
+    <div
+        class="search-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="searchTitle"
+    >
+
+        <button
+            type="button"
+            id="closeSearchButton"
+            class="search-close"
+            aria-label="Close search"
+        >
+            ×
+        </button>
+
+        <h2 id="searchTitle">
+            Search Bakulu
+        </h2>
+
+        <div class="search-input-container">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products, locations..."
+                autocomplete="off"
+            >
+
+        </div>
+
+        <div
+            id="searchResults"
+            class="search-results"
+        ></div>
+
+    </div>
+
+</div>
 
 
 <!-- IMAGE PREVIEW -->
