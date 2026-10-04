@@ -403,30 +403,40 @@ const featuredProducts = [
 const newProducts = [
     {
         productNumber: "201",
-        name: "New Product One",
-        price: 3,
-        image: "images/Product7.jpg",
+        name: "Vaginal Tightening",
+        price: 4578,
+        image: "images/Sale1.jpg",
         location: "Lusaka",
-        phone: "+260774907636"
+        phone: "+260766894140"
     },
 
     {
         productNumber: "202",
-        name: "New Product Two",
-        price: 40,
-        image: "images/Product37.jpg",
-        location: "Ndola",
-        phone: "+260XXXXXXXXX"
+        name: "titan gel penis +",
+        price: 200,
+        image: "images/Sale4.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
     },
 
     {
         productNumber: "203",
-        name: "New Product Three",
-        price: 50,
-        image: "images/Product38.jpg",
-        location: "Kitwe",
-        phone: "+260XXXXXXXXX"
-    }
+        name: "Silicone electric head massager",
+        price: 745,
+        image: "images/Sale2.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
+
+    {
+        productNumber: "204",
+        name: "Water Gel Lubricat",
+        price: 300,
+        image: "images/Sale5.jpg",
+        location: "Lusaka",
+        phone: "+260766894140"
+    },
+
 ];
 
 
