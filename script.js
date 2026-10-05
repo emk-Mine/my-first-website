@@ -293,7 +293,7 @@ const products = [
 const featuredProducts = [
     {
         productNumber: "100",
-        name: "LIZZY BADDIE",
+        name: "Lizzy trendings",
         price: 60,
         image: "images/Photo11.jpg",
         location: "Lusaka Zambia",
@@ -302,7 +302,7 @@ const featuredProducts = [
 
     {
         productNumber: "101",
-        name: "zed_fuck hub",
+        name: "zed_f*ck hub",
         price: 20,
         image: "images/Photo1.jpg",
         location: "Zambia",
@@ -320,7 +320,7 @@ const featuredProducts = [
 
     {
         productNumber: "102",
-        name: "Banned videos only ",
+        name: "Ba-- videos only ",
         price: 20,
         image: "images/Photo2.jpg",
         location: "Zambia",
@@ -338,7 +338,7 @@ const featuredProducts = [
 
     {
         productNumber: "103",
-        name: "Real sex chat",
+        name: "Real X chat",
         price: 20,
         image: "images/Photo3.jpg",
         location: "Zambia",
@@ -421,7 +421,7 @@ const newProducts = [
 
     {
         productNumber: "203",
-        name: "Silicone electric head massager",
+        name: "Silicone massager",
         price: 745,
         image: "images/Sale2.jpg",
         location: "Lusaka",
