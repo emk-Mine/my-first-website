@@ -2614,3 +2614,67 @@ document.addEventListener(
 
     }
 );
+// ==========================================
+// LIVE STREAMS
+// ==========================================
+async function loadLiveCams() {
+
+    try {
+
+        const response =
+            await fetch("/api/livecams");
+
+        const data =
+            await response.json();
+
+        const container =
+            document.getElementById(
+                "liveCamContainer"
+            );
+
+        if (!container) return;
+
+        data.slice(0, 20).forEach(cam => {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "live-card";
+
+            card.innerHTML = `
+                <img src="${cam.image_url}">
+                <div class="live-info">
+                    <div class="live-name">
+                        ${cam.username}
+                    </div>
+
+                    <div class="live-viewers">
+                        🔴 LIVE
+                    </div>
+
+                    <button
+                        class="live-button"
+                        onclick="window.open(
+                            'https://api.a00s.net/livecamaffiliates?model=${cam.username}',
+                            '_blank'
+                        )"
+                    >
+                        Watch Live
+                    </button>
+                </div>
+            `;
+
+            container.appendChild(card);
+
+        });
+
+    } catch(error) {
+
+        console.error(
+            "Live cams failed",
+            error
+        );
+    }
+}
+
+loadLiveCams();

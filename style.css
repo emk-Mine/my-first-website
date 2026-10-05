@@ -1768,3 +1768,48 @@ a {
     }
 
 }
+/*===========================================
+live cards
+===========================================*/
+.live-section {
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.live-card {
+    width: 220px;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.live-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.live-info {
+    padding: 10px;
+}
+
+.live-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.live-viewers {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.live-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

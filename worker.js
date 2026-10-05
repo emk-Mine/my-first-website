@@ -38,6 +38,27 @@ export default {
 
             return verifyPayment(request, env);
         }
+        // ===============================
+        // LIVE API
+        // ==============================
+        if (pathname === "/api/livecams") {
+
+    const response = await fetch(
+        "https://api.a00s.net/v3/cache/affiliates/camsfeed/json"
+    );
+
+    const data = await response.json();
+
+    return new Response(
+        JSON.stringify(data),
+        {
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+    );
+}
 
         // ==============================
         // SERVE WEBSITE
