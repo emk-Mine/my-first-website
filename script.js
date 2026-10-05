@@ -2925,8 +2925,13 @@ async function loadEpornerVideos() {
                     "Untitled Video";
 
                 const image =
-                    video.image ||
-                    "";
+    video.image ||
+    video.thumb ||
+    video.thumbnail ||
+    video.thumb_url ||
+    video.thumbnail_url ||
+    video.poster ||
+    "";
 
                 const duration =
                     video.length_min ||
