@@ -2926,6 +2926,7 @@ async function loadEpornerVideos() {
 
                 const image =
     video.image ||
+    video.default_thumb?.src ||
     video.thumb ||
     video.thumbnail ||
     video.thumb_url ||
@@ -2955,10 +2956,11 @@ async function loadEpornerVideos() {
                     >
 
                         <img
-                            src="${image}"
-                            alt="${escapeHtml(title)}"
-                            loading="lazy"
-                        >
+    src="${image}"
+    alt="${escapeHtml(title)}"
+    loading="lazy"
+    onerror="this.style.display='none';"
+>
 
                         <div class="video-play">
                             ▶
