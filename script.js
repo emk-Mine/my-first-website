@@ -2680,3 +2680,104 @@ cams.slice(0, 20).forEach(cam => {
 }
 
 loadLiveCams();
+// ==========================================
+// 2. RENDER LIVE CARDS
+// ==========================================
+function renderLiveCams(cams){
+
+    const container =
+        document.getElementById(
+            "liveCamContainer"
+        );
+
+    container.innerHTML = "";
+
+    cams.slice(0,20).forEach(cam=>{
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "product-card live-card";
+
+        card.innerHTML = `
+            <div class="live-badge">
+                LIVE
+            </div>
+
+            <img
+                src="${cam.image}"
+                class="product-image">
+
+            <div class="product-info">
+
+                <h3>
+                    ${cam.username}
+                </h3>
+
+                <div class="live-viewers">
+                    👁 ${cam.viewers}
+                </div>
+
+                <button
+                    class="product-button watch-live-btn"
+                    onclick="watchLive(
+                        '${cam.username}'
+                    )">
+                    Watch Live
+                </button>
+
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+// OPEN LIVE STREAM MODAL
+
+function watchLive(username){
+
+    const frame =
+        document.getElementById(
+            "liveFrame"
+        );
+
+    frame.src =
+        "https://api.a00s.net/livecamaffiliates?model="
+        + encodeURIComponent(username);
+
+    document
+        .getElementById("liveModal")
+        .classList.remove("hidden");
+
+}
+
+// ==========================================
+// CLOSE LIVE MODAL
+// ==========================================
+document
+.getElementById("closeLiveModal")
+.addEventListener(
+    "click",
+    ()=>{
+
+        document
+        .getElementById("liveModal")
+        .classList.add("hidden");
+
+        document
+        .getElementById("liveFrame")
+        .src="";
+
+    }
+);
+// Refresh every 60 seconds
+loadLiveCams();
+
+setInterval(
+    loadLiveCams,
+    60000
+);

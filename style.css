@@ -1771,45 +1771,49 @@ a {
 /*===========================================
 live cards
 ===========================================*/
-.live-section {
-    margin-top: 30px;
-    padding: 15px;
+.live-card{
+    position:relative;
+    min-width:220px;
+    overflow:hidden;
 }
 
-.live-card {
-    width: 220px;
-    background: #111;
-    border-radius: 12px;
-    overflow: hidden;
-    flex-shrink: 0;
+.live-badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:red;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    animation:pulse 1.5s infinite;
 }
 
-.live-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+@keyframes pulse{
+    0%{opacity:1;}
+    50%{opacity:.4;}
+    100%{opacity:1;}
 }
 
-.live-info {
-    padding: 10px;
+.live-viewers{
+    font-size:12px;
+    opacity:.8;
 }
 
-.live-name {
-    font-size: 14px;
-    font-weight: 600;
+.watch-live-btn{
+    width:100%;
+    margin-top:10px;
+}
+/*=================================
+model css
+==============================*/
+#liveFrame{
+    width:100%;
+    height:80vh;
+    border:none;
 }
 
-.live-viewers {
-    color: #ff4444;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.live-button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+.modal-content{
+    width:95%;
+    max-width:1200px;
 }
