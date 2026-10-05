@@ -404,10 +404,10 @@ const newProducts = [
     {
         productNumber: "201",
         name: "Vaginal Tightening",
-        price: 4578,
+        price: 2,
         image: "images/Sale1.jpg",
         location: "Lusaka",
-        phone: "+260766894140"
+        link: "https://t.me/+8_gCN2YNwjI1MzU0"
     },
 
     {
