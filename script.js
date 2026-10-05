@@ -2634,7 +2634,9 @@ async function loadLiveCams() {
 
         if (!container) return;
 
-        data.slice(0, 20).forEach(cam => {
+        const cams = data.streams || [];
+
+cams.slice(0, 20).forEach(cam => {
 
             const card =
                 document.createElement("div");
