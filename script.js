@@ -2616,84 +2616,87 @@ document.addEventListener(
 );
 
 // ==========================================
-// LIVE STREAM TEST
+// LIVE STREAMS
 // ==========================================
 
 async function loadLiveCams() {
 
-    const cams = [
-        {
-            username: "Test Stream 1",
-            image: "images/Product1.jpg",
-            viewers: 24
-        },
-        {
-            username: "Test Stream 2",
-            image: "images/Product2.jpg",
-            viewers: 17
+    try {
+
+        const response = await fetch("/api/livecams");
+
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status}`);
         }
-    ];
 
-    renderLiveCams(cams);
-}
+        const data = await response.json();
 
+        console.log("Live cam API response:", data);
 
-function renderLiveCams(cams) {
+        const container =
+            document.getElementById("liveCamContainer");
 
-    const container =
-        document.getElementById("liveCamContainer");
+        if (!container) {
+            console.error("liveCamContainer not found");
+            return;
+        }
 
-    if (!container) {
-        console.error("liveCamContainer was not found");
-        return;
+        // Your API returns cameras inside "body"
+        const cams = data.body || [];
+
+        console.log("Cameras found:", cams.length);
+
+        container.innerHTML = "";
+
+        cams.slice(0, 20).forEach(cam => {
+
+            const card = document.createElement("div");
+
+            card.className = "live-card";
+
+            card.innerHTML = `
+                <img
+                    src="${cam.image}"
+                    alt="${cam.username}"
+                >
+
+                <div class="live-info">
+
+                    <div class="live-name">
+                        ${cam.username}
+                    </div>
+
+                    <div class="live-viewers">
+                        🔴 LIVE · ${cam.viewers} viewers
+                    </div>
+
+                    <button
+                        class="live-button"
+                        onclick="window.open(
+                            '${cam.url}',
+                            '_blank'
+                        )"
+                    >
+                        Watch Live
+                    </button>
+
+                </div>
+            `;
+
+            container.appendChild(card);
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Live cams failed:",
+            error
+        );
+
     }
-
-    container.innerHTML = "";
-
-    cams.forEach((cam) => {
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "product-card live-card";
-
-        const image =
-            document.createElement("img");
-
-        image.src = cam.image;
-        image.className = "product-image";
-        image.alt = cam.username;
-
-        const info =
-            document.createElement("div");
-
-        info.className = "product-info";
-
-        const name =
-            document.createElement("h3");
-
-        name.textContent = cam.username;
-
-        const viewers =
-            document.createElement("div");
-
-        viewers.className = "live-viewers";
-        viewers.textContent =
-            `🔴 LIVE • ${cam.viewers} viewers`;
-
-        info.appendChild(name);
-        info.appendChild(viewers);
-
-        card.appendChild(image);
-        card.appendChild(info);
-
-        container.appendChild(card);
-    });
 }
 
-
-// Load immediately
 loadLiveCams();
 
 // ==========================================
