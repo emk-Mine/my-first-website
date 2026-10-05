@@ -59,6 +59,65 @@ export default {
         }
     );
 }
+
+// ==============================
+// EPORNER VIDEOS API
+// ==============================
+if (url.pathname === "/api/videos") {
+
+    try {
+
+        const apiUrl =
+            "https://www.eporner.com/api/v2/video/search/" +
+            "?query=all" +
+            "&per_page=12" +
+            "&page=1" +
+            "&thumbsize=big" +
+            "&order=latest" +
+            "&format=json";
+
+        const response =
+            await fetch(apiUrl);
+
+        if (!response.ok) {
+
+            return json({
+                success: false,
+                message: "Video API request failed."
+            }, 502);
+
+        }
+
+        const data =
+            await response.json();
+
+        return new Response(
+            JSON.stringify(data),
+            {
+                status: 200,
+                headers: {
+                    "Content-Type":
+                        "application/json",
+                    "Cache-Control":
+                        "public, max-age=300"
+                }
+            }
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Eporner API error:",
+            error
+        );
+
+        return json({
+            success: false,
+            message: "Could not load videos."
+        }, 500);
+    }
+}
+
         // ==============================
         // SERVE WEBSITE
         // ==============================

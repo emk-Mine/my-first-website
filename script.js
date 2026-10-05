@@ -2836,3 +2836,268 @@ setInterval(
     loadLiveCams,
     60000
 );
+// ==========================================
+// EPORNER TRENDING VIDEOS
+// ==========================================
+
+async function loadEpornerVideos() {
+
+    const container =
+        document.getElementById(
+            "videoContainer"
+        );
+
+    if (!container) {
+        return;
+    }
+
+    try {
+
+        const response =
+            await fetch("/api/videos");
+
+        if (!response.ok) {
+            throw new Error(
+                "Video API error: " +
+                response.status
+            );
+        }
+
+        const data =
+            await response.json();
+
+        console.log(
+            "Eporner API response:",
+            data
+        );
+
+        /*
+         * Eporner API normally returns
+         * the videos inside "videos".
+         */
+
+        const videos =
+            data.videos ||
+            data.body ||
+            data.data ||
+            [];
+
+        container.innerHTML = "";
+
+        if (!videos.length) {
+
+            container.innerHTML = `
+                <p class="video-loading">
+                    No videos available right now.
+                </p>
+            `;
+
+            return;
+        }
+
+        videos
+            .slice(0, 12)
+            .forEach(function(video) {
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "video-card";
+
+                const videoId =
+                    video.id || "";
+
+                const title =
+                    video.title ||
+                    "Untitled Video";
+
+                const image =
+                    video.image ||
+                    video.thumb ||
+                    "";
+
+                const duration =
+                    video.length_min ||
+                    video.duration ||
+                    "";
+
+                card.innerHTML = `
+
+                    <div
+                        class="video-thumbnail"
+                        onclick="openEpornerVideo(
+                            '${escapeHtml(videoId)}'
+                        )"
+                    >
+
+                        <img
+                            src="${image}"
+                            alt="${escapeHtml(title)}"
+                            loading="lazy"
+                        >
+
+                        <div class="video-play">
+                            ▶
+                        </div>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <h3>
+                            ${escapeHtml(title)}
+                        </h3>
+
+                        ${
+                            duration
+                            ? `
+                                <span class="video-duration">
+                                    ${escapeHtml(duration)}
+                                </span>
+                            `
+                            : ""
+                        }
+
+                        <button
+                            type="button"
+                            class="video-button"
+                            onclick="openEpornerVideo(
+                                '${escapeHtml(videoId)}'
+                            )"
+                        >
+                            Watch Video
+                        </button>
+
+                    </div>
+                `;
+
+                container.appendChild(card);
+
+            });
+
+    } catch (error) {
+
+        console.error(
+            "Eporner videos failed:",
+            error
+        );
+
+        container.innerHTML = `
+            <p class="video-loading">
+                Videos are temporarily unavailable.
+            </p>
+        `;
+    }
+}
+
+
+// ==========================================
+// OPEN EPORNER VIDEO
+// ==========================================
+
+function openEpornerVideo(videoId) {
+
+    if (!videoId) {
+        return;
+    }
+
+    const modal =
+        document.getElementById(
+            "videoModal"
+        );
+
+    const frame =
+        document.getElementById(
+            "videoFrame"
+        );
+
+    if (!modal || !frame) {
+        return;
+    }
+
+    frame.src =
+        "https://www.eporner.com/embed/" +
+        encodeURIComponent(videoId);
+
+    modal.classList.remove("hidden");
+
+    document.body.style.overflow =
+        "hidden";
+}
+
+
+// ==========================================
+// CLOSE EPORNER VIDEO
+// ==========================================
+
+function closeEpornerVideo() {
+
+    const modal =
+        document.getElementById(
+            "videoModal"
+        );
+
+    const frame =
+        document.getElementById(
+            "videoFrame"
+        );
+
+    if (frame) {
+        frame.src = "";
+    }
+
+    if (modal) {
+        modal.classList.add("hidden");
+    }
+
+    restoreBodyScroll();
+}
+
+
+// ==========================================
+// VIDEO MODAL EVENTS
+// ==========================================
+
+const closeVideoButton =
+    document.getElementById(
+        "closeVideoModal"
+    );
+
+if (closeVideoButton) {
+
+    closeVideoButton.addEventListener(
+        "click",
+        closeEpornerVideo
+    );
+}
+
+
+const videoModal =
+    document.getElementById(
+        "videoModal"
+    );
+
+if (videoModal) {
+
+    videoModal.addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target ===
+                videoModal
+            ) {
+                closeEpornerVideo();
+            }
+
+        }
+    );
+}
+
+
+// ==========================================
+// LOAD VIDEOS
+// ==========================================
+
+loadEpornerVideos();

@@ -176,6 +176,28 @@
         class="product-row"
     ></div>
 
+    <!-- ==========================================
+     TRENDING VIDEOS
+========================================== -->
+
+<div
+    id="trendingVideos"
+    class="section-heading second-row-heading"
+>
+    <h2>
+        Trending Videos
+    </h2>
+</div>
+
+<div
+    id="videoContainer"
+    class="product-row video-row"
+>
+    <p class="video-loading">
+        Loading videos...
+    </p>
+</div>
+
 
 
     <div
@@ -588,7 +610,36 @@
 
 </div>
 
+<!-- ==========================================
+     EPORNER VIDEO MODAL
+========================================== -->
 
+<div
+    id="videoModal"
+    class="video-modal hidden"
+>
+
+    <div class="video-modal-content">
+
+        <button
+            type="button"
+            id="closeVideoModal"
+            class="video-modal-close"
+            aria-label="Close video"
+        >
+            ×
+        </button>
+
+        <iframe
+            id="videoFrame"
+            title="Video player"
+            allowfullscreen
+            loading="lazy"
+        ></iframe>
+
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 
