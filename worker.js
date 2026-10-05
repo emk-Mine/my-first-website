@@ -60,9 +60,10 @@ export default {
     );
 }
 
-// ==============================
+// ==========================================
 // EPORNER VIDEOS API
-// ==============================
+// ==========================================
+
 if (url.pathname === "/api/videos") {
 
     try {
@@ -76,28 +77,59 @@ if (url.pathname === "/api/videos") {
             "&order=latest" +
             "&format=json";
 
-        const response =
-            await fetch(apiUrl);
+        const response = await fetch(apiUrl, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "User-Agent": "Mozilla/5.0"
+            }
+        });
+
+        const responseText = await response.text();
+
+        console.log(
+            "EPORNER STATUS:",
+            response.status
+        );
+
+        console.log(
+            "EPORNER RESPONSE:",
+            responseText
+        );
 
         if (!response.ok) {
 
             return json({
                 success: false,
-                message: "Video API request failed."
+                message: "Eporner API returned an error.",
+                status: response.status,
+                response: responseText
             }, 502);
-
         }
 
-        const data =
-            await response.json();
+        let data;
+
+        try {
+            data = JSON.parse(responseText);
+        } catch (parseError) {
+
+            return json({
+                success: false,
+                message: "Eporner returned invalid JSON.",
+                response: responseText
+            }, 502);
+        }
 
         return new Response(
-            JSON.stringify(data),
+            JSON.stringify({
+                success: true,
+                videos: data.videos || [],
+                raw: data
+            }),
             {
                 status: 200,
                 headers: {
-                    "Content-Type":
-                        "application/json",
+                    "Content-Type": "application/json",
                     "Cache-Control":
                         "public, max-age=300"
                 }
@@ -107,13 +139,14 @@ if (url.pathname === "/api/videos") {
     } catch (error) {
 
         console.error(
-            "Eporner API error:",
+            "EPORNER FETCH ERROR:",
             error
         );
 
         return json({
             success: false,
-            message: "Could not load videos."
+            message: "Could not connect to Eporner.",
+            error: error.message
         }, 500);
     }
 }
