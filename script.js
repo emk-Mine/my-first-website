@@ -2843,9 +2843,7 @@ setInterval(
 async function loadEpornerVideos() {
 
     const container =
-        document.getElementById(
-            "videoContainer"
-        );
+        document.getElementById("videoContainer");
 
     if (!container) {
         return;
@@ -2853,12 +2851,30 @@ async function loadEpornerVideos() {
 
     try {
 
+        const apiUrl =
+            "https://www.eporner.com/api/v2/video/search/" +
+            "?query=all" +
+            "&per_page=12" +
+            "&page=1" +
+            "&thumbsize=big" +
+            "&order=latest" +
+            "&format=json";
+
+        console.log(
+            "Requesting Eporner API..."
+        );
+
         const response =
-            await fetch("/api/videos");
+            await fetch(apiUrl);
+
+        console.log(
+            "Eporner status:",
+            response.status
+        );
 
         if (!response.ok) {
             throw new Error(
-                "Video API error: " +
+                "Eporner returned HTTP " +
                 response.status
             );
         }
@@ -2867,28 +2883,30 @@ async function loadEpornerVideos() {
             await response.json();
 
         console.log(
-            "Eporner API response:",
+            "Eporner response:",
             data
         );
 
         /*
-         * Eporner API normally returns
-         * the videos inside "videos".
+         * EPorner API response:
+         *
+         * {
+         *     videos: [...]
+         * }
          */
 
         const videos =
-            data.videos ||
-            data.body ||
-            data.data ||
-            [];
+            Array.isArray(data.videos)
+                ? data.videos
+                : [];
 
         container.innerHTML = "";
 
-        if (!videos.length) {
+        if (videos.length === 0) {
 
             container.innerHTML = `
                 <p class="video-loading">
-                    No videos available right now.
+                    No videos available.
                 </p>
             `;
 
@@ -2899,12 +2917,6 @@ async function loadEpornerVideos() {
             .slice(0, 12)
             .forEach(function(video) {
 
-                const card =
-                    document.createElement("div");
-
-                card.className =
-                    "video-card";
-
                 const videoId =
                     video.id || "";
 
@@ -2914,21 +2926,27 @@ async function loadEpornerVideos() {
 
                 const image =
                     video.image ||
-                    video.thumb ||
                     "";
 
                 const duration =
                     video.length_min ||
-                    video.duration ||
                     "";
+
+                if (!videoId) {
+                    return;
+                }
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "video-card";
 
                 card.innerHTML = `
 
                     <div
                         class="video-thumbnail"
-                        onclick="openEpornerVideo(
-                            '${escapeHtml(videoId)}'
-                        )"
+                        onclick="openEpornerVideo('${videoId}')"
                     >
 
                         <img
@@ -2962,9 +2980,7 @@ async function loadEpornerVideos() {
                         <button
                             type="button"
                             class="video-button"
-                            onclick="openEpornerVideo(
-                                '${escapeHtml(videoId)}'
-                            )"
+                            onclick="openEpornerVideo('${videoId}')"
                         >
                             Watch Video
                         </button>
@@ -2985,7 +3001,7 @@ async function loadEpornerVideos() {
 
         container.innerHTML = `
             <p class="video-loading">
-                Videos are temporarily unavailable.
+                EPorner videos could not be loaded.
             </p>
         `;
     }
@@ -3003,14 +3019,10 @@ function openEpornerVideo(videoId) {
     }
 
     const modal =
-        document.getElementById(
-            "videoModal"
-        );
+        document.getElementById("videoModal");
 
     const frame =
-        document.getElementById(
-            "videoFrame"
-        );
+        document.getElementById("videoFrame");
 
     if (!modal || !frame) {
         return;
@@ -3034,14 +3046,10 @@ function openEpornerVideo(videoId) {
 function closeEpornerVideo() {
 
     const modal =
-        document.getElementById(
-            "videoModal"
-        );
+        document.getElementById("videoModal");
 
     const frame =
-        document.getElementById(
-            "videoFrame"
-        );
+        document.getElementById("videoFrame");
 
     if (frame) {
         frame.src = "";
@@ -3056,13 +3064,11 @@ function closeEpornerVideo() {
 
 
 // ==========================================
-// VIDEO MODAL EVENTS
+// CLOSE BUTTON
 // ==========================================
 
 const closeVideoButton =
-    document.getElementById(
-        "closeVideoModal"
-    );
+    document.getElementById("closeVideoModal");
 
 if (closeVideoButton) {
 
@@ -3073,10 +3079,12 @@ if (closeVideoButton) {
 }
 
 
+// ==========================================
+// CLOSE WHEN CLICKING OUTSIDE
+// ==========================================
+
 const videoModal =
-    document.getElementById(
-        "videoModal"
-    );
+    document.getElementById("videoModal");
 
 if (videoModal) {
 
