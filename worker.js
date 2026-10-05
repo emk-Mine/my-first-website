@@ -41,7 +41,7 @@ export default {
         // ===============================
         // LIVE API
         // ==============================
-        if (pathname === "/api/livecams") {
+        if (url.pathname === "/api/livecams") {
 
     const response = await fetch(
         "https://api.a00s.net/v3/cache/affiliates/camsfeed/json"
