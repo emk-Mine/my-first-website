@@ -2854,7 +2854,7 @@ async function loadEpornerVideos() {
         const apiUrl =
             "https://www.eporner.com/api/v2/video/search/" +
             "?query=all" +
-            "&per_page=12" +
+            "&per_page=100" +
             "&page=1" +
             "&thumbsize=big" +
             "&order=latest" +
@@ -2914,7 +2914,6 @@ async function loadEpornerVideos() {
         }
 
         videos
-            .slice(0, 12)
             .forEach(function(video) {
 
                 const videoId =
