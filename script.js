@@ -8,6 +8,42 @@
 ========================================================= */
 
 const products = [ 
+    {
+        name: "Town lusaka",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product41.jpg",
+        location: "Lusaka",
+        phone: "+260573370014"
+    },
+
+     {
+        name: "location lusaka",
+        price: 100,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product38.jpg",
+        location: "Lusaka",
+        phone: "+260975183321"
+    },
+
+    {
+        name: "Chilanga lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product37.jpg",
+        location: "Lusaka",
+        phone: "+260779869140"
+    },
+
+    {
+        name: "Olympia lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product36.jpg",
+        location: "Lusaka",
+        phone: "+260976228603"
+    },
+
      {
         name: "location lusaka",
         price: 50,
@@ -404,19 +440,19 @@ const newProducts = [
     {
         productNumber: "201",
         name: "Vaginal Tightening",
-        price: 2,
+        price: 4800,
         image: "images/Sale1.jpg",
         location: "Lusaka",
-        link: "https://t.me/+8_gCN2YNwjI1MzU0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20The%20Vaginal%20Tightener"
     },
 
     {
         productNumber: "202",
-        name: "titan gel penis +",
+        name: "titan gel +",
         price: 200,
         image: "images/Sale4.jpg",
         location: "Lusaka",
-        phone: "+260766894140"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Titan%20Gel"
     },
 
     {
@@ -425,7 +461,7 @@ const newProducts = [
         price: 745,
         image: "images/Sale2.jpg",
         location: "Lusaka",
-        phone: "+260766894140"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Silicone%20massager"
     },
 
     {
@@ -434,7 +470,7 @@ const newProducts = [
         price: 300,
         image: "images/Sale5.jpg",
         location: "Lusaka",
-        phone: "+260766894140"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Lubricant%20Gel"
     },
 
 ];
@@ -1243,7 +1279,7 @@ async function startMobileMoneyPayment(
 
         showNotification(
             "Approve Payment",
-            "A payment prompt has been sent to your phone. Approve the payment on your mobile phone to continue.",
+            "DO NOT REFRESH THIS PAGE until payment is confirmed.",
             "!"
         );
 
@@ -1767,7 +1803,7 @@ function showPurchaseSummary(
                     class="open-feature-button"
                     onclick="openProductLink('${escapeHtml(product.link)}')"
                 >
-                    Open Feature
+                    Continue
                 </button>
 
             </div>
