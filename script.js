@@ -2614,72 +2614,88 @@ document.addEventListener(
 
     }
 );
+
 // ==========================================
-// LIVE STREAMS
+// LIVE STREAM TEST
 // ==========================================
+
 async function loadLiveCams() {
 
-    try {
+    const cams = [
+        {
+            username: "Test Stream 1",
+            image: "images/Product1.jpg",
+            viewers: 24
+        },
+        {
+            username: "Test Stream 2",
+            image: "images/Product2.jpg",
+            viewers: 17
+        }
+    ];
 
-        const response =
-            await fetch("/api/livecams");
-
-        const data =
-            await response.json();
-
-        const container =
-            document.getElementById(
-                "liveCamContainer"
-            );
-
-        if (!container) return;
-
-        const cams = data.streams || [];
-
-cams.slice(0, 20).forEach(cam => {
-
-            const card =
-                document.createElement("div");
-
-            card.className = "live-card";
-
-            card.innerHTML = `
-                <img src="${cam.image_url}">
-                <div class="live-info">
-                    <div class="live-name">
-                        ${cam.username}
-                    </div>
-
-                    <div class="live-viewers">
-                        🔴 LIVE
-                    </div>
-
-                    <button
-                        class="live-button"
-                        onclick="window.open(
-                            'https://api.a00s.net/livecamaffiliates?model=${cam.username}',
-                            '_blank'
-                        )"
-                    >
-                        Watch Live
-                    </button>
-                </div>
-            `;
-
-            container.appendChild(card);
-
-        });
-
-    } catch(error) {
-
-        console.error(
-            "Live cams failed",
-            error
-        );
-    }
+    renderLiveCams(cams);
 }
 
+
+function renderLiveCams(cams) {
+
+    const container =
+        document.getElementById("liveCamContainer");
+
+    if (!container) {
+        console.error("liveCamContainer was not found");
+        return;
+    }
+
+    container.innerHTML = "";
+
+    cams.forEach((cam) => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "product-card live-card";
+
+        const image =
+            document.createElement("img");
+
+        image.src = cam.image;
+        image.className = "product-image";
+        image.alt = cam.username;
+
+        const info =
+            document.createElement("div");
+
+        info.className = "product-info";
+
+        const name =
+            document.createElement("h3");
+
+        name.textContent = cam.username;
+
+        const viewers =
+            document.createElement("div");
+
+        viewers.className = "live-viewers";
+        viewers.textContent =
+            `🔴 LIVE • ${cam.viewers} viewers`;
+
+        info.appendChild(name);
+        info.appendChild(viewers);
+
+        card.appendChild(image);
+        card.appendChild(info);
+
+        container.appendChild(card);
+    });
+}
+
+
+// Load immediately
 loadLiveCams();
+
 // ==========================================
 // 2. RENDER LIVE CARDS
 // ==========================================
