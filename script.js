@@ -52,15 +52,6 @@ const products = [
         location: "Lusaka",
         phone: "+260766894140"
     },
-
-     {
-        name: " Lusaka Zambia ",
-        price: 100,
-        description: "UNZA tyla.feel free to inbox and ask Anything ",
-        image: "images/Product32.jpg",
-        location: "Lusaka",
-        phone: "+260766894140"
-    },
     
      {
         name: "location lusaka",
