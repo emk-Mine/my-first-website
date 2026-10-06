@@ -2836,17 +2836,41 @@ setInterval(
     loadLiveCams,
     60000
 );
+
 // ==========================================
-// EPORNER TRENDING VIDEOS
+// EPORNER VIDEO ROLLS
 // ==========================================
+
+let epornerPage = 1;
+const epornerPerPage = 50;
+
+let epornerLoading = false;
+let epornerFinished = false;
 
 async function loadEpornerVideos() {
 
-    const container =
-        document.getElementById("videoContainer");
+    const containers = [
+        document.getElementById("videoContainer1"),
+        document.getElementById("videoContainer2"),
+        document.getElementById("videoContainer3")
+    ];
 
-    if (!container) {
+    const loadMoreButton =
+        document.getElementById("loadMoreVideos");
+
+    if (!containers[0]) {
         return;
+    }
+
+    if (epornerLoading || epornerFinished) {
+        return;
+    }
+
+    epornerLoading = true;
+
+    if (loadMoreButton) {
+        loadMoreButton.textContent = "Loading videos...";
+        loadMoreButton.disabled = true;
     }
 
     try {
@@ -2854,23 +2878,14 @@ async function loadEpornerVideos() {
         const apiUrl =
             "https://www.eporner.com/api/v2/video/search/" +
             "?query=all" +
-            "&per_page=50" +
-            "&page=1" +
+            "&per_page=" + epornerPerPage +
+            "&page=" + epornerPage +
             "&thumbsize=big" +
             "&order=latest" +
             "&format=json";
 
-        console.log(
-            "Requesting Eporner API..."
-        );
-
         const response =
             await fetch(apiUrl);
-
-        console.log(
-            "Eporner status:",
-            response.status
-        );
 
         if (!response.ok) {
             throw new Error(
@@ -2882,121 +2897,159 @@ async function loadEpornerVideos() {
         const data =
             await response.json();
 
-        console.log(
-            "Eporner response:",
-            data
-        );
-
-        /*
-         * EPorner API response:
-         *
-         * {
-         *     videos: [...]
-         * }
-         */
-
         const videos =
             Array.isArray(data.videos)
                 ? data.videos
                 : [];
 
-        container.innerHTML = "";
-
         if (videos.length === 0) {
 
-            container.innerHTML = `
-                <p class="video-loading">
-                    No videos available.
-                </p>
-            `;
+            epornerFinished = true;
+
+            if (loadMoreButton) {
+                loadMoreButton.textContent =
+                    "No more videos";
+
+                loadMoreButton.disabled = true;
+            }
 
             return;
         }
 
-        videos
-            .forEach(function(video) {
+        // Shuffle this batch
+        for (
+            let i = videos.length - 1;
+            i > 0;
+            i--
+        ) {
 
-                const videoId =
-                    video.id || "";
+            const j =
+                Math.floor(
+                    Math.random() * (i + 1)
+                );
 
-                const title =
-                    video.title ||
-                    "Untitled Video";
+            [
+                videos[i],
+                videos[j]
+            ] = [
+                videos[j],
+                videos[i]
+            ];
+        }
 
-                const image =
-    video.image ||
-    video.default_thumb?.src ||
-    video.thumb ||
-    video.thumbnail ||
-    video.thumb_url ||
-    video.thumbnail_url ||
-    video.poster ||
-    "";
+        videos.forEach(function(video, index) {
 
-                const duration =
-                    video.length_min ||
-                    "";
+            const videoId =
+                video.id || "";
 
-                if (!videoId) {
-                    return;
-                }
+            const title =
+                video.title ||
+                "Untitled Video";
 
-                const card =
-                    document.createElement("div");
+            const image =
+                video.image ||
+                video.default_thumb?.src ||
+                video.thumb ||
+                video.thumbnail ||
+                video.thumb_url ||
+                video.thumbnail_url ||
+                video.poster ||
+                "";
 
-                card.className =
-                    "video-card";
+            const duration =
+                video.length_min ||
+                "";
 
-                card.innerHTML = `
+            if (!videoId) {
+                return;
+            }
 
-                    <div
-                        class="video-thumbnail"
-                        onclick="openEpornerVideo('${videoId}')"
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "video-card";
+
+            card.innerHTML = `
+
+                <div
+                    class="video-thumbnail"
+                    onclick="openEpornerVideo('${videoId}')"
+                >
+
+                    <img
+                        src="${image}"
+                        alt="${escapeHtml(title)}"
+                        loading="lazy"
+                        onerror="this.style.display='none';"
                     >
 
-                        <img
-    src="${image}"
-    alt="${escapeHtml(title)}"
-    loading="lazy"
-    onerror="this.style.display='none';"
->
-
-                        <div class="video-play">
-                            ▶
-                        </div>
-
+                    <div class="video-play">
+                        ▶
                     </div>
 
-                    <div class="video-info">
+                </div>
 
-                        <h3>
-                            ${escapeHtml(title)}
-                        </h3>
+                <div class="video-info">
 
-                        ${
-                            duration
-                            ? `
-                                <span class="video-duration">
-                                    ${escapeHtml(duration)}
-                                </span>
-                            `
-                            : ""
-                        }
+                    <h3>
+                        ${escapeHtml(title)}
+                    </h3>
 
-                        <button
-                            type="button"
-                            class="video-button"
-                            onclick="openEpornerVideo('${videoId}')"
-                        >
-                            Watch Video
-                        </button>
+                    ${
+                        duration
+                        ? `
+                            <span class="video-duration">
+                                ${escapeHtml(duration)}
+                            </span>
+                        `
+                        : ""
+                    }
 
-                    </div>
-                `;
+                    <button
+                        type="button"
+                        class="video-button"
+                        onclick="openEpornerVideo('${videoId}')"
+                    >
+                        Watch Video
+                    </button>
 
-                container.appendChild(card);
+                </div>
+            `;
 
-            });
+            // Distribute videos across 3 rolls
+            const rollIndex =
+                index % 3;
+
+            containers[rollIndex]
+                .appendChild(card);
+
+        });
+
+        epornerPage++;
+
+        if (videos.length < epornerPerPage) {
+
+            epornerFinished = true;
+
+            if (loadMoreButton) {
+
+                loadMoreButton.textContent =
+                    "No more videos";
+
+                loadMoreButton.disabled = true;
+            }
+
+        } else {
+
+            if (loadMoreButton) {
+
+                loadMoreButton.textContent =
+                    "Load More Videos";
+
+                loadMoreButton.disabled = false;
+            }
+        }
 
     } catch (error) {
 
@@ -3005,113 +3058,33 @@ async function loadEpornerVideos() {
             error
         );
 
-        container.innerHTML = `
-            <p class="video-loading">
-                EPorner videos could not be loaded.
-            </p>
-        `;
-    }
-}
+        if (loadMoreButton) {
 
+            loadMoreButton.textContent =
+                "Try Again";
 
-// ==========================================
-// OPEN EPORNER VIDEO
-// ==========================================
-
-function openEpornerVideo(videoId) {
-
-    if (!videoId) {
-        return;
-    }
-
-    const modal =
-        document.getElementById("videoModal");
-
-    const frame =
-        document.getElementById("videoFrame");
-
-    if (!modal || !frame) {
-        return;
-    }
-
-    frame.src =
-        "https://www.eporner.com/embed/" +
-        encodeURIComponent(videoId);
-
-    modal.classList.remove("hidden");
-
-    document.body.style.overflow =
-        "hidden";
-}
-
-
-// ==========================================
-// CLOSE EPORNER VIDEO
-// ==========================================
-
-function closeEpornerVideo() {
-
-    const modal =
-        document.getElementById("videoModal");
-
-    const frame =
-        document.getElementById("videoFrame");
-
-    if (frame) {
-        frame.src = "";
-    }
-
-    if (modal) {
-        modal.classList.add("hidden");
-    }
-
-    restoreBodyScroll();
-}
-
-
-// ==========================================
-// CLOSE BUTTON
-// ==========================================
-
-const closeVideoButton =
-    document.getElementById("closeVideoModal");
-
-if (closeVideoButton) {
-
-    closeVideoButton.addEventListener(
-        "click",
-        closeEpornerVideo
-    );
-}
-
-
-// ==========================================
-// CLOSE WHEN CLICKING OUTSIDE
-// ==========================================
-
-const videoModal =
-    document.getElementById("videoModal");
-
-if (videoModal) {
-
-    videoModal.addEventListener(
-        "click",
-        function(event) {
-
-            if (
-                event.target ===
-                videoModal
-            ) {
-                closeEpornerVideo();
-            }
-
+            loadMoreButton.disabled =
+                false;
         }
-    );
+
+    } finally {
+
+        epornerLoading = false;
+    }
 }
 
+//===============================
+//load videos 
+//================================
+const loadMoreVideosButton =
+    document.getElementById("loadMoreVideos");
 
-// ==========================================
-// LOAD VIDEOS
-// ==========================================
+if (loadMoreVideosButton) {
+
+    loadMoreVideosButton.addEventListener(
+        "click",
+        loadEpornerVideos
+    );
+}
 
 loadEpornerVideos();

@@ -2280,3 +2280,76 @@ a {
         width: 100%;
     }
 }
+/* ==========================================
+   EPORNER VIDEO ROLLS
+========================================== */
+
+.video-rolls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.video-row {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 8px;
+}
+
+/* Video cards */
+
+.video-row .video-card {
+    flex: 0 0 220px;
+    width: 220px;
+}
+
+/* Load More button */
+
+.load-more-videos-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px 35px;
+}
+
+.load-more-videos {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    background: #e50914;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.load-more-videos:hover {
+    background: #b20710;
+    transform: translateY(-2px);
+}
+
+.load-more-videos:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .video-row .video-card {
+        flex: 0 0 180px;
+        width: 180px;
+    }
+
+    .load-more-videos {
+        width: 90%;
+        max-width: 300px;
+    }
+}
