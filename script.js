@@ -3079,3 +3079,105 @@ if (loadMoreVideosButton) {
 }
 
 loadEpornerVideos();
+// ==========================================
+// OPEN EPORNER VIDEO
+// ==========================================
+
+function openEpornerVideo(videoId) {
+
+    if (!videoId) {
+        console.error("No video ID provided.");
+        return;
+    }
+
+    const modal =
+        document.getElementById("videoModal");
+
+    const frame =
+        document.getElementById("videoFrame");
+
+    if (!modal) {
+        console.error("videoModal not found.");
+        return;
+    }
+
+    if (!frame) {
+        console.error("videoFrame not found.");
+        return;
+    }
+
+    console.log(
+        "Opening EPorner video:",
+        videoId
+    );
+
+    frame.src =
+        "https://www.eporner.com/embed/" +
+        encodeURIComponent(videoId);
+
+    modal.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+// ==========================================
+// CLOSE EPORNER VIDEO
+// ==========================================
+
+function closeEpornerVideo() {
+
+    const modal =
+        document.getElementById("videoModal");
+
+    const frame =
+        document.getElementById("videoFrame");
+
+    if (frame) {
+        frame.src = "";
+    }
+
+    if (modal) {
+        modal.classList.add("hidden");
+    }
+
+    document.body.style.overflow = "";
+}
+
+
+// ==========================================
+// CLOSE VIDEO BUTTON
+// ==========================================
+
+const closeVideoButton =
+    document.getElementById("closeVideoModal");
+
+if (closeVideoButton) {
+
+    closeVideoButton.addEventListener(
+        "click",
+        closeEpornerVideo
+    );
+}
+
+
+// ==========================================
+// CLOSE WHEN CLICKING OUTSIDE
+// ==========================================
+
+const videoModal =
+    document.getElementById("videoModal");
+
+if (videoModal) {
+
+    videoModal.addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === videoModal) {
+                closeEpornerVideo();
+            }
+
+        }
+    );
+}
