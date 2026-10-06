@@ -8,6 +8,96 @@
 ========================================================= */
 
 const products = [ 
+      {
+        name: "Chilanga lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product37.jpg",
+        location: "Lusaka",
+        phone: "+260779869140"
+    },
+
+    {
+        name: "Kamwala Lusaka",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product53.jpg",
+        location: "Lusaka",
+        phone: "+260762484116"
+    },
+
+    {
+        name: "Chala Lusaka",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product51.jpg",
+        location: "Lusaka",
+        phone: "+260978349821"
+    },
+
+    {
+        name: "Kamwala Lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product49.jpg",
+        location: "Lusaka",
+        phone: "+260771610165"
+    },
+
+    {
+        name: "emmasdale Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product48.jpg",
+        location: "Lusaka",
+        phone: "+260965689638"
+    },
+
+    {
+        name: "Roma Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product47.jpg",
+        location: "Lusaka",
+        phone: "+260974174939"
+    },
+
+    {
+        name: "Chingola",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product46.jpg",
+        location: "Chingola",
+        phone: "+260973966269"
+    },
+
+    {
+        name: "Ndola",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product45.jpg",
+        location: "Ndola",
+        phone: "+260980475748"
+    },
+
+    {
+        name: "Chaisa lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product43.jpg",
+        location: "Lusaka",
+        phone: "+260570876276"
+    },
+
+    {
+        name: "Northmead lusaka",
+        price: 30,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product42.jpg",
+        location: "Lusaka",
+        phone: "+260775967807"
+    },
+
     {
         name: "Town lusaka",
         price: 50,
@@ -24,15 +114,6 @@ const products = [
         image: "images/Product38.jpg",
         location: "Lusaka",
         phone: "+260975183321"
-    },
-
-    {
-        name: "Chilanga lusaka",
-        price: 30,
-        description: "feel free to inbox and ask me anything.",
-        image: "images/Product37.jpg",
-        location: "Lusaka",
-        phone: "+260779869140"
     },
 
     {
@@ -318,9 +399,18 @@ const products = [
 
 
 const featuredProducts = [
+      {
+        productNumber: "100",
+        name: "TE Niga tape Channel",
+        price: 60,
+        image: "images/Photo14.jpg",
+        location: "Zambia",
+        link: "https://t.me/naijatapeblog"
+    },
+
     {
         productNumber: "100",
-        name: "Lizzy trendings",
+        name: "WA Lizzy trendings",
         price: 60,
         image: "images/Photo11.jpg",
         location: "Lusaka Zambia",
@@ -329,7 +419,7 @@ const featuredProducts = [
 
     {
         productNumber: "101",
-        name: "zed_f*ck hub",
+        name: "WA zed_f*ck hub",
         price: 20,
         image: "images/Photo1.jpg",
         location: "Zambia",
@@ -337,8 +427,17 @@ const featuredProducts = [
     },
 
     {
+        productNumber: "100",
+        name: "TE Black Nut lovers",
+        price: 60,
+        image: "images/Photo15.jpg",
+        location: "Zambia",
+        link: "http://t.me/joinchat/cwNP8xDVXJoxYmVk"
+    },
+
+    {
         productNumber: "10.1",
-        name: "Mwaka Halwindi",
+        name: "TE Mwaka Halwindi",
         price: 30,
         image: "images/Photo12.jpg",
         location: "Lusaka",
@@ -347,7 +446,7 @@ const featuredProducts = [
 
     {
         productNumber: "102",
-        name: "Ba-- videos only ",
+        name: "WA Ba-- videos only ",
         price: 20,
         image: "images/Photo2.jpg",
         location: "Zambia",
@@ -356,7 +455,7 @@ const featuredProducts = [
 
      {
         productNumber: "10.2",
-        name: "Gizile Trending",
+        name: "TE Gizile Trending",
         price: 25,
         image: "images/Photo13.jpg",
         location: "Lusaka",
@@ -365,7 +464,7 @@ const featuredProducts = [
 
     {
         productNumber: "103",
-        name: "Real X chat",
+        name: "WA Real X chat",
         price: 20,
         image: "images/Photo3.jpg",
         location: "Zambia",
@@ -374,16 +473,25 @@ const featuredProducts = [
 
     {
         productNumber: "105",
-        name: "Bakulu",
+        name: "TE Bakulu",
         price: 40,
         image: "images/Photo5.jpg",
         location: "Zambia",
         link: "https://t.me/+4pR6wVZkgHIwZTQ0"
     },
 
+     {
+        productNumber: "105",
+        name: "TE P-rnhub Premium",
+        price: 40,
+        image: "images/Photo16.jpg",
+        location: "Zambia",
+        link: "http://t.me/Pornhub_prr"
+    },
+
       {
         productNumber: "106",
-        name: "ZedTrending stories",
+        name: "WA ZedTrending stories",
         price: 40,
         image: "images/Photo6.jpg",
         location: "Lusaka",
@@ -392,7 +500,7 @@ const featuredProducts = [
 
       {
         productNumber: "107",
-        name: "Ukulalana pa zed",
+        name: "TE Ukulalana pa zed",
         price: 40,
         image: "images/Photo7.jpg",
         location: "Lusaka",
@@ -428,6 +536,78 @@ const featuredProducts = [
 ];
 
 const newProducts = [
+    {
+        productNumber: "212",
+        name: "Egg Vibrator",
+        price: 1300,
+        image: "images/Sale13.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Egg%20Vibrator"
+    },
+
+    {
+        productNumber: "211",
+        name: "Dildo with Strap",
+        price: 1350,
+        image: "images/Sale12.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Dildo%20with%20Strap"
+    },
+
+    {
+        productNumber: "210",
+        name: "Handsize mustabatur",
+        price: 900,
+        image: "images/Sale11.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20mustabatur"
+    },
+
+    {
+        productNumber: "209",
+        name: "Panty Vibrator",
+        price: 1400,
+        image: "images/Sale14.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Panty%20Vibrator"
+    },
+
+    {
+        productNumber: "208",
+        name: "Vacum elongator",
+        price: 1000,
+        image: "images/Sale10.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Vacum%20elongator"
+    },
+
+    {
+        productNumber: "207",
+        name: "Half Body silicon",
+        price: 1900,
+        image: "images/Sale9.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20HalfBody%20silicon"
+    },
+
+     {
+        productNumber: "206",
+        name: "Handsize silicon",
+        price: 1400,
+        image: "images/Sale8.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20silicon"
+    },
+
+    {
+        productNumber: "205",
+        name: "The famous rose",
+        price: 1500,
+        image: "images/Sale7.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Rose"
+    },
+
     {
         productNumber: "201",
         name: "Vaginal Tightening",
