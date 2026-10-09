@@ -2907,7 +2907,8 @@ async function loadLiveCams() {
                     <button
                         class="live-button"
                         onclick="window.open(
-                            '${cam.username}'
+                            '${cam.url}',
+                            '_blank'
                         )"
                     >
                         Watch Live
