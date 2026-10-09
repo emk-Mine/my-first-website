@@ -2448,3 +2448,41 @@ a {
         width: 180px;
     }
 }
+/* Text-only Load More Videos button */
+.load-more-videos-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px 15px;
+    background: transparent !important;
+}
+
+button.load-more-videos {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+button.load-more-videos:hover {
+    background: transparent !important;
+    color: #cccccc !important;
+    text-decoration: underline;
+}
+
+button.load-more-videos:disabled {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #888888 !important;
+    cursor: not-allowed;
+}
