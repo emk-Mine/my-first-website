@@ -8,7 +8,7 @@
 ========================================================= */
 
 const products = [ 
-      {
+    {
         name: "Chilanga lusaka",
         price: 30,
         description: "feel free to inbox and ask me anything.",
@@ -18,12 +18,30 @@ const products = [
     },
 
     {
+        name: "Zanimone Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product54.jpg",
+        location: "Lusaka",
+        phone: "+260961756352"
+    },
+
+    {
         name: "Kamwala Lusaka",
         price: 50,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product53.jpg",
         location: "Lusaka",
         phone: "+260762484116"
+    },
+
+    {
+        name: "Woodland Lusaka",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product55.jpg",
+        location: "Lusaka",
+        phone: "+260965400562"
     },
 
     {
@@ -107,7 +125,16 @@ const products = [
         phone: "+260573370014"
     },
 
-     {
+    {
+        name: "Luanshya",
+        price: 50,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product56.jpg",
+        location: "Luanshya",
+        phone: "+260773916528"
+    },
+
+    {
         name: "location lusaka",
         price: 100,
         description: "feel free to inbox and ask me anything.",
