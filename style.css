@@ -1958,3 +1958,9 @@ a {
         font-size: 18px;
     }
 }
+/* Bigger main product button text */
+.main-product-display .product-button {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 13px 20px;
+}
