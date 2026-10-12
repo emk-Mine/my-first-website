@@ -1993,3 +1993,91 @@ a {
         font-size: 26px;
     }
 }
+/* MAIN PRODUCT NAME */
+.main-product-display .product-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+/* MAIN PRODUCT DESCRIPTION */
+.main-product-display .product-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* MAIN PRODUCT PRICE */
+.main-product-display .product-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* MAIN PRODUCT BUTTON */
+.main-product-display .product-button {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 11px 16px;
+}
+/* COMPACT ADS BANNER */
+.marketing-banner {
+    padding: 10px;
+    margin: 15px auto;
+    max-width: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ADS IMAGE */
+.marketing-banner-image {
+    height: 130px;
+    overflow: hidden;
+}
+
+.marketing-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ADS TEXT AREA */
+.marketing-banner-content {
+    padding: 10px 12px;
+    gap: 8px;
+}
+
+/* ADS TITLE */
+.marketing-banner-text h2 {
+    font-size: 17px;
+    margin: 4px 0;
+}
+
+/* ADS DESCRIPTION */
+.marketing-banner-text p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 4px 0;
+}
+
+/* LEARN MORE BUTTON */
+.marketing-learn-button {
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .marketing-banner {
+        padding: 8px;
+        margin: 12px auto;
+    }
+
+    .marketing-banner-image {
+        height: 110px;
+    }
+
+    .marketing-banner-content {
+        padding: 8px;
+    }
+}
