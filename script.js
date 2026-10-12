@@ -27,12 +27,39 @@ const products = [
     },
 
     {
+        name: "6miles Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product59.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kamwala Lusaka",
         price: 50,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product53.jpg",
         location: "Lusaka",
         link: "https://wa.me/260762484116?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+     {
+        name: "Chilenge Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product57.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Kitwe",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product58.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -54,6 +81,15 @@ const products = [
     },
 
     {
+        name: "Chamba vally lsk",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product60.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kamwala Lusaka",
         price: 30,
         description: "feel free to inbox and ask me anything.",
@@ -69,6 +105,15 @@ const products = [
         image: "images/Product48.jpg",
         location: "Lusaka",
         link: "https://wa.me/260965689638?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Chilenge Lusaka",
+        price: 40,
+        description: "feel free to inbox and ask me anything.",
+        image: "images/Product61.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
