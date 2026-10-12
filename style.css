@@ -2486,3 +2486,19 @@ button.load-more-videos:disabled {
     color: #888888 !important;
     cursor: not-allowed;
 }
+/* ==========================================
+   REMOVE VIDEOS AND LIVE SECTIONS
+========================================== */
+
+.videos-section,
+.live-section,
+.live-button,
+.live-dot,
+#liveModal,
+#videoModal,
+.video-rolls,
+.video-row,
+.load-more-videos-container,
+.load-more-videos {
+    display: none !important;
+}
