@@ -1,472 +1,368 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-   <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
->
-    <meta
-        name="description"
-        content="Bakulu - discover available products and featured content."
-    >
-    <title>Bakulu</title>
-    <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="images/logo1.jpg">
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+    <meta
+        name="description"
+        content="Bakulu - discover available products and featured content."
+    >
+
+    <title>Bakulu</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="images/logo1.jpg">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- INSTALL APP BANNER -->
-<div id="installBanner" class="install-banner hidden">
-    <div class="install-banner-content">
-        <div class="install-app-icon">
-            <img
-                src="images/logo1.jpg"
-                alt="Bakulu"
-            >
-        </div>
-        <div class="install-banner-text">
-            <strong>Install Bakulu</strong>
-            <span>
-                Get quick access from your home screen.
-            </span>
-        </div>
-        <button
-            type="button"
-            id="installAppButton"
-            class="install-app-button"
-        >
-            Install
-        </button>
-        <button
-            type="button"
-            id="closeInstallBanner"
-            class="close-install-banner"
-            aria-label="Close install banner"
-        >
-            ×
-        </button>
-    </div>
-</div>
-<header class="navbar">
-    <div class="logo">
-        BAKULU
-    </div>
-    <button
-    type="button"
-    id="openSearchButton"
-    class="search-button"
-    aria-label="Search"
->
-    🔍
-</button>
-    <nav class="navbar-links">
-        <a
-    href="#live"
-    class="live-button"
->
-    <span class="live-dot"></span>
-    Live
-</a>
-        <a href="#videos">
-            Groups
-        </a>
-        <a href="#ladies">
-            Ladies
-        </a>
-    </nav>
-</header>
-<!-- ==========================================
-     MARKETING BANNER
-========================================== -->
-<section class="marketing-banner">
-    <div class="marketing-banner-image">
-        <img
-            src="images/Market.jpg"
-            alt="Bakulu promotion"
-        >
-    </div>
-    <div class="marketing-banner-content">
-        <div class="marketing-banner-text">
-            <span class="marketing-label">
-                FEATURED
-            </span>
-            <h2>
-                Discover Something New
-            </h2>
-            <p>
-                Check out our latest offers and updates.
-            </p>
-        </div>
-        <a
-            href="https://wa.me/260766894140?text=Hello%20I%20would%20like%20to%20join%20Bakulu"
-            class="marketing-learn-button"
-        >
-            Learn More
-        </a>
-    </div>
-</section>
-<main>
-<section
-    id="ladies"
-    class="products-section"
->
-    <div class="section-heading">
-        <h1>
-            Available Now
-        </h1>
-    </div>
-    <div
-        id="productContainer"
-        class="product-row"
-    ></div>
-    <!-- ==========================================
-     TRENDING VIDEOS
-========================================== -->
-<section class="videos-section">
-    <h2 class="videos-title">Videos</h2>
-    <div class="video-rolls">
-        <div
-            id="videoContainer1"
-            class="product-row video-row"
-        ></div>
-        <div
-            id="videoContainer2"
-            class="product-row video-row"
-        ></div>
-        <div
-            id="videoContainer3"
-            class="product-row video-row"
-        ></div>
-    </div>
-    <div class="load-more-videos-container">
-        <button
-            id="loadMoreVideos"
-            type="button"
-            class="load-more-videos"
-        >
-            Load More Videos ›
-        </button>
-    </div>
-</section>
-    <div
-        id="videos"
-        class="section-heading second-row-heading"
-    >
-        <h2>
-           Channels & Groups
-        </h2>
-    </div>
-    <div
-        id="featuredProductContainer"
-        class="product-row featured-row"
-    ></div>
-    <div
-    class="section-heading second-row-heading"
->
-    <h2>
-        New Arrivals
-    </h2>
-</div>
-<div
-    id="newProductContainer"
-    class="product-row"
-></div>
-</section>
-<!-- ==========================================
-     LIVE SECTION
-========================================== -->
-<section id="live" class="live-section">
-    <div class="section-header">
-        <h2>🔴 Live - free</h2>
-    </div>
-    <div
-        id="liveCamContainer"
-        class="product-container"
-    >
-        <p>Loading live streams...</p>
-    </div>
-</section>
-<!-- ==========================================
-     LIVE VIDEO MODAL
-========================================== -->
-<div id="liveModal"
-     class="modal hidden">
-    <div class="modal-content">
-        <button id="closeLiveModal">
-            ×
-        </button>
-        <iframe
-            id="liveFrame"
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-<section
-    id="summarySection"
-    class="summary-section hidden"
->
-    <div class="summary-card">
-        <p class="small-title">
-            PAYMENT CONFIRMED
-        </p>
-        <h2>
-            Purchase Summary
-        </h2>
-        <div
-            id="purchaseSummary"
-        ></div>
-    </div>
-</section>
-</main>
-<!-- SEARCH MODAL -->
-<div
-    id="searchModal"
-    class="search-modal hidden"
->
-    <div
-        class="search-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="searchTitle"
-    >
-        <button
-            type="button"
-            id="closeSearchButton"
-            class="search-close"
-            aria-label="Close search"
-        >
-            ×
-        </button>
-        <h2 id="searchTitle">
-            Search Bakulu
-        </h2>
-        <div class="search-input-container">
-            <span class="search-icon">
-                🔍
-            </span>
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Search products, videos, groups, locations..."
-                autocomplete="off"
-            >
-        </div>
-        <div
-            id="searchResults"
-            class="search-results"
-        ></div>
-    </div>
-</div>
-<!-- IMAGE PREVIEW -->
-<div
-    id="imagePreview"
-    class="image-preview hidden"
->
-    <div class="preview-content">
-        <button
-            type="button"
-            id="closePreview"
-            class="close-preview"
-            aria-label="Close image preview"
-        >
-            ×
-        </button>
-        <img
-            id="previewImage"
-            src=""
-            alt="Product preview"
-        >
-    </div>
-</div>
-<!-- PAYMENT MODAL -->
-<div
-    id="paymentModal"
-    class="payment-modal hidden"
->
-    <div
-        class="payment-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="paymentTitle"
-    >
-        <button
-            type="button"
-            id="closePaymentModal"
-            class="modal-close"
-            aria-label="Close payment window"
-        >
-            ×
-        </button>
-        <p class="small-title">
-            CHECKOUT
-        </p>
-        <h2 id="paymentTitle">
-            Payment Details
-        </h2>
-        <p class="payment-subtitle">
-            Dont refresh your browser.
-        </p>
-        <!-- PRODUCT -->
-        <div class="checkout-product">
-            <div class="checkout-product-info">
-                <span class="checkout-label">
-                    Product
-                </span>
-                <strong id="checkoutProductName">
-                    Product
-                </strong>
-            </div>
-            <strong id="checkoutProductPrice">
-                K0
-            </strong>
-        </div>
-        <!-- EMAIL -->
-        <div class="form-group">
-            <label for="customerEmail">
-                Email address
-            </label>
-            <input
-                type="email"
-                id="customerEmail"
-                placeholder="you@example.com"
-                autocomplete="email"
-            >
-            <small>
-                Enter your email address.
-            </small>
-        </div>
-        <!-- PHONE -->
-        <div class="form-group">
-            <label for="customerPhone">
-                Mobile Money Number
-            </label>
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="0971234567"
-                autocomplete="tel"
-                inputmode="tel"
-            >
-            <small>
-                Enter the phone number registered for mobile money.
-            </small>
-        </div>
-        <!-- NETWORK -->
-        <div class="form-group">
-            <label for="mobileMoneyOperator">
-                Mobile Money Network
-            </label>
-            <select
-                id="mobileMoneyOperator"
-            >
-                <option value="">
-                    Select network
-                </option>
-                <option value="mtn">
-                    MTN
-                </option>
-                <option value="airtel">
-                    Airtel
-                </option>
-                <option value="zamtel">
-                    Zamtel
-                </option>
-            </select>
-            <small>
-                Select the network connected to the number.
-            </small>
-        </div>
-        <!-- PAY BUTTON -->
-        <button
-            type="button"
-            id="continuePaymentButton"
-            class="continue-payment-button"
-        >
-            Pay Now
-        </button>
-        <button
-            type="button"
-            id="cancelPaymentButton"
-            class="cancel-payment-button"
-        >
-            Cancel
-        </button>
-    </div>
-</div>
-<!-- NOTIFICATION -->
-<div
-    id="notificationModal"
-    class="notification-modal hidden"
->
-    <div
-        class="notification-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="notificationTitle"
-    >
-        <div
-            id="notificationIcon"
-            class="notification-icon"
-        >
-            !
-        </div>
-        <h2 id="notificationTitle">
-            Notice
-        </h2>
-        <p id="notificationMessage">
-            Please try again.
-        </p>
-        <button
-            type="button"
-            id="notificationButton"
-            class="notification-button"
-        >
-            Continue
-        </button>
-    </div>
-</div>
-<!-- ==========================================
-     EPORNER VIDEO MODAL
-========================================== -->
-<div
-    id="videoModal"
-    class="video-modal hidden"
->
-    <div class="video-modal-content">
-        <button
-            type="button"
-            id="closeVideoModal"
-            class="video-modal-close"
-            aria-label="Close video"
-        >
-            ×
-        </button>
-        <iframe
-            id="videoFrame"
-            title="Video player"
-            allowfullscreen
-            loading="lazy"
-        ></iframe>
-    </div>
-</div>
-<script src="script.js"></script>
-<script>
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("/service-worker.js")
-                .then(() => {
-                    console.log("Service worker registered.");
-                })
-                .catch((error) => {
-                    console.error("Service worker registration failed:", error);
-                });
-        });
-    }
-</script>
+
+    <!-- INSTALL APP BANNER -->
+    <div id="installBanner" class="install-banner hidden">
+        <div class="install-banner-content">
+            <div class="install-app-icon">
+                <img src="images/logo1.jpg" alt="Bakulu">
+            </div>
+
+            <div class="install-banner-text">
+                <strong>Install Bakulu</strong>
+                <span>Get quick access from your home screen.</span>
+            </div>
+
+            <button
+                type="button"
+                id="installAppButton"
+                class="install-app-button"
+            >
+                Install
+            </button>
+
+            <button
+                type="button"
+                id="closeInstallBanner"
+                class="close-install-banner"
+                aria-label="Close install banner"
+            >
+                ×
+            </button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">BAKULU</div>
+
+        <button
+            type="button"
+            id="openSearchButton"
+            class="search-button"
+            aria-label="Search"
+        >
+            🔍
+        </button>
+
+        <nav class="navbar-links">
+            <a href="#videos">Groups</a>
+            <a href="#ladies">Ladies</a>
+        </nav>
+    </header>
+
+    <!-- MARKETING BANNER -->
+    <section class="marketing-banner">
+        <div class="marketing-banner-image">
+            <img src="images/Market.jpg" alt="Bakulu promotion">
+        </div>
+
+        <div class="marketing-banner-content">
+            <div class="marketing-banner-text">
+                <span class="marketing-label">FEATURED</span>
+                <h2>Discover Something New</h2>
+                <p>Check out our latest offers and updates.</p>
+            </div>
+
+            <a
+                href="https://wa.me/260766894140?text=Hello%20I%20would%20like%20to%20join%20Bakulu"
+                class="marketing-learn-button"
+            >
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- AVAILABLE NOW -->
+        <section id="ladies" class="products-section">
+            <div class="section-heading">
+                <h1>Available Now</h1>
+            </div>
+
+            <div
+                id="productContainer"
+                class="product-row"
+            ></div>
+        </section>
+
+        <!-- CHANNELS AND GROUPS -->
+        <section id="videos" class="products-section">
+            <div class="section-heading second-row-heading">
+                <h2>Channels &amp; Groups</h2>
+            </div>
+
+            <div
+                id="featuredProductContainer"
+                class="product-row featured-row"
+            ></div>
+        </section>
+
+        <!-- NEW ARRIVALS -->
+        <section class="products-section">
+            <div class="section-heading second-row-heading">
+                <h2>New Arrivals</h2>
+            </div>
+
+            <div
+                id="newProductContainer"
+                class="product-row"
+            ></div>
+        </section>
+
+        <!-- PURCHASE SUMMARY -->
+        <section
+            id="summarySection"
+            class="summary-section hidden"
+        >
+            <div class="summary-card">
+                <p class="small-title">PAYMENT CONFIRMED</p>
+                <h2>Purchase Summary</h2>
+                <div id="purchaseSummary"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SEARCH MODAL -->
+    <div id="searchModal" class="search-modal hidden">
+        <div
+            class="search-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="searchTitle"
+        >
+            <button
+                type="button"
+                id="closeSearchButton"
+                class="search-close"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <h2 id="searchTitle">Search Bakulu</h2>
+
+            <div class="search-input-container">
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products, groups, locations..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div id="imagePreview" class="image-preview hidden">
+        <div class="preview-content">
+            <button
+                type="button"
+                id="closePreview"
+                class="close-preview"
+                aria-label="Close image preview"
+            >
+                ×
+            </button>
+
+            <img
+                id="previewImage"
+                src=""
+                alt="Product preview"
+            >
+        </div>
+    </div>
+
+    <!-- PAYMENT MODAL -->
+    <div id="paymentModal" class="payment-modal hidden">
+        <div
+            class="payment-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="paymentTitle"
+        >
+            <button
+                type="button"
+                id="closePaymentModal"
+                class="modal-close"
+                aria-label="Close payment window"
+            >
+                ×
+            </button>
+
+            <p class="small-title">CHECKOUT</p>
+            <h2 id="paymentTitle">Payment Details</h2>
+
+            <p class="payment-subtitle">
+                Dont refresh your browser.
+            </p>
+
+            <!-- PRODUCT DETAILS -->
+            <div class="checkout-product">
+                <div class="checkout-product-info">
+                    <span class="checkout-label">Product</span>
+
+                    <strong id="checkoutProductName">
+                        Product
+                    </strong>
+                </div>
+
+                <strong id="checkoutProductPrice">K0</strong>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="customerEmail">Email address</label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+
+                <small>Enter your email address.</small>
+            </div>
+
+            <!-- PHONE -->
+            <div class="form-group">
+                <label for="customerPhone">
+                    Mobile Money Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="0971234567"
+                    autocomplete="tel"
+                    inputmode="tel"
+                >
+
+                <small>
+                    Enter the phone number registered for mobile money.
+                </small>
+            </div>
+
+            <!-- NETWORK -->
+            <div class="form-group">
+                <label for="mobileMoneyOperator">
+                    Mobile Money Network
+                </label>
+
+                <select id="mobileMoneyOperator">
+                    <option value="">Select network</option>
+                    <option value="mtn">MTN</option>
+                    <option value="airtel">Airtel</option>
+                    <option value="zamtel">Zamtel</option>
+                </select>
+
+                <small>
+                    Select the network connected to the number.
+                </small>
+            </div>
+
+            <!-- PAYMENT BUTTONS -->
+            <button
+                type="button"
+                id="continuePaymentButton"
+                class="continue-payment-button"
+            >
+                Pay Now
+            </button>
+
+            <button
+                type="button"
+                id="cancelPaymentButton"
+                class="cancel-payment-button"
+            >
+                Cancel
+            </button>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MODAL -->
+    <div
+        id="notificationModal"
+        class="notification-modal hidden"
+    >
+        <div
+            class="notification-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notificationTitle"
+        >
+            <div
+                id="notificationIcon"
+                class="notification-icon"
+            >
+                !
+            </div>
+
+            <h2 id="notificationTitle">Notice</h2>
+
+            <p id="notificationMessage">
+                Please try again.
+            </p>
+
+            <button
+                type="button"
+                id="notificationButton"
+                class="notification-button"
+            >
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(() => {
+                        console.log("Service worker registered.");
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Service worker registration failed:",
+                            error
+                        );
+                    });
+            });
+        }
+    </script>
+
 </body>
 </html>
