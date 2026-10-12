@@ -10,11 +10,11 @@
 const products = [ 
     {
         name: "Chilanga lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product37.jpg",
         location: "Lusaka",
-        phone: "+260779869140"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -23,7 +23,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product54.jpg",
         location: "Lusaka",
-        phone: "+260961756352"
+        link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -32,7 +32,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product53.jpg",
         location: "Lusaka",
-        phone: "+260762484116"
+        link: "https://wa.me/260762484116?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -41,7 +41,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product55.jpg",
         location: "Lusaka",
-        phone: "+260965400562"
+        link: "https://wa.me/260965400562?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -50,7 +50,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product51.jpg",
         location: "Lusaka",
-        phone: "+260978349821"
+        link: "https://wa.me/260978349821?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -59,7 +59,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product49.jpg",
         location: "Lusaka",
-        phone: "+260771610165"
+        link: "https://wa.me/260771610165?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -68,7 +68,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product48.jpg",
         location: "Lusaka",
-        phone: "+260965689638"
+        link: "https://wa.me/260965689638?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -77,7 +77,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product47.jpg",
         location: "Lusaka",
-        phone: "+260974174939"
+        link: "https://wa.me/260974174939?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -86,7 +86,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product46.jpg",
         location: "Chingola",
-        phone: "+260973966269"
+        link: "https://wa.me/260973966269?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -95,7 +95,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product45.jpg",
         location: "Ndola",
-        phone: "+260980475748"
+        link: "https://wa.me/260980475748?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -104,16 +104,16 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product43.jpg",
         location: "Lusaka",
-        phone: "+260570876276"
+        link: "https://wa.me/260570876276?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
         name: "Northmead lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product42.jpg",
         location: "Lusaka",
-        phone: "+260775967807"
+        link: "https://wa.me/260775967807?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -122,7 +122,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product41.jpg",
         location: "Lusaka",
-        phone: "+260573370014"
+        link: "https://wa.me/260573370014?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -131,71 +131,71 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product56.jpg",
         location: "Luanshya",
-        phone: "+260773916528"
+        link: "https://wa.me/260773916528?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
         name: "location lusaka",
-        price: 100,
+        price: 50,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product38.jpg",
         location: "Lusaka",
-        phone: "+260975183321"
+        link: "https://wa.me/260975183321?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
         name: "Olympia lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product36.jpg",
         location: "Lusaka",
-        phone: "+260976228603"
+        link: "https://wa.me/260976228603?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "location lusaka",
-        price: 50,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product33.jpg",
         location: "Lusaka",
-        phone: "+260766894140"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
      {
         name: "location lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product31.jpg",
         location: "Lusaka",
-        phone: "+260966330227"
+        link: "https://wa.me/260966330227?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
       {
         name: "Chipate Eastern",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product35.jpg",
         location: "Chipata eastern",
-        phone: "+260975432580"
+        link: "https://wa.me/260975432580?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
 
       {
         name: "lusaka zambia",
-        price: 100,
+        price: 50,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product30.jpg",
         location: "Lusaka Zambia",
-        phone: "+63 915 351 1483"
+        link: "https://wa.me/260978349821?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
         name: "lusaka town",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product29.jpg",
         location: "lusaka town",
-        phone: "+260773620924"
+        link: "https://wa.me/260773620924?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -204,7 +204,7 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product28.jpg",
         location: "lusaka garden house",
-        phone: "+260977178021"
+        link: "https://wa.me/260977178021?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -213,214 +213,214 @@ const products = [
         description: "feel free to inbox and ask me anything.",
         image: "images/Product27.jpg",
         location: "Lusaka Chalala",
-        phone: "+260975616380"
+        link: "https://wa.me/260975616380?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
         name: "lusaka Olympia",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product26.jpg",
         location: "Olympia lusaka",
-        phone: "+260974740075"
+        link: "https://wa.me/260974740075?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
         name: "lusaka Chawama",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product25.jpg",
         location: " lusaka chawama",
-        phone: "+260778707866"
+        link: "https://wa.me/260778707866?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
         name: "Lusak rhodes park",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product24.jpg",
         location: "Rhodes park lusaka",
-        phone: "+260776984542"
+        link: "https://wa.me/260776984542?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
         name: "location Lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product23.jpg",
         location: "Lusaka",
-        phone: "+260574141749"
+        link: "https://wa.me/260574141749?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
         name: "location Kitwe",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product22.jpg",
         location: "Kitwe",
-        phone: "+260974826582"
+        link: "https://wa.me/260974826582?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "location mansa",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product2.jpg",
         location: "Mansa",
-        phone: "+260776025194"
+        link: "https://wa.me/260776025194?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "location kabwe",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product3.jpg",
         location: "Kabwe",
-        phone: "+260775788853"
+        link: "https://wa.me/260775788853?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "location lusaka",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product4.jpg",
         location: "water works",
-        phone: "+260975736569"
+        link: "https://wa.me/260975736569?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lsk Chamba Vally",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product5.jpg",
         location: "Lusaka Chamba Vally",
-        phone: "+260976831899"
+        link: "https://wa.me/260976831899?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "kitwe",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product6.jpg",
         location: "Kitwe",
-        phone: "+260762429176"
+        link: "https://wa.me/260762429176?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lusaka ngomba",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and tell me anything.",
         image: "images/Product8.jpg",
         location: "Lusaka",
-        phone: "+260776007309"
+        link: "https://wa.me/260776007309?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Lusaka matero",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product9.jpg",
         location: "Lusaka matero",
-        phone: "+260573102739"
+        link: "https://wa.me/260573102739?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Solwezi",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product10.jpg",
         location: "solwezi",
-        phone: "+260972968720"
+        link: "https://wa.me/260972968720?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Kitwe",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product11.jpg",
         location: "Kitwe",
-        phone: "+260767267075"
+        link: "https://wa.me/260767267075?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Lsk Kamwala south",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product12.jpg",
         location: "Lusaka kamwala south",
-        phone: "+260771610165"
+        link: "https://wa.me/260771610165?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lsk Garden house ",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product13.jpg",
         location: "Lusaka garden house",
-        phone: "+260570887604"
+        link: "https://wa.me/260570887604?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Ndola kansanshi",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product14.jpg",
         location: "Ndola kansanshi",
-        phone: "+260766756675"
+        link: "https://wa.me/260766756675?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lsk garden house",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product15.jpg",
         location: "Lusaka garden house",
-        phone: "+260977178021"
+        link: "https://wa.me/260977178021?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lsk garden house",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product16.jpg",
         location: "Lusaka garden house",
-        phone: "+260978001911"
+        link: "https://wa.me/260978001911?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "lsk Avondale",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product17.jpg",
         location: "Lusaka avondale",
-        phone: "+260772828660"
+        link: "https://wa.me/260772828660?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
         name: "Ndola twapia",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product18.jpg",
         location: "Ndola twapia",
-        phone: "+260761278566"
+        link: "https://wa.me/260761278566?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
         name: "lusaka zambia",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product20.jpg",
         location: "Lusaka",
-        phone: "+260974986089"
+        link: "https://wa.me/260974986089?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
         name: "lsk kawala south",
-        price: 30,
+        price: 40,
         description: "feel free to inbox and ask me anything.",
         image: "images/Product21.jpg",
         location: "Lusaka",
-        phone: "+260771677760"
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 ];
 
@@ -432,7 +432,7 @@ const featuredProducts = [
         price: 60,
         image: "images/Photo14.jpg",
         location: "Zambia",
-        link: "https://t.me/naijatapeblog"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -441,7 +441,7 @@ const featuredProducts = [
         price: 60,
         image: "images/Photo11.jpg",
         location: "Lusaka Zambia",
-        link: "https://chat.whatsapp.com/Hct5SVgIqePIlJV6iDHvG0"
+        link: "https://wa.me/260776007309?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -450,7 +450,7 @@ const featuredProducts = [
         price: 20,
         image: "images/Photo1.jpg",
         location: "Zambia",
-        link: "https://chat.whatsapp.com/ELCDcKLQTcU83TiTKOGXKr?s=cl&p=a&mlu=4&ilr=4"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -459,7 +459,7 @@ const featuredProducts = [
         price: 60,
         image: "images/Photo15.jpg",
         location: "Zambia",
-        link: "http://t.me/joinchat/cwNP8xDVXJoxYmVk"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -468,7 +468,7 @@ const featuredProducts = [
         price: 30,
         image: "images/Photo12.jpg",
         location: "Lusaka",
-        link: "https://t.me/c/3983996172/135"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -477,7 +477,7 @@ const featuredProducts = [
         price: 20,
         image: "images/Photo2.jpg",
         location: "Zambia",
-        link: "https://chat.whatsapp.com/CKGatvIA14n4MWVDIA8d4S?s=cl&p=a&ilr=0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
      {
@@ -486,7 +486,7 @@ const featuredProducts = [
         price: 25,
         image: "images/Photo13.jpg",
         location: "Lusaka",
-        link: "https://t.me/+ccUvnvkA1iFkNGU0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -495,7 +495,7 @@ const featuredProducts = [
         price: 20,
         image: "images/Photo3.jpg",
         location: "Zambia",
-        link: "https://chat.whatsapp.com/FZTT11EsYPl42fAHtmhZfq?s=cl&p=a&ilr=0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -504,7 +504,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo5.jpg",
         location: "Zambia",
-        link: "https://t.me/+4pR6wVZkgHIwZTQ0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
      {
@@ -513,7 +513,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo16.jpg",
         location: "Zambia",
-        link: "http://t.me/Pornhub_prr"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
       {
@@ -522,7 +522,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo6.jpg",
         location: "Lusaka",
-        link: "https://chat.whatsapp.com/LdpwzSQlBKJDQmgLRUlDF6"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
       {
@@ -531,7 +531,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo7.jpg",
         location: "Lusaka",
-        link: "https://t.me/+kkTkh4N7b6A1ODJk"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -540,7 +540,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo8.jpg",
         location: "Lusaka",
-        link: "https://t.me/+VPwVAL2K6ec0YzZk"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -549,7 +549,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo9.jpg",
         location: "Ndola",
-        link: "https://t.me/+TPzk-MEpchY3ZWQ0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -558,7 +558,7 @@ const featuredProducts = [
         price: 40,
         image: "images/Photo10.jpg",
         location: "Kitwe",
-        link: "https://t.me/+8_gCN2YNwjI1MzU0"
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     }
 ];
 

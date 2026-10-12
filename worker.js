@@ -151,6 +151,32 @@ if (url.pathname === "/api/videos") {
     }
 }
 
+// ==============================
+// TEST DATABASE CONNECTION
+// ==============================
+
+if (url.pathname === "/api/test-db") {
+    try {
+        const result = await env.DB.prepare(
+            "SELECT COUNT(*) AS total FROM products"
+        ).first();
+
+        return json({
+            success: true,
+            database: "Connected",
+            totalProducts: result.total
+        });
+
+    } catch (error) {
+        console.error("D1 connection failed:", error);
+
+        return json({
+            success: false,
+            message: "Database connection failed"
+        }, 500);
+    }
+}
+
         // ==============================
         // SERVE WEBSITE
         // ==============================

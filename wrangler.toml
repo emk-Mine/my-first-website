@@ -8,3 +8,8 @@ compatibility_date = "2026-09-23"
 directory = "./"
 binding = "ASSETS"
 run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bakulu-private"
+database_id = "a3dfb2e7-1593-4c5c-900f-6572c717030f"
