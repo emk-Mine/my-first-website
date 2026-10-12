@@ -2020,64 +2020,57 @@ a {
     font-weight: 600;
     padding: 11px 16px;
 }
-/* COMPACT ADS BANNER */
-.marketing-banner {
+/* COMPACT MAIN PRODUCT CARD */
+.main-product-display .product-card {
     padding: 10px;
-    margin: 15px auto;
-    max-width: 650px;
     border-radius: 12px;
-    overflow: hidden;
 }
 
-/* ADS IMAGE */
-.marketing-banner-image {
-    height: 130px;
-    overflow: hidden;
+/* SMALLER PRODUCT IMAGE */
+.main-product-display .product-image-container {
+    height: 240px;
 }
 
-.marketing-banner-image img {
+.main-product-display .product-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-/* ADS TEXT AREA */
-.marketing-banner-content {
-    padding: 10px 12px;
-    gap: 8px;
+/* REDUCE TEXT SPACING */
+.main-product-display .product-info {
+    padding: 10px;
 }
 
-/* ADS TITLE */
-.marketing-banner-text h2 {
+.main-product-display .product-name {
     font-size: 17px;
-    margin: 4px 0;
+    margin-bottom: 5px;
 }
 
-/* ADS DESCRIPTION */
-.marketing-banner-text p {
-    font-size: 12px;
+.main-product-display .product-description {
+    font-size: 13px;
     line-height: 1.4;
-    margin: 4px 0;
+    margin-bottom: 7px;
 }
 
-/* LEARN MORE BUTTON */
-.marketing-learn-button {
-    font-size: 12px;
-    padding: 8px 12px;
+.main-product-display .product-price {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* COMPACT BUTTON */
+.main-product-display .product-button {
+    font-size: 15px;
+    padding: 10px 14px;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-    .marketing-banner {
-        padding: 8px;
-        margin: 12px auto;
+    .main-product-display .product-image-container {
+        height: 200px;
     }
 
-    .marketing-banner-image {
-        height: 110px;
-    }
-
-    .marketing-banner-content {
+    .main-product-display .product-info {
         padding: 8px;
     }
 }
