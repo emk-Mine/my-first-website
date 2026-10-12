@@ -807,8 +807,14 @@ const summarySection =
 /* =========================================================
    RENDER PRODUCTS
 ========================================================= */
+let currentProductIndex = 0;
+function showMainProduct() {
+    if (!productContainer || !products.length) return;
 
-products.forEach(function (product, index) {
+    productContainer.innerHTML = "";
+
+    const index = currentProductIndex;
+    const product = products[index];
 
     const card = document.createElement("div");
 
@@ -864,8 +870,29 @@ products.forEach(function (product, index) {
     `;
 
     productContainer.appendChild(card);
+
+    const counter = document.getElementById("productCounter");
+
+    if (counter) {
+        counter.textContent =
+            `${currentProductIndex + 1} / ${products.length}`;
+    }
+};
+document.getElementById("prevProduct")?.addEventListener("click", function () {
+    currentProductIndex =
+        (currentProductIndex - 1 + products.length) % products.length;
+
+    showMainProduct();
 });
 
+document.getElementById("nextProduct")?.addEventListener("click", function () {
+    currentProductIndex =
+        (currentProductIndex + 1) % products.length;
+
+    showMainProduct();
+});
+
+showMainProduct();
 
 /* =========================================================
    RENDER FEATURED PRODUCTS
