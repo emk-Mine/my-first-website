@@ -2072,73 +2072,67 @@ a {
 }
 /* COMPACT CHANNELS & NEW ARRIVALS CARDS */
 
+/* Keep existing card width */
 .scrollable-products .product-row .product-card {
-    width: 170px;
-    flex: 0 0 170px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 12px;
+    height: auto;
 }
 
-/* SHORTER PRODUCT IMAGES */
+/* Shorter images */
 .scrollable-products .product-image-container {
     height: 120px;
-    overflow: hidden;
 }
 
+/* Keep images fully visible */
 .scrollable-products .product-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-/* SMALLER TEXT AREA */
+/* Reduce text area spacing */
 .scrollable-products .product-info {
     padding: 6px;
 }
 
-/* PRODUCT NAME */
+/* Product name */
 .scrollable-products .product-name {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.3;
     margin-bottom: 4px;
 }
 
-/* PRODUCT DESCRIPTION */
+/* Description */
 .scrollable-products .product-description {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.3;
     margin-bottom: 5px;
 }
 
-/* PRODUCT PRICE */
+/* Price */
 .scrollable-products .product-price {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 6px;
 }
 
-/* SMALLER BUTTON */
+/* Smaller buttons */
 .scrollable-products .product-button {
-    font-size: 12px;
-    padding: 7px 10px;
-}
-
-/* REDUCE SPACING BETWEEN CARDS */
-.scrollable-products .product-row {
-    gap: 8px;
+    font-size: 13px;
+    padding: 8px 12px;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-    .scrollable-products .product-row .product-card {
-        width: 145px;
-        flex-basis: 145px;
-    }
-
     .scrollable-products .product-image-container {
-        height: 100px;
+        height: 105px;
     }
 
     .scrollable-products .product-info {
         padding: 5px;
+    }
+
+    .scrollable-products .product-button {
+        padding: 7px 10px;
     }
 }
