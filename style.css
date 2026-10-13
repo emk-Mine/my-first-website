@@ -1936,3 +1936,68 @@ a {
         right: 15px;
     }
 }
+/* MAIN PAGE LAYOUT */
+.bakulu-layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100dvh - 65px);
+    overflow: hidden;
+    background: #000;
+}
+
+/* MAIN PRODUCT SECTION - DOES NOT SCROLL */
+.bakulu-layout #ladies {
+    flex: 0 0 auto;
+    background: #000;
+    padding: 10px;
+    margin: 0;
+    z-index: 2;
+}
+
+/* MAIN PRODUCT CARD */
+.bakulu-layout .main-product-carousel {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* SCROLLABLE LOWER SECTIONS */
+.scrollable-products {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 0 30px;
+}
+
+/* HORIZONTAL SCROLLING */
+.scrollable-products .product-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 12px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* KEEP PRODUCT CARDS SIDE BY SIDE */
+.scrollable-products .product-row .product-card {
+    flex: 0 0 auto;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .bakulu-layout {
+        height: calc(100dvh - 60px);
+    }
+
+    .bakulu-layout #ladies {
+        padding: 6px;
+    }
+
+    .scrollable-products {
+        padding-top: 8px;
+    }
+}
