@@ -2001,3 +2001,72 @@ a {
         padding-top: 8px;
     }
 }
+/* COMPACT FIXED MAIN PRODUCT SECTION */
+.bakulu-layout #ladies {
+    padding: 4px 8px;
+    margin: 0;
+    background: #000;
+}
+
+/* SHORTER MAIN PRODUCT CARD */
+.bakulu-layout .main-product-display .product-card {
+    padding: 5px;
+    margin: 0;
+}
+
+/* REDUCE IMAGE HEIGHT */
+.bakulu-layout .main-product-display .product-image-container {
+    height: 180px;
+}
+
+/* REDUCE TEXT AREA SPACING */
+.bakulu-layout .main-product-display .product-info {
+    padding: 6px 8px;
+}
+
+.bakulu-layout .main-product-display .product-name {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.bakulu-layout .main-product-display .product-description {
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.bakulu-layout .main-product-display .product-price {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* SHORTER BUTTON */
+.bakulu-layout .main-product-display .product-button {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+/* REDUCE SPACE BELOW MAIN PRODUCT */
+.bakulu-layout .product-counter {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .bakulu-layout #ladies {
+        padding: 3px 5px;
+    }
+
+    .bakulu-layout .main-product-display .product-image-container {
+        height: 145px;
+    }
+
+    .bakulu-layout .main-product-display .product-info {
+        padding: 5px;
+    }
+
+    .bakulu-layout .main-product-display .product-button {
+        padding: 7px 10px;
+    }
+}
