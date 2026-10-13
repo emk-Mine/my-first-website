@@ -1693,186 +1693,6 @@ a {
     }
 }
 
-.marketing-banner {
-    width: calc(100% - 32px);
-    max-width: 1100px;
-    height: 180px;
-    margin: 18px auto 24px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    background: #111;
-}
-
-.marketing-banner-image {
-    position: absolute;
-    inset: 0;
-}
-
-.marketing-banner-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.marketing-banner-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-
-        90deg,
-
-        rgba(0, 0, 0, 0.85) 0%,
-
-        rgba(0, 0, 0, 0.55) 45%,
-
-        rgba(0, 0, 0, 0.10) 100%
-
-    );
-}
-
-.marketing-banner-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 22px 28px;
-}
-
-.marketing-banner-text {
-    max-width: 500px;
-}
-
-.marketing-label {
-    display: inline-block;
-    margin-bottom: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #ff3b3b;
-}
-
-.marketing-banner h2 {
-    margin: 0 0 5px;
-    color: white;
-    font-size: 24px;
-    line-height: 1.15;
-}
-
-.marketing-banner p {
-    margin: 0;
-    color: #d5d5d5;
-    font-size: 14px;
-}
-
-.marketing-learn-button {
-    flex-shrink: 0;
-    padding: 11px 18px;
-    border-radius: 8px;
-    background: #e50914;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: transform 0.2s ease,
-
-        opacity 0.2s ease;
-}
-
-.marketing-learn-button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-@media(max-width: 600px) {
-    .marketing-banner {
-
-        width: calc(100% - 24px);
-
-        height: 150px;
-
-        margin-top: 12px;
-
-        border-radius: 12px;
-
-    }
-
-    
-
-    .marketing-banner-content {
-
-        padding: 16px;
-
-        align-items: flex-end;
-
-    }
-
-    
-
-    .marketing-banner h2 {
-
-        font-size: 18px;
-
-    }
-
-    
-
-    .marketing-banner p {
-
-        font-size: 12px;
-
-        max-width: 220px;
-
-    }
-
-    
-
-    .marketing-label {
-
-        font-size: 9px;
-
-    }
-
-    
-
-    .marketing-learn-button {
-
-        padding: 9px 12px;
-
-        font-size: 11px;
-
-    }
-}
-
-@keyframespulse {
-    0% {
-
-        opacity: 1;
-
-    }
-
-    
-
-    50% {
-
-        opacity: 0.45;
-
-    }
-
-    
-
-    100% {
-
-        opacity: 1;
-
-    }
-}
-
 /* Compact spacing between section headings and cards */
 .products-section {
     padding-top: 5px;
@@ -2072,5 +1892,47 @@ a {
 
     .main-product-display .product-info {
         padding: 8px;
+    }
+}
+/* FLOATING WHATSAPP BUTTON */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    z-index: 9999;
+
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        bottom: 18px;
+        right: 15px;
     }
 }
