@@ -32,6 +32,24 @@ const products = [
     },
 
     {
+        name: "Barastone lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (189).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "lusaka Unza",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (200).jpg",
+        location: "UNZA",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Chalala lusaka",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -47,6 +65,15 @@ const products = [
         image: "images/Product37.jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Mtendere lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (194).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -95,6 +122,33 @@ const products = [
     },
 
     {
+        name: "Kamwala South",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (192).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka chilenge",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (198).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Monse or Ndola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (193).jpg",
+        location: "Monze Ndola",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "kanyama lusaka",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -104,10 +158,46 @@ const products = [
     },
 
     {
+        name: "Lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (197).jpg",
+        location: " Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kanyama lusaka",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (159).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Mtendere lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (195).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "LSK Apex chalala",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (199).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Meanwood lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (196).jpg",
         location: "Lusaka",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
@@ -127,6 +217,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (180).jpg",
         location: "Chalala",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka 10 miles",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (190).jpg",
+        location: "Lusaka",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -302,6 +401,15 @@ const products = [
     },
 
     {
+        name: "Kamwala South lsk",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (185).jpg",
+        location: "Kamwala south",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kitwe",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -311,11 +419,29 @@ const products = [
     },
 
     {
+        name: "Kalundu Lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (186).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Chipata",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (126).jpg",
         location: "Chipata",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka kabanana",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (183).jpg",
+        location: "lusaka",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -466,6 +592,15 @@ const products = [
     },
 
     {
+        name: "Kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (201).jpg",
+        location: "Kitwe",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Lusaka UNZA",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -481,6 +616,15 @@ const products = [
         image: "images/Product54.jpg",
         location: "Lusaka",
         link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Ndola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (202).jpg",
+        location: "Ndola",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -511,6 +655,15 @@ const products = [
     },
 
     {
+        name: "Chibombo",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (204).jpg",
+        location: "Chibombo",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kasama",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -525,6 +678,24 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (129).jpg",
         location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Kaunda square LSK",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (182).jpg",
+        location: "Kaunda Square",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka Kalingalinga",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (205).jpg",
+        location: "Kalingalinga",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -547,11 +718,29 @@ const products = [
     },
 
     {
+        name: "Chingola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (206).jpg",
+        location: "Chingola",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kitwe",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (71).jpg",
         location: "kitwe",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka or kaoma",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (207).jpg",
+        location: "Kaoma - Lusaka",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -565,11 +754,56 @@ const products = [
     },
 
     {
+        name: "Lusaka Garden house",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (208).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Libala South LSK",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (184).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Choma",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (209).jpg",
+        location: "Choma",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Southern province",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (72).jpg",
         location: "Southern province",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Kasumbalesa",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (210).jpg",
+        location: "Kasumbalesa",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Solwezi",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (211).jpg",
+        location: "Solwezi",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -598,6 +832,15 @@ const products = [
         image: "images/Product57.jpg",
         location: "Lusaka",
         link: "https://wa.me/260961756352?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (188).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -852,6 +1095,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (139).jpg",
         location: "Ndola",
+        link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (191).jpg",
+        location: "kitwe",
         link: "https://wa.me/260771677760?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
