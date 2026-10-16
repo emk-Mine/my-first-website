@@ -2416,37 +2416,52 @@ function showNotification(
 }
 
 
+
 function closeNotification() {
+    // Do not let the customer dismiss a pending payment status.
+    if (currentPayment && !paymentFinalized) {
+        return;
+    }
 
-    notificationModal.classList.add(
-        "hidden"
-    );
-
+    notificationModal.classList.add("hidden");
     restoreBodyScroll();
 }
 
+notificationButton.addEventListener("click", function () {
+    // While payment is pending, Continue means "check again",
+    // not "close the payment status card".
+    if (currentPayment && !paymentFinalized) {
+        notificationTitle.textContent = "Payment Still Processing";
+        notificationMessage.textContent =
+            "Your payment has not been confirmed yet. Please check your phone. This card will remain visible while we check the payment status.";
+        notificationIcon.textContent = "...";
 
-notificationButton.addEventListener(
-    "click",
-    closeNotification
-);
-
-
-notificationModal.addEventListener(
-    "click",
-    function (event) {
-
-        if (
-            event.target ===
-            notificationModal
-        ) {
-
-            closeNotification();
-
+        if (!paymentVerificationRunning) {
+            beginPaymentVerification(currentPayment.reference);
         }
 
+        return;
     }
-);
+
+    closeNotification();
+});
+
+notificationModal.addEventListener("click", function (event) {
+    // Prevent closing the status card by clicking outside it
+    // while a payment is awaiting confirmation.
+    if (
+        event.target === notificationModal &&
+        currentPayment &&
+        !paymentFinalized
+    ) {
+        return;
+    }
+
+    if (event.target === notificationModal) {
+        closeNotification();
+    }
+});
+
 
 
 /* =========================================================
@@ -3134,18 +3149,17 @@ function handleFailedPayment(message) {
 ========================================================= */
 
 function showPaymentStillChecking() {
-
     paymentVerificationRunning = false;
 
-    resetPaymentButton();
+    notificationTitle.textContent = "Payment Still Processing";
+    notificationMessage.textContent =
+        "We have not received final confirmation yet. Please check your phone. Do not start another payment. Press Continue to check again.";
+    notificationIcon.textContent = "...";
 
-
-    showNotification(
-        "Payment Still Processing",
-        "We have not received final confirmation yet. Please check your phone and do not submit another payment.",
-        "..."
-    );
+    notificationModal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
 }
+
 
 
 /* =========================================================
