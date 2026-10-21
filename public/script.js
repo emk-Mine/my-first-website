@@ -4,6 +4,15 @@
 ========================================================= */
 
 const products = [ 
+     {
+        name: "Lusaka Roma",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (133).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
     {
         name: "Kamwala south lusaka",
         price: 40,
@@ -81,15 +90,6 @@ const products = [
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (178).jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
-    },
-
-    {
-        name: "Lusaka Roma",
-        price: 40,
-        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
-        image: "images/Product (133).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
