@@ -905,6 +905,15 @@ const products = [
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
+    
+    {
+        name: "Lusaka Barastone",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(233).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
 
     {
         name: "lusaka",
@@ -933,7 +942,6 @@ const products = [
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
-    
     {
         name: "Makeni lusaka",
         price: 40,
@@ -978,6 +986,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (74).jpg",
         location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka Kaunda Square",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(231).jpg",
+        location: "lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -1198,6 +1215,15 @@ const products = [
     },
 
     {
+        name: "Garden House Lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(230).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Lusaka chunga",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1212,6 +1238,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (110).jpg",
         location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Chingola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(229).jpg",
+        location: "Chingola",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -1252,6 +1287,15 @@ const products = [
     },
 
     {
+        name: "Kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(228).jpg",
+        location: "Kitwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Chingola",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1279,6 +1323,15 @@ const products = [
     },
 
     {
+        name: "Ndola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(226).jpg",
+        location: "Ndola",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kamwala Lusaka",
         price: 30,
         description: "K 30 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1302,6 +1355,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product48.jpg",
         location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Ndola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(225).jpg",
+        location: "Ndola",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -1342,6 +1404,15 @@ const products = [
     },
 
     {
+        name: "Kabwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(223).jpg",
+        location: "Kabwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Chingola",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1378,6 +1449,15 @@ const products = [
     },
 
     {
+        name: "Kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(222).jpg",
+        location: "Kitwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Town lusaka",
         price: 50,
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1396,11 +1476,56 @@ const products = [
     },
 
     {
+        name: "Kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(215).jpg",
+        location: "Kitwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "location lusaka",
         price: 50,
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product38.jpg",
         location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Mufulira",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(221).jpg",
+        location: "Mufulira",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "lusaka johnlang",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(217).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Kitwe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(216).jpg",
+        location: "Kitwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Silverrest lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(214).jpg",
+        location: "lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -1421,7 +1546,43 @@ const products = [
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
+
+    {
+        name: "Kapiri",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(220).jpg",
+        location: "Kapiri Mposhi",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
     
+    {
+        name: "lusaka Nipa",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(213).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka Garden house",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(218).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka Kamwala south",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(219).jpg",
+        location: "lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
      {
         name: "location lusaka",
         price: 40,
@@ -1439,9 +1600,8 @@ const products = [
         location: "Chipata eastern",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
-
-
-      {
+    
+    {
         name: "lusaka zambia",
         price: 50,
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
@@ -1483,6 +1643,15 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product26.jpg",
         location: "Olympia lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "lusaka Obama",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product(212).jpg",
+        location: " lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
@@ -1689,138 +1858,67 @@ const products = [
 const featuredProducts = [
       {
         productNumber: "100",
-        name: "TE Niga tape Channel",
-        price: 60,
-        image: "images/Photo14.jpg",
+        name: "zed vides whatsapp",
+        price: 35,
+        image: "images/Photo (1).jpg",
         location: "Zambia",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
         productNumber: "100",
-        name: "WA Lizzy trendings",
-        price: 60,
-        image: "images/Photo11.jpg",
+        name: "Zed trending stories",
+        price: 35,
+        image: "images/Photo (2).jpg",
         location: "Lusaka Zambia",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
         productNumber: "101",
-        name: "WA zed_f*ck hub",
-        price: 20,
-        image: "images/Photo1.jpg",
+        name: "Punani very sweet",
+        price: 35,
+        image: "images/Photo (3).jpg",
         location: "Zambia",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
         productNumber: "100",
-        name: "TE Black Nut lovers",
-        price: 60,
-        image: "images/Photo15.jpg",
+        name: "Abana 2pin whatsapp",
+        price: 35,
+        image: "images/Photo (4).jpg",
         location: "Zambia",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
         productNumber: "10.1",
-        name: "TE Mwaka Halwindi",
-        price: 30,
-        image: "images/Photo12.jpg",
+        name: "LSK Hookup party whatsapp",
+        price: 35,
+        image: "images/Photo (5).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
         productNumber: "102",
-        name: "WA Ba-- videos only ",
+        name: "Ifyabakulu whatsapp group ",
+        price: 35,
+        image: "images/Photo (6).jpg",
+        location: "Zambia",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
+    },
+
+    {
+        productNumber: "102",
+        name: "Bakulu telegram ",
         price: 20,
-        image: "images/Photo2.jpg",
+        image: "images/Photo (7).jpg",
         location: "Zambia",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
-     {
-        productNumber: "10.2",
-        name: "TE Gizile Trending",
-        price: 25,
-        image: "images/Photo13.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-    {
-        productNumber: "103",
-        name: "WA Real X chat",
-        price: 20,
-        image: "images/Photo3.jpg",
-        location: "Zambia",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-    {
-        productNumber: "105",
-        name: "TE Bakulu",
-        price: 40,
-        image: "images/Photo5.jpg",
-        location: "Zambia",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-     {
-        productNumber: "105",
-        name: "TE P-rnhub Premium",
-        price: 40,
-        image: "images/Photo16.jpg",
-        location: "Zambia",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-      {
-        productNumber: "106",
-        name: "WA ZedTrending stories",
-        price: 40,
-        image: "images/Photo6.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-      {
-        productNumber: "107",
-        name: "TE Ukulalana pa zed",
-        price: 40,
-        image: "images/Photo7.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-    {
-        productNumber: "108",
-        name: "Zed hule kuchalo",
-        price: 40,
-        image: "images/Photo8.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-    {
-        productNumber: "109",
-        name: "Cant belive this ",
-        price: 40,
-        image: "images/Photo9.jpg",
-        location: "Ndola",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    },
-
-    {
-        productNumber: "110",
-        name: "Edith trending vides ",
-        price: 40,
-        image: "images/Photo10.jpg",
-        location: "Kitwe",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
-    }
 ];
 
 const newProducts = [
@@ -1831,24 +1929,6 @@ const newProducts = [
         image: "images/Sale13.jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Egg%20Vibrator"
-    },
-
-    {
-        productNumber: "211",
-        name: "Dildo with Strap",
-        price: 1350,
-        image: "images/Sale12.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Dildo%20with%20Strap"
-    },
-
-    {
-        productNumber: "210",
-        name: "Handsize mustabatur",
-        price: 900,
-        image: "images/Sale11.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20mustabatur"
     },
 
     {
@@ -1867,24 +1947,6 @@ const newProducts = [
         image: "images/Sale10.jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Vacum%20elongator"
-    },
-
-    {
-        productNumber: "207",
-        name: "Half Body silicon",
-        price: 1900,
-        image: "images/Sale9.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20HalfBody%20silicon"
-    },
-
-     {
-        productNumber: "206",
-        name: "Handsize silicon",
-        price: 1400,
-        image: "images/Sale8.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20silicon"
     },
 
     {
@@ -1921,6 +1983,33 @@ const newProducts = [
         image: "images/Sale2.jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Silicone%20massager"
+    },
+
+    {
+        productNumber: "211",
+        name: "Dildo with Strap",
+        price: 1350,
+        image: "images/Sale12.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Dildo%20with%20Strap"
+    },
+
+    {
+        productNumber: "210",
+        name: "Handsize mustabatur",
+        price: 900,
+        image: "images/Sale11.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20mustabatur"
+    },
+
+    {
+        productNumber: "207",
+        name: "Half Body silicon",
+        price: 1900,
+        image: "images/Sale9.jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20HalfBody%20silicon"
     },
 
     {
