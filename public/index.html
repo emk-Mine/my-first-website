@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+    <meta
+        name="description"
+        content="Bakulu - discover available products and featured content."
+    >
+
+    <title>Bakulu</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="images/logo1.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INSTALL APP BANNER -->
+    <div id="installBanner" class="install-banner hidden">
+        <div class="install-banner-content">
+            <div class="install-app-icon">
+                <img src="images/logo1.jpg" alt="Bakulu">
+            </div>
+
+            <div class="install-banner-text">
+                <strong>Install Bakulu</strong>
+                <span>Get quick access from your home screen.</span>
+            </div>
+
+            <button
+                type="button"
+                id="installAppButton"
+                class="install-app-button"
+            >
+                Install
+            </button>
+
+            <button
+                type="button"
+                id="closeInstallBanner"
+                class="close-install-banner"
+                aria-label="Close install banner"
+            >
+                ×
+            </button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">BAKULU</div>
+
+        <button
+            type="button"
+            id="openSearchButton"
+            class="search-button"
+            aria-label="Search"
+        >
+            🔍
+        </button>
+
+        <nav class="navbar-links">
+            <a href="#videos">Groups</a>
+            <a href="#ladies">Ladies</a>
+        </nav>
+    </header>
+    
+    <!-- MAIN CONTENT -->
+    <main class="bakulu-layout">
+
+        <!-- AVAILABLE NOW -->
+        <section id="ladies" class="products-section">
+
+            <div class="main-product-carousel">
+    <button id="prevProduct" class="carousel-arrow" aria-label="Previous product">
+        &#10094;
+    </button>
+
+    <div id="productContainer" class="main-product-display"></div>
+
+    <button id="nextProduct" class="carousel-arrow" aria-label="Next product">
+        &#10095;
+    </button>
+</div>
+
+<div id="productCounter" class="product-counter"></div>
+        </section>
+
+        <div class="scrollable-products">
+
+        <!-- CHANNELS AND GROUPS -->
+        <section id="videos" class="products-section">
+            <div class="section-heading second-row-heading">
+                <h2>Channels &amp; Groups</h2>
+            </div>
+
+            <div
+                id="featuredProductContainer"
+                class="product-row featured-row"
+            ></div>
+        </section>
+
+        <!-- NEW ARRIVALS -->
+        <section class="products-section">
+            <div class="section-heading second-row-heading">
+                <h2>New Arrivals</h2>
+            </div>
+
+            <div
+                id="newProductContainer"
+                class="product-row"
+            ></div>
+        </section>
+        </div>
+
+        <!-- PURCHASE SUMMARY -->
+        <section
+            id="summarySection"
+            class="summary-section hidden"
+        >
+            <div class="summary-card">
+                <p class="small-title">PAYMENT CONFIRMED</p>
+                <h2>Purchase Summary</h2>
+                <div id="purchaseSummary"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SEARCH MODAL -->
+    <div id="searchModal" class="search-modal hidden">
+        <div
+            class="search-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="searchTitle"
+        >
+            <button
+                type="button"
+                id="closeSearchButton"
+                class="search-close"
+                aria-label="Close search"
+            >
+                ×
+            </button>
+
+            <h2 id="searchTitle">Search Bakulu</h2>
+
+            <div class="search-input-container">
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products, groups, locations..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div id="imagePreview" class="image-preview hidden">
+        <div class="preview-content">
+            <button
+                type="button"
+                id="closePreview"
+                class="close-preview"
+                aria-label="Close image preview"
+            >
+                ×
+            </button>
+
+            <img
+                id="previewImage"
+                src=""
+                alt="Product preview"
+            >
+        </div>
+    </div>
+
+    <!-- PAYMENT MODAL -->
+    <div id="paymentModal" class="payment-modal hidden">
+        <div
+            class="payment-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="paymentTitle"
+        >
+            <button
+                type="button"
+                id="closePaymentModal"
+                class="modal-close"
+                aria-label="Close payment window"
+            >
+                ×
+            </button>
+
+            <p class="small-title">CHECKOUT</p>
+            <h2 id="paymentTitle">Payment Details</h2>
+
+            <p class="payment-subtitle">
+                Dont refresh your browser.
+            </p>
+
+            <!-- PRODUCT DETAILS -->
+            <div class="checkout-product">
+                <div class="checkout-product-info">
+                    <span class="checkout-label">Product</span>
+
+                    <strong id="checkoutProductName">
+                        Product
+                    </strong>
+                </div>
+
+                <strong id="checkoutProductPrice">K0</strong>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="customerEmail">Email address</label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                >
+
+                <small>Enter your email address.</small>
+            </div>
+
+            <!-- PHONE -->
+            <div class="form-group">
+                <label for="customerPhone">
+                    Mobile Money Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="0971234567"
+                    autocomplete="tel"
+                    inputmode="tel"
+                >
+
+                <small>
+                    Enter the phone number registered for mobile money.
+                </small>
+            </div>
+
+            <!-- NETWORK -->
+            <div class="form-group">
+                <label for="mobileMoneyOperator">
+                    Mobile Money Network
+                </label>
+
+                <select id="mobileMoneyOperator">
+                    <option value="">Select network</option>
+                    <option value="mtn">MTN</option>
+                    <option value="airtel">Airtel</option>
+                    <option value="zamtel">Zamtel</option>
+                </select>
+
+                <small>
+                    Select the network connected to the number.
+                </small>
+            </div>
+
+            <!-- PAYMENT BUTTONS -->
+            <button
+                type="button"
+                id="continuePaymentButton"
+                class="continue-payment-button"
+            >
+                Pay Now
+            </button>
+
+            <button
+                type="button"
+                id="cancelPaymentButton"
+                class="cancel-payment-button"
+            >
+                Cancel
+            </button>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MODAL -->
+    <div
+        id="notificationModal"
+        class="notification-modal hidden"
+    >
+        <div
+            class="notification-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notificationTitle"
+        >
+            <div
+                id="notificationIcon"
+                class="notification-icon"
+            >
+                !
+            </div>
+
+            <h2 id="notificationTitle">Notice</h2>
+
+            <p id="notificationMessage">
+                Please try again.
+            </p>
+
+            <button
+                type="button"
+                id="notificationButton"
+                class="notification-button"
+            >
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then(() => {
+                        console.log("Service worker registered.");
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Service worker registration failed:",
+                            error
+                        );
+                    });
+            });
+        }
+    </script>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+    href="https://wa.me/260766894140"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact us on WhatsApp"
+>
+    <svg viewBox="0 0 32 32"
+         width="30"
+         height="30"
+         fill="currentColor"
+         aria-hidden="true">
+        <path d="M16 .8A15.1 15.1 0 0 0 3 23.6L.9 31l7.6-2A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.5 12.5 0 1 1 16 28.4Zm6.9-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 4.4c.3.5 2.6 4.1 6.4 5.7.9.4 1.6.6 2.1.8.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5Z"/>
+    </svg>
+</a>
+
+</body>
+</html>
