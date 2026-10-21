@@ -2136,3 +2136,64 @@ a {
         padding: 7px 10px;
     }
 }
+/* =========================================
+   GROUPS & NEW ARRIVALS — COMPACT CARDS
+========================================= */
+
+/* Consistent card sizing */
+.groups-section .product-card,
+.new-arrivals-section .product-card {
+    width: 100%;
+    min-width: 0;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Consistent image dimensions */
+.groups-section .product-card img,
+.new-arrivals-section .product-card img {
+    width: 100%;
+    height: 135px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Prevent long titles from stretching cards */
+.groups-section .product-card h3,
+.new-arrivals-section .product-card h3 {
+    font-size: 13px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Compact descriptions */
+.groups-section .product-card p,
+.new-arrivals-section .product-card p {
+    font-size: 12px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .groups-section .product-card,
+    .new-arrivals-section .product-card {
+        height: 250px;
+    }
+
+    .groups-section .product-card img,
+    .new-arrivals-section .product-card img {
+        height: 110px;
+    }
+}
