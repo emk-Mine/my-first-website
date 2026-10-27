@@ -4,11 +4,38 @@
 ========================================================= */
 
 const products = [ 
+    {
+        name: "Kamwala south lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (240).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
      {
         name: "Lusaka Roma",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (133).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Ndola",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (246).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Garden house",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (235).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
@@ -50,11 +77,20 @@ const products = [
     },
 
     {
-        name: "lusaka Unza",
+        name: "lsk Chamba vally",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
-        image: "images/Product (200).jpg",
-        location: "UNZA",
+        image: "images/Product (234).jpg",
+        location: "Chamba vally",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "lsk Chelston",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (236).jpg",
+        location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -104,11 +140,29 @@ const products = [
     },
 
     {
+        name: "Luanshya",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (237).jpg",
+        location: "Luanshya",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kitwe",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (161).jpg",
         location: "Kitwe",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lsk makeni",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (241).jpg",
+        location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
@@ -122,10 +176,28 @@ const products = [
     },
 
     {
+        name: "lusaka mtendere",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (243).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
         name: "Kamwala South",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (192).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Chalala",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (238).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
@@ -140,7 +212,7 @@ const products = [
     },
 
     {
-        name: "Monse or Ndola",
+        name: "Monze or Ndola",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (193).jpg",
@@ -153,6 +225,33 @@ const products = [
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (160).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "lusaka ngombe",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (242).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "foxdale lusaka",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (244).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Lusaka west",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (239).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
@@ -171,6 +270,15 @@ const products = [
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (159).jpg",
+        location: "Lusaka",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+    },
+
+    {
+        name: "Kafue ",
+        price: 40,
+        description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
+        image: "images/Product (245).jpg",
         location: "Lusaka",
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
@@ -1894,7 +2002,7 @@ const featuredProducts = [
 
     {
         productNumber: "10.1",
-        name: "LSK Hookup party whatsapp",
+        name: "Hookup party",
         price: 35,
         image: "images/Photo (5).jpg",
         location: "Lusaka",
@@ -1903,7 +2011,7 @@ const featuredProducts = [
 
     {
         productNumber: "102",
-        name: "Ifyabakulu whatsapp group ",
+        name: "Ifyabakulu whatsapp ",
         price: 35,
         image: "images/Photo (6).jpg",
         location: "Zambia",
@@ -1919,106 +2027,22 @@ const featuredProducts = [
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
-];
-
-const newProducts = [
     {
-        productNumber: "212",
-        name: "Egg Vibrator",
-        price: 1300,
-        image: "images/Sale13.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Egg%20Vibrator"
+        productNumber: "101",
+        name: "Zed Queens Group",
+        price: 35,
+        image: "images/Photo (8).jpg",
+        location: "Zambia",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
-        productNumber: "209",
-        name: "Panty Vibrator",
-        price: 1400,
-        image: "images/Sale14.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Panty%20Vibrator"
-    },
-
-    {
-        productNumber: "208",
-        name: "Vacum elongator",
-        price: 1000,
-        image: "images/Sale10.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Vacum%20elongator"
-    },
-
-    {
-        productNumber: "205",
-        name: "The famous rose",
-        price: 1500,
-        image: "images/Sale7.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Rose"
-    },
-
-    {
-        productNumber: "201",
-        name: "Vaginal Tightening",
-        price: 4800,
-        image: "images/Sale1.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20The%20Vaginal%20Tightener"
-    },
-
-    {
-        productNumber: "202",
-        name: "titan gel +",
-        price: 200,
-        image: "images/Sale4.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Titan%20Gel"
-    },
-
-    {
-        productNumber: "203",
-        name: "Silicone massager",
-        price: 745,
-        image: "images/Sale2.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Silicone%20massager"
-    },
-
-    {
-        productNumber: "211",
-        name: "Dildo with Strap",
-        price: 1350,
-        image: "images/Sale12.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Dildo%20with%20Strap"
-    },
-
-    {
-        productNumber: "210",
-        name: "Handsize mustabatur",
-        price: 900,
-        image: "images/Sale11.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Handsize%20mustabatur"
-    },
-
-    {
-        productNumber: "207",
-        name: "Half Body silicon",
-        price: 1900,
-        image: "images/Sale9.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20HalfBody%20silicon"
-    },
-
-    {
-        productNumber: "204",
-        name: "Water Gel Lubricat",
-        price: 300,
-        image: "images/Sale5.jpg",
-        location: "Lusaka",
-        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20the%20Lubricant%20Gel"
+        productNumber: "101",
+        name: "Groups by zile",
+        price: 35,
+        image: "images/Photo (9).jpg",
+        location: "Zambia",
+        link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
 ];
@@ -2065,9 +2089,6 @@ const productContainer =
 
 const featuredProductContainer =
     document.getElementById("featuredProductContainer");
-
-const newProductContainer =
-    document.getElementById("newProductContainer"); 
 
 const paymentModal =
     document.getElementById("paymentModal");
@@ -2255,65 +2276,6 @@ featuredProducts.forEach(function (product, index) {
     `;
 
     featuredProductContainer.appendChild(card);
-});
-
-/* =========================================================
-   RENDER NEW PRODUCTS
-========================================================= */
-
-newProducts.forEach(function (product, index) {
-
-    const card = document.createElement("div");
-
-    card.className = "product-card";
-
-    card.innerHTML = `
-
-        <div
-            class="product-image-container"
-            onclick="previewImage(
-                '${product.image}',
-                '${escapeHtml(product.name)}'
-            )"
-        >
-
-            <img
-                class="product-image"
-                src="${product.image}"
-                alt="${escapeHtml(product.name)}"
-                loading="lazy"
-            >
-
-        </div>
-
-        <div class="product-info">
-
-            <div class="product-number">
-                PRODUCT ${product.productNumber}
-            </div>
-
-            <h3 class="product-name">
-                ${escapeHtml(product.name)}
-            </h3>
-
-            <div class="product-price">
-                K${formatAmount(product.price)}
-            </div>
-
-            <button
-                class="product-button"
-                type="button"
-                onclick="openPaymentModal(
-                    newProducts[${index}]
-                )"
-            >
-                Buy Now
-            </button>
-
-        </div>
-    `;
-
-    newProductContainer.appendChild(card);
 });
 
 
@@ -3903,12 +3865,6 @@ const searchableProducts = [
         searchCategory: "Trending Videos & Groups"
     })),
 
-    // New Arrivals
-    ...newProducts.map((product) => ({
-        ...product,
-        searchCategory: "New Arrival"
-    }))
-
 ];
 
 
@@ -4239,543 +4195,3 @@ document.addEventListener(
 
     }
 );
-
-// ==========================================
-// LIVE STREAMS
-// ==========================================
-
-async function loadLiveCams() {
-
-    try {
-
-        const response = await fetch("/api/livecams");
-
-        if (!response.ok) {
-            throw new Error(`API error: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        console.log("Live cam API response:", data);
-
-        const container =
-            document.getElementById("liveCamContainer");
-
-        if (!container) {
-            console.error("liveCamContainer not found");
-            return;
-        }
-
-        // Your API returns cameras inside "body"
-        const cams = data.body || [];
-
-        console.log("Cameras found:", cams.length);
-
-        container.innerHTML = "";
-
-        cams.slice(0, 20).forEach(cam => {
-
-            const card = document.createElement("div");
-
-            card.className = "live-card";
-
-            card.innerHTML = `
-                <img
-                    src="${cam.image}"
-                    alt="${cam.username}"
-                >
-
-                <div class="live-info">
-
-                    <div class="live-name">
-                        ${cam.username}
-                    </div>
-
-                    <div class="live-viewers">
-                        🔴 LIVE · ${cam.viewers} viewers
-                    </div>
-
-                    <button
-                        class="live-button"
-                        onclick="window.open(
-                            '${cam.url}',
-                            '_blank'
-                        )"
-                    >
-                        Watch Live
-                    </button>
-
-                </div>
-            `;
-
-            container.appendChild(card);
-
-        });
-
-    } catch (error) {
-
-        console.error(
-            "Live cams failed:",
-            error
-        );
-
-    }
-}
-
-loadLiveCams();
-
-// ==========================================
-// 2. RENDER LIVE CARDS
-// ==========================================
-function renderLiveCams(cams){
-
-    const container =
-        document.getElementById(
-            "liveCamContainer"
-        );
-
-    container.innerHTML = "";
-
-    cams.slice(0,20).forEach(cam=>{
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "product-card live-card";
-
-        card.innerHTML = `
-            <div class="live-badge">
-                LIVE
-            </div>
-
-            <img
-                src="${cam.image}"
-                class="product-image">
-
-            <div class="product-info">
-
-                <h3>
-                    ${cam.username}
-                </h3>
-
-                <div class="live-viewers">
-                    👁 ${cam.viewers}
-                </div>
-
-                <button
-                    class="product-button watch-live-btn"
-                    onclick="watchLive(
-                        '${cam.username}'
-                    )">
-                    Watch Live
-                </button>
-
-            </div>
-        `;
-
-        container.appendChild(card);
-
-    });
-
-}
-
-// OPEN LIVE STREAM MODAL
-
-function watchLive(username){
-
-    const frame =
-        document.getElementById(
-            "liveFrame"
-        );
-
-    frame.src =
-        "https://api.a00s.net/livecamaffiliates?model="
-        + encodeURIComponent(username);
-
-    document
-        .getElementById("liveModal")
-        .classList.remove("hidden");
-
-}
-
-// ==========================================
-// CLOSE LIVE MODAL
-// ==========================================
-document
-.getElementById("closeLiveModal")
-.addEventListener(
-    "click",
-    ()=>{
-
-        document
-        .getElementById("liveModal")
-        .classList.add("hidden");
-
-        document
-        .getElementById("liveFrame")
-        .src="";
-
-    }
-);
-// Refresh every 60 seconds
-loadLiveCams();
-
-setInterval(
-    loadLiveCams,
-    60000
-);
-
-// ==========================================
-// EPORNER VIDEO ROLLS
-// ==========================================
-
-let epornerPage = 1;
-const epornerPerPage = 50;
-
-let epornerLoading = false;
-let epornerFinished = false;
-
-async function loadEpornerVideos() {
-
-    const containers = [
-        document.getElementById("videoContainer1"),
-        document.getElementById("videoContainer2"),
-        document.getElementById("videoContainer3")
-    ];
-
-    const loadMoreButton =
-        document.getElementById("loadMoreVideos");
-
-    if (!containers[0]) {
-        return;
-    }
-
-    if (epornerLoading || epornerFinished) {
-        return;
-    }
-
-    epornerLoading = true;
-
-    if (loadMoreButton) {
-        loadMoreButton.textContent = "Loading videos...";
-        loadMoreButton.disabled = true;
-    }
-
-    try {
-
-        const apiUrl =
-            "https://www.eporner.com/api/v2/video/search/" +
-            "?query=all" +
-            "&per_page=" + epornerPerPage +
-            "&page=" + epornerPage +
-            "&thumbsize=big" +
-            "&order=latest" +
-            "&format=json";
-
-        const response =
-            await fetch(apiUrl);
-
-        if (!response.ok) {
-            throw new Error(
-                "Eporner returned HTTP " +
-                response.status
-            );
-        }
-
-        const data =
-            await response.json();
-
-        const videos =
-            Array.isArray(data.videos)
-                ? data.videos
-                : [];
-
-        if (videos.length === 0) {
-
-            epornerFinished = true;
-
-            if (loadMoreButton) {
-                loadMoreButton.textContent =
-                    "No more videos";
-
-                loadMoreButton.disabled = true;
-            }
-
-            return;
-        }
-
-        // Shuffle this batch
-        for (
-            let i = videos.length - 1;
-            i > 0;
-            i--
-        ) {
-
-            const j =
-                Math.floor(
-                    Math.random() * (i + 1)
-                );
-
-            [
-                videos[i],
-                videos[j]
-            ] = [
-                videos[j],
-                videos[i]
-            ];
-        }
-
-        videos.forEach(function(video, index) {
-
-            const videoId =
-                video.id || "";
-
-            const title =
-                video.title ||
-                "Untitled Video";
-
-            const image =
-                video.image ||
-                video.default_thumb?.src ||
-                video.thumb ||
-                video.thumbnail ||
-                video.thumb_url ||
-                video.thumbnail_url ||
-                video.poster ||
-                "";
-
-            const duration =
-                video.length_min ||
-                "";
-
-            if (!videoId) {
-                return;
-            }
-
-            const card =
-                document.createElement("div");
-
-            card.className =
-                "video-card";
-
-            card.innerHTML = `
-
-                <div
-                    class="video-thumbnail"
-                    onclick="openEpornerVideo('${videoId}')"
-                >
-
-                    <img
-                        src="${image}"
-                        alt="${escapeHtml(title)}"
-                        loading="lazy"
-                        onerror="this.style.display='none';"
-                    >
-
-                    <div class="video-play">
-                        ▶
-                    </div>
-
-                </div>
-
-                <div class="video-info">
-
-                    <h3>
-                        ${escapeHtml(title)}
-                    </h3>
-
-                    ${
-                        duration
-                        ? `
-                            <span class="video-duration">
-                                ${escapeHtml(duration)}
-                            </span>
-                        `
-                        : ""
-                    }
-
-                    <button
-                        type="button"
-                        class="video-button"
-                        onclick="openEpornerVideo('${videoId}')"
-                    >
-                        Watch Video
-                    </button>
-
-                </div>
-            `;
-
-            // Distribute videos across 3 rolls
-            const rollIndex =
-                index % 3;
-
-            containers[rollIndex]
-                .appendChild(card);
-
-        });
-
-        epornerPage++;
-
-        if (videos.length < epornerPerPage) {
-
-            epornerFinished = true;
-
-            if (loadMoreButton) {
-
-                loadMoreButton.textContent =
-                    "No more videos";
-
-                loadMoreButton.disabled = true;
-            }
-
-        } else {
-
-            if (loadMoreButton) {
-
-                loadMoreButton.textContent =
-                    "Load More Videos";
-
-                loadMoreButton.disabled = false;
-            }
-        }
-
-    } catch (error) {
-
-        console.error(
-            "Eporner videos failed:",
-            error
-        );
-
-        if (loadMoreButton) {
-
-            loadMoreButton.textContent =
-                "Try Again";
-
-            loadMoreButton.disabled =
-                false;
-        }
-
-    } finally {
-
-        epornerLoading = false;
-    }
-}
-
-//===============================
-//load videos 
-//================================
-const loadMoreVideosButton =
-    document.getElementById("loadMoreVideos");
-
-if (loadMoreVideosButton) {
-
-    loadMoreVideosButton.addEventListener(
-        "click",
-        loadEpornerVideos
-    );
-}
-
-loadEpornerVideos();
-// ==========================================
-// OPEN EPORNER VIDEO
-// ==========================================
-
-function openEpornerVideo(videoId) {
-
-    if (!videoId) {
-        console.error("No video ID provided.");
-        return;
-    }
-
-    const modal =
-        document.getElementById("videoModal");
-
-    const frame =
-        document.getElementById("videoFrame");
-
-    if (!modal) {
-        console.error("videoModal not found.");
-        return;
-    }
-
-    if (!frame) {
-        console.error("videoFrame not found.");
-        return;
-    }
-
-    console.log(
-        "Opening EPorner video:",
-        videoId
-    );
-
-    frame.src =
-        "https://www.eporner.com/embed/" +
-        encodeURIComponent(videoId);
-
-    modal.classList.remove("hidden");
-
-    document.body.style.overflow = "hidden";
-}
-
-
-// ==========================================
-// CLOSE EPORNER VIDEO
-// ==========================================
-
-function closeEpornerVideo() {
-
-    const modal =
-        document.getElementById("videoModal");
-
-    const frame =
-        document.getElementById("videoFrame");
-
-    if (frame) {
-        frame.src = "";
-    }
-
-    if (modal) {
-        modal.classList.add("hidden");
-    }
-
-    document.body.style.overflow = "";
-}
-
-
-// ==========================================
-// CLOSE VIDEO BUTTON
-// ==========================================
-
-const closeVideoButton =
-    document.getElementById("closeVideoModal");
-
-if (closeVideoButton) {
-
-    closeVideoButton.addEventListener(
-        "click",
-        closeEpornerVideo
-    );
-}
-
-
-// ==========================================
-// CLOSE WHEN CLICKING OUTSIDE
-// ==========================================
-
-const videoModal =
-    document.getElementById("videoModal");
-
-if (videoModal) {
-
-    videoModal.addEventListener(
-        "click",
-        function(event) {
-
-            if (event.target === videoModal) {
-                closeEpornerVideo();
-            }
-
-        }
-    );
-}
