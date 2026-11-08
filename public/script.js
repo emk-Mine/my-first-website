@@ -13,7 +13,7 @@ const products = [
         link: "https://wa.me/260766894140?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
-     {
+    {
         name: "Lusaka Roma",
         price: 40,
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
