@@ -10,7 +10,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (240).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -19,7 +19,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (133).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -28,7 +28,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (246).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -37,7 +37,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (235).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -46,7 +46,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (250).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -55,7 +55,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (173).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
@@ -64,7 +64,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (175).jpg",
         location: "Chongwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -73,7 +73,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (251).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -82,7 +82,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (171).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -91,7 +91,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (189).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -100,7 +100,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (234).jpg",
         location: "Chamba vally",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -109,7 +109,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (236).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -118,7 +118,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (179).jpg",
         location: "Chalala",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -127,7 +127,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (248).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -136,7 +136,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product37.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -145,7 +145,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (194).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -154,7 +154,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (178).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -163,7 +163,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (177).jpg",
         location: "Kalundu",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -172,7 +172,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (237).jpg",
         location: "Luanshya",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -181,7 +181,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (161).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -190,7 +190,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (247).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -199,7 +199,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (162).jpg",
         location: "Siavonga",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -208,7 +208,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (243).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -217,7 +217,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (192).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -226,7 +226,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (238).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -235,7 +235,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (198).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -244,7 +244,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (193).jpg",
         location: "Monze Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -253,7 +253,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (252).jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -262,7 +262,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (160).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -271,7 +271,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (242).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -280,7 +280,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (244).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -289,7 +289,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (239).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -298,7 +298,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (197).jpg",
         location: " Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -307,7 +307,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (159).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -316,7 +316,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (245).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -325,7 +325,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (195).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -334,7 +334,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (199).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -343,7 +343,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (196).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -352,7 +352,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (174).jpg",
         location: "Kabwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -361,7 +361,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (180).jpg",
         location: "Chalala",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -370,7 +370,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (190).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -379,7 +379,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (166).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -388,7 +388,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (165).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -397,7 +397,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (164).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -406,7 +406,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (163).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -415,7 +415,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (122).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -424,7 +424,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (167).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -433,7 +433,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (170).jpg",
         location: "Chalimbana",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -442,7 +442,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (167).jpg",
         location: "Choma",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -451,7 +451,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (158).jpg",
         location: "kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -460,7 +460,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (157).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -469,7 +469,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (156).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -478,7 +478,7 @@ const products = [
         description: "K 100 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (151).jpg",
         location: "Kalulushi",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -487,7 +487,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (153).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -496,7 +496,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (152).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -505,7 +505,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (155).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -514,7 +514,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (154).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -523,7 +523,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (150).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -532,7 +532,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (149).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -541,7 +541,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (145).jpg",
         location: "Kapiri",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -550,7 +550,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (185).jpg",
         location: "Kamwala south",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -559,7 +559,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (146).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -568,7 +568,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (186).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -577,7 +577,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (126).jpg",
         location: "Chipata",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -586,7 +586,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (183).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -595,7 +595,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (148).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -604,7 +604,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (101).jpg",
         location: "Kapiri",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
 
@@ -615,7 +615,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (136).jpg",
         location: "Mufulira",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -624,7 +624,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (70).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -633,7 +633,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (135).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -642,7 +642,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (121).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -651,7 +651,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (142).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -660,7 +660,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (143).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -669,7 +669,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (132).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -678,7 +678,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (144).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -687,7 +687,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (123).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -696,7 +696,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (125).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -705,7 +705,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (141).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -714,7 +714,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (124).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -723,7 +723,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (130).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -732,7 +732,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (69).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -741,7 +741,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (201).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -750,7 +750,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (127).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -759,7 +759,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product54.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -768,7 +768,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (202).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -777,7 +777,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (134).jpg",
         location: "kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -786,7 +786,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (176).jpg",
         location: "UNZA",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -795,7 +795,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (128).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -804,7 +804,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (204).jpg",
         location: "Chibombo",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -813,7 +813,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (77).jpg",
         location: "Kasama",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -822,7 +822,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (129).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -831,7 +831,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (182).jpg",
         location: "Kaunda Square",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -840,7 +840,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (205).jpg",
         location: "Kalingalinga",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -849,7 +849,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product59.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -858,7 +858,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (78).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -867,7 +867,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (206).jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -876,7 +876,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (71).jpg",
         location: "kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -885,7 +885,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (207).jpg",
         location: "Kaoma - Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -894,7 +894,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product53.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -903,7 +903,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (208).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -912,7 +912,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (184).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -921,7 +921,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (209).jpg",
         location: "Choma",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -930,7 +930,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (72).jpg",
         location: "Southern province",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -939,7 +939,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (210).jpg",
         location: "Kasumbalesa",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -948,7 +948,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (211).jpg",
         location: "Solwezi",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -957,7 +957,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (79).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -966,7 +966,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (80).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -975,7 +975,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product57.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -984,7 +984,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (188).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -993,7 +993,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (131).jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1002,7 +1002,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (81).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1011,7 +1011,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (82).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1020,7 +1020,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (83).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1029,7 +1029,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (84).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1038,7 +1038,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (85).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1047,7 +1047,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (86).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
@@ -1056,7 +1056,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(233).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1065,7 +1065,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (87).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1074,7 +1074,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (73).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1083,7 +1083,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (88).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1092,7 +1092,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (89).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     
@@ -1102,7 +1102,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (90).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     
@@ -1112,7 +1112,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (91).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1121,7 +1121,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product58.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1130,7 +1130,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (74).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1139,7 +1139,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(231).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1148,7 +1148,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product55.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1157,7 +1157,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (75).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1166,7 +1166,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product51.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1175,7 +1175,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (92).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1184,7 +1184,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (93).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1193,7 +1193,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (94).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1202,7 +1202,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (95).jpg",
         location: "Chililabwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1211,7 +1211,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (96).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1220,7 +1220,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (97).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1229,7 +1229,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (98).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1238,7 +1238,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (100).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1247,7 +1247,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (101).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1256,7 +1256,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (139).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1265,7 +1265,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (191).jpg",
         location: "kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1274,7 +1274,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (137).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1283,7 +1283,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (102).jpg",
         location: "Livingstone",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1292,7 +1292,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (103).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1301,7 +1301,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product60.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1310,7 +1310,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (104).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1319,7 +1319,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (76).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1328,7 +1328,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (105).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1337,7 +1337,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (106).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1346,7 +1346,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (107).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1355,7 +1355,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (108).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1364,7 +1364,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(230).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1373,7 +1373,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (109).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1382,7 +1382,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (110).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1391,7 +1391,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(229).jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1400,7 +1400,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (111).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1409,7 +1409,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (112).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1418,7 +1418,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (113).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1427,7 +1427,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (114).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1436,7 +1436,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(228).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1445,7 +1445,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (115).jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1454,7 +1454,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (116).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1463,7 +1463,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (117).jpg",
         location: "Monze",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1472,7 +1472,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(226).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1481,7 +1481,7 @@ const products = [
         description: "K 30 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product49.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1490,7 +1490,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (118).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1499,7 +1499,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product48.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1508,7 +1508,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(225).jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1517,7 +1517,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (119).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1526,7 +1526,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product (120).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1535,7 +1535,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product61.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1544,7 +1544,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product47.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1553,7 +1553,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(223).jpg",
         location: "Kabwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1562,7 +1562,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product46.jpg",
         location: "Chingola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1571,7 +1571,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product45.jpg",
         location: "Ndola",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1580,7 +1580,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product43.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1589,7 +1589,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product42.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1598,7 +1598,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(222).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1607,7 +1607,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product41.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1616,7 +1616,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product56.jpg",
         location: "Luanshya",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1625,7 +1625,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(215).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1634,7 +1634,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product38.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1643,7 +1643,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(221).jpg",
         location: "Mufulira",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1652,7 +1652,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(217).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1661,7 +1661,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(216).jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1670,7 +1670,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(214).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1679,7 +1679,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product36.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1688,7 +1688,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product33.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1697,7 +1697,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(220).jpg",
         location: "Kapiri Mposhi",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
@@ -1706,7 +1706,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(213).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1715,7 +1715,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(218).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1724,7 +1724,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(219).jpg",
         location: "lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1733,7 +1733,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product31.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
       {
@@ -1742,7 +1742,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product35.jpg",
         location: "Chipata eastern",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
@@ -1751,7 +1751,7 @@ const products = [
         description: "K 50 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product30.jpg",
         location: "Lusaka Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1760,7 +1760,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product29.jpg",
         location: "lusaka town",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1769,7 +1769,7 @@ const products = [
         description: "K 30 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product28.jpg",
         location: "lusaka garden house",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1778,7 +1778,7 @@ const products = [
         description: "K 30 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product27.jpg",
         location: "Lusaka Chalala",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1787,7 +1787,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product26.jpg",
         location: "Olympia lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1796,7 +1796,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product(212).jpg",
         location: " lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1805,7 +1805,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product25.jpg",
         location: " lusaka chawama",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1814,7 +1814,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product24.jpg",
         location: "Rhodes park lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
       {
@@ -1823,7 +1823,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product23.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
     
     {
@@ -1832,7 +1832,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product22.jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1841,7 +1841,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product2.jpg",
         location: "Mansa",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1850,7 +1850,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product3.jpg",
         location: "Kabwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1859,7 +1859,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product4.jpg",
         location: "water works",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1868,7 +1868,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product5.jpg",
         location: "Lusaka Chamba Vally",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1877,7 +1877,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product6.jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1886,7 +1886,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product8.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1895,7 +1895,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product9.jpg",
         location: "Lusaka matero",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1904,7 +1904,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product10.jpg",
         location: "solwezi",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1913,7 +1913,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product11.jpg",
         location: "Kitwe",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1922,7 +1922,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product12.jpg",
         location: "Lusaka kamwala south",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1931,7 +1931,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product13.jpg",
         location: "Lusaka garden house",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1940,7 +1940,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product14.jpg",
         location: "Ndola kansanshi",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1949,7 +1949,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product15.jpg",
         location: "Lusaka garden house",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1958,7 +1958,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product16.jpg",
         location: "Lusaka garden house",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1967,7 +1967,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product17.jpg",
         location: "Lusaka avondale",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
      {
@@ -1976,7 +1976,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product18.jpg",
         location: "Ndola twapia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1985,7 +1985,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product20.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 
     {
@@ -1994,7 +1994,7 @@ const products = [
         description: "K 40 is connection fee, you will have to negotiate with our client ( k 600 starting).",
         image: "images/Product21.jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Connection"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Connection"
     },
 ];
 
@@ -2006,7 +2006,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (1).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2015,7 +2015,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (2).jpg",
         location: "Lusaka Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2024,7 +2024,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (3).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2033,7 +2033,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (4).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2042,7 +2042,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (5).jpg",
         location: "Lusaka",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2051,7 +2051,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (6).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2060,7 +2060,7 @@ const featuredProducts = [
         price: 20,
         image: "images/Photo (7).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2069,7 +2069,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (8).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
     {
@@ -2078,7 +2078,7 @@ const featuredProducts = [
         price: 35,
         image: "images/Photo (9).jpg",
         location: "Zambia",
-        link: "https://wa.me/260968025322?text=Hello%20I%20just%20paid%20for%20a%20Group"
+        link: "https://wa.me/260765866709?text=Hello%20I%20just%20paid%20for%20a%20Group"
     },
 
 ];
